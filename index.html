@@ -1,0 +1,406 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - kinsazo</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favicons -->
+    <style>
+      /* --- Background!!! --- */
+      body {
+        background-image: url("background.png");
+      }
+      /* --- HIDING SCROLLBARS (inside divs) --- */
+      div {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      ::-webkit-scrollbar {
+        display: none;
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+      }
+      /* --- FEATURED + MORE --- */
+      .featured {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      .featured::-webkit-scrollbar {
+        display: none;
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+      }
+      .featured img {
+        display: flex;
+        justify-content: center;
+        float: center;
+        padding: 0;
+        max-width: 225px;
+        height: auto;
+        border-radius: 4px;
+      }
+      .featured-img:hover, .featured-img:active, .featured-img:focus {
+        transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        -ms-transform: scale(1.05); /* IE 9 */
+        -webkit-transform: scale(1.05); /* Safari 3-8 */
+      }
+      .featured-img {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        transition: transform .2s; /* Animation */
+      }
+      .windowframe-lite {
+        left: 0;
+        background: repeating-linear-gradient(45deg, rgba(25,40,55,0.35) 15%, rgba(25,40,0,0.35) 15%, rgba(25,40,55,0.35) 10%, rgba(70,85,100,0.35) 45%, rgba(70,85,100,0.35) 55%, rgba(25,40,55,0.35) 70%);
+        background-attachment: fixed;
+        background-clip: padding-box;
+        border-radius: 10px;
+        box-shadow: inset 0 0 1.65px 1px rgba(246,246,247,0.14), inset 0 0 4px 2.25px rgba(0,0,0,0.02), 0 3px 9px rgba(0,0,0,0.26), inset 0 1.5px 6.35px rgba(246,246,247,0.16);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        -moz-backdrop-filter: blur(16px);
+        border: 1.5px solid rgba(2,3,4,0.26);
+        max-width: 504px;
+        overflow: hidden;
+        transform: translateX(0) translateY(0);
+        z-index: 0;
+      }
+      .windowframe-lite:target {
+        box-shadow: inset 0 1px 0.35px 2px rgba(255,255,255,0.22) inset 0 3px 0.35px 2px rgba(0,0,0,0.22) 0 6px 20px rgba(0,0,0,0.35);
+        z-index: 1;
+      }
+      /* --- MY DIVS --- */
+      .myDiv { 
+        padding: 0px;
+        max-width: 225px;
+        float: center;
+        text-align: center;
+        border-radius: 10px;
+      }
+      /* --- unused one lol --- */
+      .myDiv2 {
+        padding: 18px 38px 28px 34px;
+        float: left;
+        max-width: 225px;
+        text-align: center;
+        border: 0px dotted #677cb5;
+      }
+      .myDiv3 {
+        padding: 2px 0px 28px 0px;
+        float: left;
+        max-width: 225px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      /* --- GOIN RIGHT NEWS / POSTS / UPDATES --- */
+      .goingright {
+        max-width: 650px;
+        white-space: nowrap;
+        overflow: hidden;
+        animation-delay: 0s;
+      }
+      .goingright p {
+        display: inline-block;
+        animation: marquee1 12s linear infinite;
+        animation-delay: 0s;
+        padding-left: 100%;
+      }
+      /* --- ANIMATION, STILL GOING RIGHT --- */
+      @keyframes marquee1 {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+      }
+      p:hover, p:active, p:focus {
+        animation-play-state: paused;
+      }
+      /* --- ALLDIV STUFF --- */
+      .allDiv {
+        max-width: 1600px;
+        display: flex;
+        flex-wrap: wrap;
+        float: center;
+        overflow: hidden;
+        justify-content: center;
+        padding: 0;
+      }
+      @media screen and (max-width: 500px) {
+        .flex-direction {
+           flex-direction:column;
+        }
+      }
+      /* --- the rest --- */
+      .socials-box {
+        display: inline-block;
+        padding: 0px 0px 0px 24px;
+      }
+      .socials-box span {
+        margin-right: 24px;
+        float: center;
+        padding: 12px 0px 12px 0px;
+      }
+      .socials-box span img {
+        display: block;
+        float: left;
+        justify-content: center;
+        border-radius: 8px;
+      }
+      .socials-box span p {
+        display: block;
+        float: left;
+        margin: 3px 0px 0px 12px;
+        text-align: left;
+      }
+      .globes {
+        float: center;
+      }
+      .globes span {
+        float: center;
+        padding: 12px 0px 12px 0px;
+      }
+      .globes span img {
+        float: left;
+        justify-content: center;
+        border-radius: 0px;
+      }
+      .globes span p {
+        float: left;
+        margin: 0px 12px 6px 12px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <br>
+          <div class="myDivPost" style="height: 80px; max-width: 650px; animation: float 6s ease-in-out infinite; animation-delay: 0s;">
+            <p style="font-size:30px; font-family: 'GauFontPopMagic'; letter-spacing: -3px; float: left;">
+              <b>Home</b>
+            </p>
+            <p style="font-size:18px; text-align: right; float: right; transform: translateY(11px);">
+              <fhdgfd style="opacity: 0.85; font-family: 'GauFontPopMagic'; transform: scaleY(1.22);">kinsazo</fhdgfd>
+              <!-- <br>
+              <fhdgfd style="font-size: 16px; opacity: 0.65; text-decoration: underline;">&lt; back</fhdgfd> -->
+            </p>
+          </div>
+          <div class="goingright">
+            <a href="/posts/2022-02-13-one-year-anniversary.html">
+              <p>📝 LATEST POST: 13/2/22 - <u>"ONE YEAR ANNIVERSARY!!!"</u></p>
+            </a>
+          </div>
+          <br>
+          <br>
+          <div class="pages">
+            <span style="display: inline-block; opacity: 0.65;">
+              <p>🏠 &nbsp;home</p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/posts.html">📝 &nbsp;posts</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="tips.html">💡 &nbsp;tips</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/art/1.html">🖌️ &nbsp;art</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/wallpapers.html">🌉 &nbsp;wallpapers</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/music.html">🎹 &nbsp;music</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/coolsites.html">🏆 &nbsp;cool sites</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/downloads.html">📂 &nbsp;downloads</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/general.html">🎉 &nbsp;general</a></p>
+            </span>
+            <span style="display: inline-block;">
+              <p><a href="/extras.html">🚗 &nbsp;extras</a></p>
+            </span>
+          </div>
+          <br>
+          <br>
+          <br>
+          <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic';">
+            <b>accounts / contact</b>
+          </p>
+          <div class="socials-box">
+            <a href="https://twitter.com/kinsazo">
+              <span style="display: inline-block;">
+                <img src="/socials-box/tweetr.png" alt="🕊️" width="40" height="40">
+                <p style="font-size:14px;transform: scaleY(1.65);font-family: 'GauFontPopMagic';">twitter <br>
+                </p>
+                <br>
+                <p style="font-size:16px;transform: scaleY(1);">kinsazo</p>
+              </span>
+            </a>
+            <a href="https://cohost.org/kinsazo">
+              <span style="display: inline-block;">
+                <img src="/socials-box/cohostthing200.png" alt="🥚" width="40" height="40">
+                <p style="font-size:14px;transform: scaleY(1.65);font-family: 'GauFontPopMagic';">cohost <br>
+                </p>
+                <br>
+                <p style="font-size:16px;transform: scaleY(1);">kinsazo</p>
+              </span>
+            </a>
+            <a href="https://kinsazo.newgrounds.com">
+              <span style="display: inline-block;">
+                <img src="/socials-box/newgrounded.png" alt="🌐" width="40" height="40">
+                <p style="font-size:14px;transform: scaleY(1.65);font-family: 'GauFontPopMagic';">newgrounds <br>
+                </p>
+                <br>
+                <p style="font-size:16px;transform: scaleY(1);">Kinsazo</p>
+              </span>
+            </a>
+            <a href="https://www.youtube.com/@Kinsazo">
+              <span style="display: inline-block;">
+                <img src="/socials-box/yoghurt.png" alt="📺" width="40" height="40">
+                <p style="font-size:14px;transform: scaleY(1.65);font-family: 'GauFontPopMagic';">youtube <br>
+                </p>
+                <br>
+                <p style="font-size:16px;transform: scaleY(1);">Kinsazo</p>
+              </span>
+            </a>
+            <a href="https://open.spotify.com/user/3uznai7oorqhz1967o2r9vssa">
+              <span style="display: inline-block;">
+                <img src="/socials-box/spottyfi.png" alt="🎧" width="40" height="40">
+                <p style="font-size:14px;transform: scaleY(1.65);font-family: 'GauFontPopMagic';">spotify <br>
+                </p>
+                <br>
+                <p style="font-size:16px;transform: scaleY(1);">Choceos</p>
+              </span>
+            </a>
+            <br>
+            <br>
+          </div>
+          <br>
+          <br>
+          <div class="windowframe-lite" style="overflow-x: hidden; overflow-y: auto; padding-top: 14px; margin-left: 25px; margin-right: 25px; -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ background-color: rgba(52,42,64,0.12);">
+          <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic';">
+            <b>- &nbsp; projects &nbsp; -</b>
+          </p>
+          <div class="carousel" style="min-height:205px; overflow-y: scroll; margin: 12px;">
+            <!-- LIST OF ITEMS -->
+            <span id="item-1"></span>
+            <span id="item-2"></span>
+            <span id="item-3"></span>
+            <div class="carousel-item item-1">
+              <span>
+                <a href="gbs.html"><img src="/site-bg/gbs_bg.png" width="160" height="120"><br>
+                  <p style="font-size:16px;transform: scaleY(1.82);font-family: 'GauFontPopMagic'; display: inline-grid;">gold bars series</p>
+                </a><p>Object show(s?) I made with a couple people, it's alright</p>
+              </span><a class="arrow arrow-prev" href="#item-3"></a>
+              <a class="arrow arrow-next" href="#item-2"></a>
+            </div>
+            <div class="carousel-item item-2">
+              <span>
+                <a href="oldscratch.html"><img src="/site-bg/scratch_bg.png" width="160" height="120"><br>
+                  <p style="font-size:16px;transform: scaleY(1.82);font-family: 'GauFontPopMagic'; display: inline-grid;">scratch things</p>
+                </a><p>Some old things i made on scratch.mit.edu!</p>
+              </span><a class="arrow arrow-prev" href="#item-1"></a>
+              <a class="arrow arrow-next" href="#item-3"></a>
+            </div>
+            <div class="carousel-item item-3">
+              <span>
+                <a href="https://scratch.mit.edu/studios/2973135/"><img src="/site-bg/navigation_bg.png" width="160" height="120"><br>
+                  <p style="font-size:16px;transform: scaleY(1.82);font-family: 'GauFontPopMagic'; display: inline-grid;">blue and orange</p>
+                </a><p>a shortlived series (And a placeholder!)</p>
+              </span><a class="arrow arrow-prev" href="#item-2"></a>
+              <a class="arrow arrow-next" href="#item-1"></a>
+            </div>
+          </div>
+          </div>
+          <div class="allDiv" style="margin-top: -4px">
+            <div class="myDiv3" style="margin-left: 9px; margin-right: 9px; margin-top: 2px;">
+              <div>
+                <div class="myDiv">
+                  <!--  ABOUT ME LOL -->
+                  <p></p>
+                  <div class="windowframe" style="max-width: 225px; height: 338px; overflow-x: hidden; overflow-y: hidden; -ms-overflow-style: none;  /* IE and Edge */ scrollbar-width: none;  /* Firefox */ background-color: rgba(83, 44, 55, 0.0)">
+                    <p style="font-size:9px; transform:scaleY(1.72); opacity:0.95; letter-spacing: -0.3px; font-family: 'GauFontPopMagic'; padding:3px 12px; text-align:left;">about me</p>
+                    <div class="textbox" style="background: rgba(0,0,0,0.78); color:white; border-radius:4px; padding: 12px 24px; border: 2px dashed rgba(215,215,238,0.54); font-size:15px;">
+                      <center>
+                        <p></p>
+                        <a href="/pfp/NAXICONNOV2022VERSION3.png"><img src="/pfp/NAXICONNOV2022VERSION3.png" width="48" height="48" style="border-radius: 2px;"></a>
+                        <p>
+                          workin on this
+                        </p>
+                      </center>
+                    </div> <!-- textbox -->
+                  </div> <!-- windowframe -->
+                  <br>
+                  <!-- INTRO -->
+                  <div class="windowframe" style="max-width: 225px; height: 244px; background-color: rgba(142,128,205,0.34);">
+                    <p style="font-size:9px; transform:scaleY(1.72); opacity:0.95; letter-spacing: -0.3px; font-family: 'GauFontPopMagic'; padding:3px 12px; text-align:left;">welcome!</p>
+                    <div class="textbox" style="background: rgba(251,250,252,0.78); font-size:15px; color: rgba(42,41,68,0.88);">
+                      <p style="padding: 24px 24px; display: table-cell; vertical-align: middle;">
+                        hey thanks for visiting my website
+                        <br><br>most of this is on other sites but i made this as an attempt to put it all together
+                        <br><br>enjoy! (hopefully!)
+                      </text>
+                    </div> <!-- textbox -->
+                  </div> <!-- windowframe -->
+                </div> <!-- myDiv -->
+              </div> <!-- too many divs!! -->
+            </div> <!-- myDiv3 (left side div) -->
+            <br>
+            <br>
+            <div>
+              <br>
+              <!-- FEATURED -->
+              <div class="featured">
+                <div class="windowframe" style="max-width: 225px; margin-left: 9px; margin-right: 9px; float: left; overflow-x: hidden; overflow-y: auto; height: 576px; padding: 8px 18px 20px 18px; -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ background-color: rgba(22,21,62,0.82);">
+                  <div class="textbox" style="background: rgba(0,1,2,0.24); top: 6px; color: white; padding: 8px 18px 11px 18px;">
+                  <p style="font-size:10px;transform: scaleY(1.65);font-family: 'GauFontPopMagic'; margin-top:-6px;">
+                    <b><br>-----------<br>showcase<br>
+                  </p>
+                  <p style="font-size:10px;transform: scaleY(1.65);font-family: 'GauFontPopMagic'; margin-bottom:-5px;">
+                    <b>-----------</b></b>
+                  </p>
+                  <a href="/tips/googletranspng.html" style="text-decoration: underline;"><p>how to always get real transparent pngs on google</p></a>
+                  <div class="featured-img">
+                    <a href="/art/2022/NAXBANNER3.png"><img src="/art 2022/THUMBNAIL---NAXBANNER3.png"></a>
+                  </div>
+                  <br>
+                  <div class="featured-img">
+                    <a href="/art/2022/picosketch4picoday2022.png"><img src="/art 2022/THUMBNAIL---picosketch4picoday2022.png"></a>
+                  </div>
+                  <br>
+                  <div class="featured-img">
+                    <a href="/art/2022/gexesis.png"><img src="/art 2022/thumbnail---gexesis.png"></a>
+                  </div>
+                  <br>
+                  <div class="featured-img">
+                    <a href="/art/2021/tankman.png"><img src="/art 2021/tankman.png"></a>
+                  </div> <!-- featured-img -->
+                </div> <!-- windowframe -->
+              </div> <!-- featured -->
+            </div> <!-- random div -->
+          </div> <!-- allDiv -->
+      </div> <!-- something -->
+      <br><br><br><br><br><br>
+      <footer>
+        <p style="font-size:12px;">started 13 feb 2021</p>
+        <p style="font-size:12px;">last updated 1 feb 2023</p>
+        <p style="font-size:12px;">version 4.0 beta (aurora)</p>
+      </footer>
+      </div>
+    </center>
+  </body>
+</html>

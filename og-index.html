@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favicons -->
+    <style>
+    a {
+      color: white;
+    }
+    a:visited {
+      color: white;
+    }
+    a:hover, a:active, a:focus {
+      color: white;
+    }
+    .myDiv {
+      padding: 18px 32px 18px;
+      max-width: 225px;
+      float: center;
+      background-color: #061029; 
+      border: 2px dashed white;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .goingright {
+      max-width: 285px;
+      white-space: nowrap;
+      overflow: hidden;
+      animation-delay: 0s;
+    }
+    .goingright p {
+      display: inline-block;
+      animation: marquee1 10s linear infinite;
+      animation-delay: 0s;
+    }
+    @keyframes marquee1 {
+      0%   { transform:translateX(-203px); }
+      100%   { transform:translateX(285px); }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+    }
+    img {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      max-width: 225px;
+      height: auto;
+    }
+    .featured {
+      padding: 15px 30px;
+      max-width: 225px;
+      float: center;
+      background-color: #0a183d;
+      border: 3px dotted #677cb5;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .featured-img {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      width: 225px;
+      height: auto;
+    }
+    </style>
+  </head>
+  <body>
+    <center>
+    <br><br>
+    
+    <div class="content">
+    <main>
+    <p style = "font-size:30px;transform: scaleY(0.82);"><b>crexesis</b></p>
+    <div class="myDiv">
+      <p>hey thanks for visiting my website
+        <br>
+        <br>
+        this is basically just a dump for things that i've made that i'd consider kind of significant and then i tried to make it look nice
+        <br><br>
+        - - - - - - - - - - - - - - - - - - - - -
+        <br><br>
+        ( click the globe to enter )
+      </p>
+    </div>
+    <br>
+      
+    <br><br><br><br>
+    <a href="navigation.html"><img src="earthanim.gif" alt="navigation"></a>
+    <br><br><br>
+    
+    <div class="goingright">
+      <p>WEBSITE DONE!!!!!</p>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    
+    <p><b>----------<br>featured<br>----------</b></p>
+    <div class="featured">
+      <a href="tips/googletranspng.html"><p>how to make sure you get an actual transparent png image and not just a fake jpg one on google</p></a>
+      <br>
+      <div class="featured-img">
+        <a href="wallpapers/Swirls Light.png"><img src="/wallpapers/Swirls Light.png"></a>
+      </div>
+      <br>
+    </div>
+    </main>
+    <br>
+    <br>
+    <br>
+      <footer><p style="font-size:12px;">started 13 feb 2021</p></footer>
+    </div>
+    </center>
+  </body>
+</html>

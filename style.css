@@ -1,0 +1,391 @@
+body {
+    background-image: url("/special-backgrounds/updatepost_bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: black;
+    color: white;
+    font-family: 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
+    padding: 10px 0px 25px 0px;
+}
+
+.pages {
+    display: inline-block;
+    max-width: 950px;
+}
+.pages span {
+    float: center;
+    padding: 6px 0px 6px 0px;
+}
+.pages span img {
+    display: inline-block;
+    justify-content: center;
+    border-radius: 0px;
+}
+.pages span p {
+    display: inline-block;
+    margin: 0px 24px 6px 24px;
+    text-align: center;
+}
+/* --- floating title stuff anims --- */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
+  }
+.pageHeader {
+    padding: 0px 20px 20px 20px;
+    max-width: 650px;
+    float: center;
+    text-align: left;
+    line-height: 22px;
+    height: 80px;
+    animation: float 6s ease-in-out infinite; animation-delay: 0s;
+}
+
+/* --- POP MAGIC --- */
+@font-face {
+    font-family: 'GauFontPopMagic';
+    src:url('GauFontPopMagic.ttf.woff') format('woff'), url('GauFontPopMagic.ttf.svg#GauFontPopMagic') format('svg'), url('GauFontPopMagic.ttf.eot'), url('GauFontPopMagic.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- links stuff --- */
+a {
+    color: white;
+    text-decoration: none;
+    animation: dehover-anim 0.15s ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+@keyframes dehover-anim {
+    0% { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
+    100% { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+a:hover, a:active, a:focus {
+    color: white;
+    text-decoration: none;
+    animation: hover-anim 0.04s ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+@keyframes hover-anim {
+    0% { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+    100% { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
+}
+
+/* --- FOR LISTS + POSTS --- */
+.myDivPost {
+    padding: 0px 20px 20px 20px;
+    max-width: 1100px;
+    float: center;
+    text-align: left;
+    line-height: 22px;
+}
+.listingDiv {
+    padding: 0px 20px 20px 20px;
+    max-width: 500px;
+    float: center;
+    text-align: left;
+}
+.myDivPost img, .listingDiv img {
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 0px;
+    max-width: 100%;
+}
+long-words {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    display: inline-block;
+    word-break: break-word;
+    word-break: break-all;
+    -ms-word-break: break-word;
+    line-break: strict;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: auto;
+    margin:auto;
+    text-align:justify;
+    word-break: break-word;
+    white-space: pre-line;
+}
+
+/* --- WINDOWS --- */
+/* --- background-filter could be unsupported lol --- */
+.windowframe {
+    left: 0;
+    background: repeating-linear-gradient(45deg, rgba(25,40,55,0.35) 35%, rgba(25,40,0,0.35) 35%, rgba(25,40,55,0.35) 30%, rgba(70,85,100,0.35) 65%, rgba(70,85,100,0.35) 75%, rgba(25,40,55,0.35) 90%);
+    background-attachment: fixed;
+    background-clip: padding-box;
+    border-radius: 10px;
+    box-shadow: inset 0 0 1.65px 1px rgba(246,246,247,0.14), inset 0 0 4px 2.25px rgba(0,0,0,0.02), 0 3px 9px rgba(0,0,0,0.26), inset 0 1.5px 6.35px rgba(246,246,247,0.16);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    -moz-backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(2,3,4,0.26);
+    width: 640px;
+    overflow: hidden;
+    transform: translateX(0) translateY(0);
+    z-index: 0;
+}
+.windowframe:target {
+    box-shadow: inset 0 1px 0.35px 2px rgba(255,255,255,0.22) inset 0 3px 0.35px 2px rgba(0,0,0,0.22) 0 6px 20px rgba(0,0,0,0.35);
+    z-index: 1;
+}
+.title {
+    color: white;
+    float: left;
+    margin-left: 9px;
+    margin-top: 8px;
+}
+
+/* --- TEXTBOX --- */
+.textbox {
+    left: 6px;
+    right: 6px;
+    top: 28px;
+    bottom: 6px;
+    background: rgba(255,255,255,1);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0.85px 1px rgba(0,0,0,0.12);
+    color: black;
+    overflow: scroll;
+    position: absolute;
+    z-index: 1;
+}
+
+/* --- ZOOM ANIM TEMPLATES --- */
+.zoomanimlite:hover, .zoomanimlite:active, .zoomanimlite:focus {
+    transform: scale(1.05); /* (105% zoom) */
+    -ms-transform: scale(1.05); /* IE (lol) */
+    -webkit-transform: scale(1.05); /* Safari */
+    -moz-transform: scale(1.05); /* Firefox */
+}
+.zoomanimlite {
+    transition: transform .2s; /* Animation */
+}
+.zoomanim:hover, .zoomanim:active, .zoomanim:focus {
+    transform: scale(1.18); /* (118% zoom) */
+    -ms-transform: scale(1.18); /* IE (internet explorer) */
+    -webkit-transform: scale(1.18); /* Safari */
+    -moz-transform: scale(1.18); /* Firefox */
+}
+.zoomanim {
+    transition: transform .55s; /* Animation */
+}
+
+/* --- collapsibles stuff --- */
+/* --- https://www.digitalocean.com/community/tutorials/css-collapsible thanks --- */
+.wrap-collapsible {
+    margin-bottom: 20px 0;
+}
+input[type='checkbox'] {
+    display: none;
+}
+.input {
+    display: block;
+    font-weight: bold;
+    font-family: 'GauFontPopMagic';
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px;
+    color: #000000;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.25s ease-out;
+}
+.lbl-toggle {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0px;
+    color: #000000;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.25s ease-out;
+}
+.lbl-toggle:hover {
+    color: #003dff;
+}
+.lbl-toggle::beforeg {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .1s ease-out;
+}
+.toggle:checked + .lbl-toggle::clicked + .collapsible-content {
+    transform: rotate(90deg) translateX(-3px);
+    max-height: 100vh;
+}
+.collapsible-content {
+    max-height: 56px;
+    overflow: hidden;
+    transition: max-height .1s ease-in-out;
+    border-radius: 12px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    -moz-backdrop-filter: blur(16px);
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+}
+.toggle:checked + .lbl-toggle {
+    border-radius: 12px;
+}
+.collapsible-content .content-inner {
+    background: rgba(255, 255, 255, 0.25);
+    border-bottom: 0px solid rgba(250, 224, 66, .45);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-radius: 12px;
+    padding: 2px 16px 10px;
+}
+
+/* --- THUMBNAILS WITH CAPTIONS --- */
+/* TEMPLATE HTML:
+<div class="thumb">
+  <span>
+    <a href="LINK"><img src="THUMBNAIL.png" width="160" height="120">
+      <p style="font-size:16px;transform: scaleY(1.82);font-family: 'GauFontPopMagic'; display: inline-grid;">TITLE</p>
+    </a><p>DESCRIPTION</p>
+  </span>
+</div>
+*/
+.thumb {
+    display: grid;
+    padding: 0px 32px;
+    float: center;
+    flex-wrap: wrap;
+}
+.thumb span {
+    float: center;
+    padding: 12px 0px;
+    flex-wrap: wrap;
+}
+.thumb span img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    justify-content: center;
+    border-radius: 4px;
+    transition: transform .2s; /* Animation */
+}
+.thumb span p {
+    text-align: left;
+    justify-content: center;
+    margin-bottom: -5px;
+}
+.thumb span img:hover, .thumb span img:active, .thumb span img:focus {
+    transform: scale(1.05); /* (105% zoom) */
+    -ms-transform: scale(1.05); /* IE (lol) */
+    -webkit-transform: scale(1.05); /* Safari */
+    -moz-transform: scale(1.05); /* Firefox */
+}
+
+/* --- CAROUSEL HERE --- */
+.carousel {
+    position: relative;
+    max-width: 500px;
+    min-height: 250px;
+    float: center;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: auto;
+    display: block;
+}
+.carousel-item {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    flex-wrap: wrap;
+    opacity: 0;
+    float: center;
+    transition: all 0.0s ease-in-out;
+    display: grid;
+    margin-top: 4px;
+}
+.carousel-item img {
+    float: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.carousel-item p {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: -5px;
+}
+.carousel-item img:hover, .carousel-item img:active, .carousel-item img:focus {
+    transform: scale(1.05); /* (105% zoom) */
+    -ms-transform: scale(1.05); /* IE (lol) */
+    -webkit-transform: scale(1.05); /* Safari */
+    -moz-transform: scale(1.05); /* Firefox */
+}
+.carousel-item img {
+    transition: transform .2s; /* Animation */
+}
+
+.arrow {
+    border: solid rgba(255,255,255,0.75);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 3px;
+}
+.arrow-prev {
+    left:-20px;
+    position:absolute;
+    top: 60px;
+    transform:translateY(-50%) rotate(135deg);
+    margin-left: 30px;
+}
+.arrow-next {
+    right:-20px;
+    position:absolute;
+    top: 60px;
+    transform:translateY(-50%) rotate(-45deg);
+    margin-right: 30px;
+}
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+}
+.item-2 {
+}
+.item-3 {
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}

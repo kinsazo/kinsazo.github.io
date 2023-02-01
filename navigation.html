@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favicons -->
+  <style>
+    a {
+      color: white;
+      text-decoration: none;
+      animation: dehover-anim 0.15s ease-out;
+      animation-iteration-count: 1;
+      animation-fill-mode:forwards;
+    }
+    @keyframes dehover-anim {
+        0%   { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
+        100%   { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+      }
+    a:visited {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover, a:active, a:focus {
+      color: white;
+      text-decoration: none;
+      animation: hover-anim 0.04s ease-in;
+      animation-iteration-count: 1;
+      animation-fill-mode:forwards;
+    }
+    @keyframes hover-anim {
+        0%   { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+        100%   { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
+      }
+    .myDiv { 
+        padding: 00px 0px 0px 0px;
+        max-width: 350px;
+        float: center;
+        text-align: left;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+      .featured {
+        padding: 0px 0px 0px 42px;
+        max-width: 350px;
+        float: left;
+        overflow-y: auto;
+        text-align: left;
+      }
+      .myDiv2 {
+        padding: 0px;
+        float: left;
+        max-width: 350px;
+        text-align: center;
+      }
+      .myDiv3 {
+        padding: 0px;
+        float: left;
+        max-width: 350px;
+        text-align: center;
+        border-radius: 0px;
+      }
+      .allDiv {
+        max-width: 1600px;
+        display: flex;
+        flex-wrap: wrap;
+        float: center;
+        overflow: hidden;
+        justify-content: center;
+        padding: 0;
+      }
+      @media screen and (max-width: 500px) {
+        .flex-direction {
+           flex-direction:column;
+        }
+        .myDiv2 {
+          max-width:350px;
+          height:auto;
+          border-right:none;
+        }
+        .myDiv3 {
+          max-width:350px;
+          height:auto;
+          border-right:none;
+        }
+        .featured {
+          max-width:350px;
+          height:auto;
+        }
+        .featured span {
+          line-height:107px;
+        }
+
+      }
+      @font-face {
+        font-family: 'GauFontPopMagic';
+        src:url('GauFontPopMagic.ttf.woff') format('woff'),
+            url('GauFontPopMagic.ttf.svg#GauFontPopMagic') format('svg'),
+            url('GauFontPopMagic.ttf.eot'),
+            url('GauFontPopMagic.ttf.eot?#iefix') format('embedded-opentype'); 
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        background-image: url("/special-backgrounds/navigation_bg.png");
+      }
+  </style>
+  </head>
+  <body>
+    <center>
+    <div class="content">
+    <main>
+    <br>
+    <br>  
+    <br>
+    <img src="color_earth.gif" alt="globe gif" height="60" width="60">
+    <br>
+    <br>
+    <p style="font-size:30px;transform: scaleY(1.22);font-family: 'GauFontPopMagic', 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
+      <b>navigation</b>
+    </p>
+    around the world around the world
+    <br>
+    <br>
+      <div class="myDiv">
+        <br>
+        <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic', 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
+          site pages
+        </p>
+        <div class="allDiv">
+          <div class="myDiv3">
+            <div class="myDiv">
+              <p><a href="index.html">🏠 &nbsp;home</a></p>
+              <p><a href="tips.html">💡 &nbsp;tips</a></p>
+              <p><a href="news.html">📰 &nbsp;news archive</a></p>
+              <p><a href="coolsites.html">🏆 &nbsp;cool sites</a></p>
+              <p><a href="oldscratch.html">😸 &nbsp;scratch things</a></p>
+              <br>
+            </div>
+          </div>
+            <div class="featured">
+              <p><a href="/art/1.html">🖌️ &nbsp;art</a></p>
+              <p><a href="wallpapers.html">🌉 &nbsp;wallpapers</a></p>
+              <p><a href="extras.html">🚗 &nbsp;extras</a></p>
+              <p><a href="blog.html">📝 &nbsp;blog</a></p>
+              <p><a href="variety.html">🎉 &nbsp;variety</a></p>
+            </div>
+          </div>
+        <br>
+        <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic', 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
+          projects
+        </p>
+        <p><a href="amusii.html">🎹 &nbsp;amusii [music]</a></p>
+        <p><a href="gbs.html">⭐️ &nbsp;gold bars series [an object show]</a></p>
+        <br><br>
+        <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic', 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
+          accounts / contact
+        </p>
+        <p><a href="https://twitter.com/kinsazo">🕊️ &nbsp;twitter [main]</a></p>
+          <p><a href="https://twitter.com/crexidite">&nbsp; &nbsp; 🖼️ &nbsp;@crexidite [art only]</a></p>
+          <p><a href="https://twitter.com/amusiimusic">&nbsp; &nbsp; 🎼 &nbsp;@amusiimusic [music only]</a></p>
+          <p><a href="https://twitter.com/choceos">&nbsp; &nbsp; 🔑 &nbsp;@choceos [backup]</a></p>
+        <p><a href="https://pizzacube.newgrounds.com">🌐 &nbsp;newgrounds</a></p>
+        <p><a href="https://www.youtube.com/channel/UCdC71DXv-uwRd4sI2PP1mSQ">📺 &nbsp;youtube</a></p>
+        <p><a href="https://www.youtube.com/channel/UC4Pslhgm2AeEEeVCWmiqVOA">📀 &nbsp;alt youtube [crexdoesstuff]</a></p>
+        <p><a href="https://open.spotify.com/user/3uznai7oorqhz1967o2r9vssa">🎧 &nbsp;spotify</a></p>
+        <p>💬 &nbsp;discord: crex#3651</p>
+    </main>
+      </div>
+    <br><br><br><br><br><br>
+    <footer>
+      <p style="font-size:14px; text-decoration: underline;"><a href="https://guhlactic.neocities.org/">also check out guhlactic's website!</a></p>
+    </footer>
+    </div>
+    </center>
+  </body>
+</html>
