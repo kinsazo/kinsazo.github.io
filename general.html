@@ -15,92 +15,83 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <!-- favicons -->
-  <style>
-    a {
-      color: black;
-      text-decoration: none;
-      animation: dehover-anim 0.15s ease-out;
-      animation-iteration-count: 1;
-      animation-fill-mode:forwards;
-    }
-    @keyframes dehover-anim {
-        0%   { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
-        100%   { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+    <style>
+      body {
+        background-image: url("/site-bg/general_bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: black;
       }
-    a:visited {
-      color: black;
-      text-decoration: none;
-    }
-    a:hover, a:active, a:focus {
-      color: black;
-      text-decoration: none;
-      animation: hover-anim 0.04s ease-in;
-      animation-iteration-count: 1;
-      animation-fill-mode:forwards;
-    }
-    @keyframes hover-anim {
-        0%   { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
-        100%   { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
+      a {
+        color: black;
+        text-decoration: none;
+        animation: dehover-anim 0.15s ease-out;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
       }
-    img {
-      display: flex;
-      justify-content: center;
-      float: center;
-      padding: 0;
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      max-height: 600px;
-      transition: transform .2s; /* Animation */
-    }    
-    .myDiv {
-      float: center;
-      text-align: left;
-      justify-content: center;
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-    }
-    .myDiv img:hover, .myDiv img:active, .myDiv img:focus {
-      transform: scale(1.05); /* (105% zoom) */
-      -ms-transform: scale(1.05); /* IE (lol) */
-      -webkit-transform: scale(1.05); /* Safari */
-      -moz-transform: scale(1.05); /* Firefox */
-    }
-    video {
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      width: 100%;
-    }
-    art {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      flex: 300px;
-      justify-content: center;
-    }
-    arty {
-      padding: 10px 10px 64px;
-      margin: 10px;
-    }
-    body {
-      background-image: url("/special-backgrounds/variety_bg.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: black;
-    }
-    @font-face {
-        font-family: 'GauFontPopMagic';
-        src:url('GauFontPopMagic.ttf.woff') format('woff'),
-            url('GauFontPopMagic.ttf.svg#GauFontPopMagic') format('svg'),
-            url('GauFontPopMagic.ttf.eot'),
-            url('GauFontPopMagic.ttf.eot?#iefix') format('embedded-opentype'); 
-        font-weight: normal;
-        font-style: normal;
+      @keyframes dehover-anim {
+          0%   { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
+          100%   { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+        }
+      a:visited {
+        color: black;
+        text-decoration: none;
       }
-  </style>
+      a:hover, a:active, a:focus {
+        color: black;
+        text-decoration: none;
+        animation: hover-anim 0.04s ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+      }
+      @keyframes hover-anim {
+          0%   { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+          100%   { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
+        }
+      img {
+        display: flex;
+        justify-content: center;
+        float: center;
+        padding: 0;
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        max-height: 600px;
+        transition: transform .2s; /* Animation */
+      }    
+      .myDiv {
+        float: center;
+        text-align: left;
+        justify-content: center;
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+      }
+      .myDiv img:hover, .myDiv img:active, .myDiv img:focus {
+        transform: scale(1.05); /* (105% zoom) */
+        -ms-transform: scale(1.05); /* IE (lol) */
+        -webkit-transform: scale(1.05); /* Safari */
+        -moz-transform: scale(1.05); /* Firefox */
+      }
+      video {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+      }
+      art {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 300px;
+        justify-content: center;
+      }
+      arty {
+        padding: 10px 10px 64px;
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
     <center>
@@ -115,8 +106,8 @@
   <art>
     <arty>
      <div class="myDiv">
-      <a href="/variety/lyb.png">
-        <img src="/variety/lyb.png">
+      <a href="/general/lyb.png">
+        <img src="/general/lyb.png">
       </a><br>
       <p>
         <b>madeon - love you back concept cover (as in, unofficial)</b>
@@ -126,8 +117,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/variety/croix_concept.png">
-        <img src="/variety/croix_concept.png">
+      <a href="/general/croix_concept.png">
+        <img src="/general/croix_concept.png">
       </a><br>
       <p>
         <b>croix concept</b>
@@ -138,7 +129,7 @@
     <arty>
      <div class="myDiv">
       <video controls>
-        <source src="/variety/SFGB 6 Intro v2.mp4" type="video/mp4">
+        <source src="/general/SFGB 6 Intro v2.mp4" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
       Your browser does not support the video tag.
       </video>
@@ -151,8 +142,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/variety/refunk.png">
-        <img src="/variety/refunk.png">
+      <a href="/general/refunk.png">
+        <img src="/general/refunk.png">
       </a><br>
       <p>
         <b>friday night funkin' story mode concept</b>
@@ -162,8 +153,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/variety/switchitup.png">
-        <img src="/variety/switchitup.png">
+      <a href="/general/switchitup.png">
+        <img src="/general/switchitup.png">
       </a><br>
       <p>
         <b>BRAND NEW nintendo switch menu leak (real) (official) (Version 126) (2)</b>
@@ -173,8 +164,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/variety/finally.png">
-        <img src="/variety/finally.png">
+      <a href="/general/finally.png">
+        <img src="/general/finally.png">
       </a><br>
       <p>
         <b>i fixed it</b>
@@ -184,8 +175,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/variety/newoldSFGBInfoCards.png">
-        <img src="/variety/newoldSFGBInfoCards.png">
+      <a href="/general/newoldSFGBInfoCards.png">
+        <img src="/general/newoldSFGBInfoCards.png">
       </a><br>
       <p>
         <b>old sfgb info cards</b>
@@ -195,8 +186,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/variety/you got the bags.png">
-        <img src="/variety/you got the bags.png">
+      <a href="/general/you got the bags.png">
+        <img src="/general/you got the bags.png">
       </a><br>
       <p>
         <b>ultimate</b>
