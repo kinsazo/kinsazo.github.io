@@ -49,7 +49,7 @@
         width: 100%;
         max-width: 200px;
         max-height: 200px;
-        object-fit: cover; /* Do not scale the image */
+        object-fit: cover;
         height: cover;
         object-position: 50% 50%; /* Center the image within the element */
         margin: 10px;
@@ -57,10 +57,9 @@
         transition: transform .2s;
       }
       img:hover, img:active, img:focus {
-        transform: scale(1.05); /* (105% zoom) */
-        -ms-transform: scale(1.05); /* IE 9 */
-        -webkit-transform: scale(1.05); /* Safari 3-8 */
-        -moz-transform: scale(1.05); /* Firefox */
+        transform: scale(1.05); /* 105% zoom */
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
       }
       .myDiv {
         max-width: 200px;
@@ -72,7 +71,7 @@
         border-radius: 4px;
       }
       body {
-        background-image: url("/special-backgrounds/wallpapers_bg.png");
+        background-image: url("/site-bg/wallpapers_bg.png");
         color: black;
       }
       wheres-wally {

@@ -1,5 +1,5 @@
 body {
-    background-image: url("/special-backgrounds/updatepost_bg.png");
+    background-image: url("/site-bg/updatepost_bg.png");
     background-repeat: repeat;
     background-attachment: fixed;
     background-color: black;
@@ -13,8 +13,9 @@ body {
     max-width: 950px;
 }
 .pages span {
-    float: center;
-    padding: 6px 0px 6px 0px;
+    padding: 6px 0px 12px 0px;
+    display: inline-block;
+    line-height: 20px;
 }
 .pages span img {
     display: inline-block;
@@ -26,20 +27,21 @@ body {
     margin: 0px 24px 6px 24px;
     text-align: center;
 }
-/* --- floating title stuff anims --- */
+/* --- floating title stuff --- */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-3px); }
     100% { transform: translateY(0px); }
-  }
-.pageHeader {
+}
+.pageTitle {
     padding: 0px 20px 20px 20px;
     max-width: 650px;
     float: center;
     text-align: left;
     line-height: 22px;
     height: 80px;
-    animation: float 6s ease-in-out infinite; animation-delay: 0s;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 0s;
 }
 
 /* --- POP MAGIC --- */
@@ -71,7 +73,7 @@ a:hover, a:active, a:focus {
     text-decoration: none;
     animation: hover-anim 0.04s ease-in;
     animation-iteration-count: 1;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
 }
 @keyframes hover-anim {
     0% { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
@@ -98,23 +100,6 @@ a:hover, a:active, a:focus {
     border-radius: 0px;
     max-width: 100%;
 }
-long-words {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    display: inline-block;
-    word-break: break-word;
-    word-break: break-all;
-    -ms-word-break: break-word;
-    line-break: strict;
-    hyphens: none;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    hyphens: auto;
-    margin:auto;
-    text-align:justify;
-    word-break: break-word;
-    white-space: pre-line;
-}
 
 /* --- WINDOWS --- */
 /* --- background-filter could be unsupported lol --- */
@@ -123,7 +108,7 @@ long-words {
     background: repeating-linear-gradient(45deg, rgba(25,40,55,0.35) 35%, rgba(25,40,0,0.35) 35%, rgba(25,40,55,0.35) 30%, rgba(70,85,100,0.35) 65%, rgba(70,85,100,0.35) 75%, rgba(25,40,55,0.35) 90%);
     background-attachment: fixed;
     background-clip: padding-box;
-    border-radius: 10px;
+    border-radius: 6px;
     box-shadow: inset 0 0 1.65px 1px rgba(246,246,247,0.14), inset 0 0 4px 2.25px rgba(0,0,0,0.02), 0 3px 9px rgba(0,0,0,0.26), inset 0 1.5px 6.35px rgba(246,246,247,0.16);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -152,7 +137,7 @@ long-words {
     top: 28px;
     bottom: 6px;
     background: rgba(255,255,255,1);
-    border-radius: 4px;
+    border-radius: 0px;
     box-shadow: inset 0 0 0.85px 1px rgba(0,0,0,0.12);
     color: black;
     overflow: scroll;
@@ -161,23 +146,13 @@ long-words {
 }
 
 /* --- ZOOM ANIM TEMPLATES --- */
-.zoomanimlite:hover, .zoomanimlite:active, .zoomanimlite:focus {
-    transform: scale(1.05); /* (105% zoom) */
-    -ms-transform: scale(1.05); /* IE (lol) */
-    -webkit-transform: scale(1.05); /* Safari */
-    -moz-transform: scale(1.05); /* Firefox */
+.zoomExample:hover, .zoomExample:active, .zoomExample:focus {
+    transform: scale(1.05); /* 105% zoom */
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
 }
-.zoomanimlite {
+.zoomExample {
     transition: transform .2s; /* Animation */
-}
-.zoomanim:hover, .zoomanim:active, .zoomanim:focus {
-    transform: scale(1.18); /* (118% zoom) */
-    -ms-transform: scale(1.18); /* IE (internet explorer) */
-    -webkit-transform: scale(1.18); /* Safari */
-    -moz-transform: scale(1.18); /* Firefox */
-}
-.zoomanim {
-    transition: transform .55s; /* Animation */
 }
 
 /* --- collapsibles stuff --- */
@@ -188,56 +163,11 @@ long-words {
 input[type='checkbox'] {
     display: none;
 }
-.input {
-    display: block;
-    font-weight: bold;
-    font-family: 'GauFontPopMagic';
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 6px;
-    color: #000000;
-    background: #ffffff;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: all 0.25s ease-out;
-}
-.lbl-toggle {
-    display: block;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0px;
-    color: #000000;
-    background: #ffffff;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: all 0.25s ease-out;
-}
-.lbl-toggle:hover {
-    color: #003dff;
-}
-.lbl-toggle::beforeg {
-    content: ' ';
-    display: inline-block;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid currentColor;
-    vertical-align: middle;
-    margin-right: .7rem;
-    transform: translateY(-2px);
-    transition: transform .1s ease-out;
-}
-.toggle:checked + .lbl-toggle::clicked + .collapsible-content {
-    transform: rotate(90deg) translateX(-3px);
-    max-height: 100vh;
-}
 .collapsible-content {
     max-height: 56px;
     overflow: hidden;
     transition: max-height .1s ease-in-out;
-    border-radius: 12px;
+    border-radius: 2px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     -moz-backdrop-filter: blur(16px);
@@ -245,15 +175,9 @@ input[type='checkbox'] {
 .toggle:checked + .lbl-toggle + .collapsible-content {
     max-height: 100vh;
 }
-.toggle:checked + .lbl-toggle {
-    border-radius: 12px;
-}
 .collapsible-content .content-inner {
-    background: rgba(255, 255, 255, 0.25);
-    border-bottom: 0px solid rgba(250, 224, 66, .45);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
     padding: 2px 16px 10px;
 }
 
@@ -292,10 +216,9 @@ input[type='checkbox'] {
     margin-bottom: -5px;
 }
 .thumb span img:hover, .thumb span img:active, .thumb span img:focus {
-    transform: scale(1.05); /* (105% zoom) */
-    -ms-transform: scale(1.05); /* IE (lol) */
-    -webkit-transform: scale(1.05); /* Safari */
-    -moz-transform: scale(1.05); /* Firefox */
+    transform: scale(1.05); /* 105% zoom */
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
 }
 
 /* --- CAROUSEL HERE --- */
@@ -332,10 +255,9 @@ input[type='checkbox'] {
     margin-bottom: -5px;
 }
 .carousel-item img:hover, .carousel-item img:active, .carousel-item img:focus {
-    transform: scale(1.05); /* (105% zoom) */
-    -ms-transform: scale(1.05); /* IE (lol) */
-    -webkit-transform: scale(1.05); /* Safari */
-    -moz-transform: scale(1.05); /* Firefox */
+    transform: scale(1.05); /* 105% zoom */
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
 }
 .carousel-item img {
     transition: transform .2s; /* Animation */
@@ -363,7 +285,7 @@ input[type='checkbox'] {
     margin-right: 30px;
 }
 
-/*Select every element*/
+/* Select every element */
 [id^="item"] {
     display: none;
 }

@@ -18,7 +18,7 @@
     <!-- favicons -->
     <style>
       body {
-        background-image: url("/special-backgrounds/art_bg.png");
+        background-image: url("/site-bg/art_bg.png");
       }
       img {
         display: flex;
@@ -28,10 +28,10 @@
         width: 100%;
         max-width: 300px;
         max-height: 300px;
-        object-fit: cover; /* Do not scale the image */
-        border-radius: 4px;
+        object-fit: cover;
+        border-radius: 2px;
         height: cover;
-        object-position: 50% 15%; /* Center the image within the element */
+        object-position: 50% 15%;
         transition: transform .2s; /* Animation */
       }
       .myDiv {
@@ -46,187 +46,165 @@
         margin: 10px;
       }
       .myDiv img:hover, .myDiv img:active, .myDiv img:focus {
-        transform: scale(1.05); /* (105% zoom) */
-        -ms-transform: scale(1.05); /* IE (lol) */
-        -webkit-transform: scale(1.05); /* Safari */
-        -moz-transform: scale(1.05); /* Firefox */
+        transform: scale(1.05); /* 105% zoom */
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
       }
-      art {
+      .container {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
       }
-      .content {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      main {
-        flex: 1;
-      }
     </style>
   </head>
   <body>
     <center>
-    <br>
-    <p><a href="/index.html" style="text-decoration: underline; color: #c5d1eb;">< home</p></a>
-      <p style="font-size:30px;transform: scaleY(1.22);font-family: 'GauFontPopMagic';">
-        <b>art</b>
-      </p>
-    <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic';">
-      <a href="https://twitter.com/crexidite/" style="color: white; text-decoration: underline;">art only twitter</a>
-      &nbsp; | &nbsp;
-      <a href="https://kinsazo.newgrounds.com/art" style="color: white; text-decoration: underline;">view on newgrounds</a>
-    </p>
-    <br>
-    <div class="pages">
-      <span style="display: inline-block;">
-        <p><a href="/updates.html">📝 &nbsp;updates</a></p>
-      </span>
-      <span style="display: inline-block;">
-        <p><a href="/tips.html">💡 &nbsp;tips</a></p>
-      </span>
-      <span style="display: inline-block;">
-        <p>🖌️ &nbsp;art</p>
-      </span>
-      <span style="display: inline-block;">
-        <p><a href="/wallpapers.html">🌉 &nbsp;wallpapers</a></p>
-      </span>
-      <span style="display: inline-block;">
-        <p><a href="/music.html">🎹 &nbsp;music</a></p>
-      </span>
-      <span style="display: inline-block;">
-        <p><a href="/coolsites.html">🏆 &nbsp;cool sites</a></p>
-      </span>
-      <span style="display: inline-block;">
-        <p><a href="/downloads.html">📂 &nbsp;downloads</a></p>
-      </span>
-      <span style="display: inline-block;">
-        <p><a href="/bonus.html">🎉 &nbsp;bonus</a></p>
-      </span>
-      <span style="display: inline-block;">
-        <p><a href="/extras.html">🚗 &nbsp;extras</a></p>
-      </span>
-    </div>
-    <br>
-    <p>2021 onwards</p>
-    <p>( click images to see full resolution )</p>
-    <br>
-    <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic';">
-      <!-- left arrow + first page --> <a href="/art/1.html" style="color: #c5d1eb;"><&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="/art/1.html" style="color: #c5d1eb;">1&nbsp;&nbsp;&nbsp;</a>
-      <!-- right arrow + last page --> <span style="color: white;">&nbsp;&nbsp;&nbsp;2</span><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></span>
-    </p>
-    <!-- art begins -->
-    <art>
-      <div class="myDiv">
-        <a href="/art 2021/croix compilation.png"><img src="/art 2021/croix compilation.png"></a><br>
-        <p><b>croix compilation</b><br>
-        <br>1 may 2021</p>
+      <br>
+        <div class="pageTitle">
+          <p style="font-size:30px; font-family: 'GauFontPopMagic'; letter-spacing: -3px; float: left;">
+            <b>Art</b>
+          </p>
+          <p style="font-size:18px; text-align: right; float: right; transform: translateY(12px);">
+            <foo style="opacity: 0.85; font-family: 'GauFontPopMagic'; transform: scaleY(1.22);">kinsazo</foo>
+            <!-- <br>
+            <foo style="font-size: 16px; opacity: 0.65;"><a href="index.html">&lt;- back</a></foo> -->
+          </p>
+        </div>
+        <div class="pages">
+          <span><p><a href="/index.html">🏠 &nbsp;home</a></p></span>
+          <span><p><a href="/posts.html">📝 &nbsp;posts</a></p></span>
+          <span><p><a href="/tips.html">💡 &nbsp;tips</a></p></span>
+          <span style="opacity: 0.65;"><p>🖌️ &nbsp;art</p></span>
+          <!-- <span><p><a href="/wallpapers.html">🌉 &nbsp;wallpapers</a></p></span>  -->
+          <span><p><a href="/music.html">🎹 &nbsp;music</a></p></span>
+          <span><p><a href="/coolsites.html">🏆 &nbsp;cool sites</a></p></span>
+          <span><p><a href="/downloads.html">📂 &nbsp;downloads</a></p></span>
+          <span><p><a href="/general.html">🎉 &nbsp;general</a></p></span>
+          <span><p><a href="/extras.html">🚗 &nbsp;extras</a></p></span>
+        </div>
         <br>
-        <label class="wrap-collapsible">
-        <input id="collapsible" class="toggle" type="checkbox">
-        <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
-          <div class="collapsible-content">
-            <div class="content-inner">
-              <p></p>
-              <center><b>Description</b></center><br>
-              <p>i figured i should do this lol, here an oc sona whatever you would call it since i haven't had one i'd actually use in a really long time
-                <br>this is croix
-                <br>okay so the name i wanted it to be like, crex but not crex and the only thing i could think of is croix, named after la croix but you pronounce the x.
-                <br>if you have any other name ideas please let me know haha
-              </p>
-            </div>
-          </div>
-        </label>
-      </div>
-    <!-- art -->
-      <div class="myDiv">
-        <a href="/art 2021/tankman.png"><img src="/art 2021/tankman.png"></a><br>
-        <p><b>tankman</b><br>
-        <br>3 apr 2021</p>
         <br>
-        <label class="wrap-collapsible">
-        <input id="collapsible" class="toggle" type="checkbox">
-        <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
-          <div class="collapsible-content">
-            <div class="content-inner">
-              <p></p>
-              <center><b>Description</b></center><br>
-              <p>logged back into newgrounds for the first time in a really long time a few weeks back thought i should draw something to celebrate
-                <br><br>
-                <b><a href="https://www.newgrounds.com/art/view/pizzacube/tankman" style="color: white; text-decoration: underline;">obligatory newgrounds mirror</a></b>
-                <br>
-              </p>
-            </div>
-          </div>
-        </label>
-      </div>
-    <!-- art -->
-      <div class="myDiv">
-        <a href="/art 2021/funny-yoshi.jpg"><img src="/art 2021/funny-yoshi.jpg"></a><br>
-        <p><b>funny yoshi</b><br>
-        <br>1 mar 2021</p>
+        <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic';">
+          <a href="https://kinsazo.newgrounds.com/art" style="color: white; text-decoration: underline;">view on newgrounds</a>
+        </p>
+        <p>2021 onwards</p>
         <br>
-        <label class="wrap-collapsible">
-        <input id="collapsible" class="toggle" type="checkbox">
-        <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
-          <div class="collapsible-content">
-            <div class="content-inner">
-              <p></p>
-              <center><b>Description</b></center><br>
-              <p>funny yoshi
-                <br>it's a jpg and i'm sorry for that
-                <br>maybe i'll fix it one day. ...probably not, no. but who knows. everything is full of opportunity
-              </p>
-            </div>
+        <p style="font-size:10px;transform: scaleY(1.82);font-family: 'GauFontPopMagic';">
+          <!-- left arrow + first page --> <a href="/art/1.html" style="color: #c5d1eb;"><&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="/art/1.html" style="color: #c5d1eb;">1&nbsp;&nbsp;&nbsp;</a>
+          <!-- right arrow + last page --> <span style="color: white;">&nbsp;&nbsp;&nbsp;2</span><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></span>
+        </p>
+        <!-- art begins -->
+        <div class="container">
+          <div class="myDiv">
+            <a href="/art/2021/croix compilation.png"><img src="/art/2021/croix compilation.png"></a><br>
+            <p><b>croix compilation</b><br>
+            <br>1 may 2021</p>
+            <br>
+            <label class="wrap-collapsible">
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
+              <div class="collapsible-content">
+                <div class="content-inner">
+                  <p></p>
+                  <center><b>Description</b></center><br>
+                  <p>i figured i should do this lol, here an oc sona whatever you would call it since i haven't had one i'd actually use in a really long time
+                    <br>this is croix
+                    <br>okay so the name i wanted it to be like, crex but not crex and the only thing i could think of is croix, named after la croix but you pronounce the x.
+                    <br>if you have any other name ideas please let me know haha
+                  </p>
+                </div>
+              </div>
+            </label>
           </div>
-        </label>
-      </div>
-    <!-- art -->
-      <div class="myDiv">
-        <a href="/art 2021/kindlefirey.jpg"><img src="/art 2021/thumbnail---kindlefirey.jpg"></a><br>
-        <p><b>kindle firey</b><br>
-        <br>24 feb 2021</p>
-        <br>
-        <label class="wrap-collapsible">
-        <input id="collapsible" class="toggle" type="checkbox">
-        <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
-          <div class="collapsible-content">
-            <div class="content-inner">
-              <p></p>
-              <center><b>Description</b></center><br>
-              <p>the first art on @crexidite twitter so that's cool!
-                <br>and i quote: "i thought maybe not kindle firey he's too simple but then again most of the characters are simple so"
-                <br>side note: i did some weird accidental keyboard shortcut and i somehow typed this in: ≈. what is this
-              </p>
-            </div>
+        <!-- art -->
+          <div class="myDiv">
+            <a href="/art/2021/tankman.png"><img src="/art/2021/tankman.png"></a><br>
+            <p><b>tankman</b><br>
+            <br>3 apr 2021</p>
+            <br>
+            <label class="wrap-collapsible">
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
+              <div class="collapsible-content">
+                <div class="content-inner">
+                  <p></p>
+                  <center><b>Description</b></center><br>
+                  <p>logged back into newgrounds for the first time in a really long time a few weeks back thought i should draw something to celebrate
+                    <br><br>
+                    <b><a href="https://www.newgrounds.com/art/view/pizzacube/tankman" style="color: white; text-decoration: underline;">obligatory newgrounds mirror</a></b>
+                    <br>
+                  </p>
+                </div>
+              </div>
+            </label>
           </div>
-        </label>
-      </div>
-    <!-- art -->
-      <div class="myDiv">
-        <a href="/gbs_character_ring_final.png"><img src="/art 2021/thumbnail---gbs_character_ring_final.png"></a><br>
-        <p><b>gbs character ring</b><br>
-        <br>18 feb 2021</p>
-        <br>
-        <label class="wrap-collapsible">
-        <input id="collapsible" class="toggle" type="checkbox">
-        <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
-          <div class="collapsible-content">
-            <div class="content-inner">
-              <p></p>
-              <center><b>Description</b></center><br>
-              <p>oop well brand new description for this
-                <br>here's a character ring for gbs i think it's pretty cool
-                <br>i started it in... 2019, i think. or not. (or 2018.) 
-                <br>then i didn't touch it for at least a year and a half for sure and picked it up in february 2021 and just became Super dedicated to finishing it and well, here we are now!
-                <br>enjoy it, on gbs.html. and, well, on here too, of course!
-              </p>
-            </div>
+        <!-- art -->
+          <div class="myDiv">
+            <a href="/art/2021/funny-yoshi.jpg"><img src="/art/2021/funny-yoshi.jpg"></a><br>
+            <p><b>funny yoshi</b><br>
+            <br>1 mar 2021</p>
+            <br>
+            <label class="wrap-collapsible">
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
+              <div class="collapsible-content">
+                <div class="content-inner">
+                  <p></p>
+                  <center><b>Description</b></center><br>
+                  <p>funny yoshi
+                    <br>it's a jpg and i'm sorry for that
+                    <br>maybe i'll fix it one day. ...probably not, no. but who knows. everything is full of opportunity
+                  </p>
+                </div>
+              </div>
+            </label>
           </div>
-        </label>
-      </div>
+        <!-- art -->
+          <div class="myDiv">
+            <a href="/art/2021/kindlefirey.jpg"><img src="/art/2021/thumbnail---kindlefirey.jpg"></a><br>
+            <p><b>kindle firey</b><br>
+            <br>24 feb 2021</p>
+            <br>
+            <label class="wrap-collapsible">
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
+              <div class="collapsible-content">
+                <div class="content-inner">
+                  <p></p>
+                  <center><b>Description</b></center><br>
+                  <p>the first art on @crexidite twitter so that's cool!
+                    <br>and i quote: "i thought maybe not kindle firey he's too simple but then again most of the characters are simple so"
+                    <br>side note: i did some weird accidental keyboard shortcut and i somehow typed this in: ≈. what is this
+                  </p>
+                </div>
+              </div>
+            </label>
+          </div>
+        <!-- art -->
+          <div class="myDiv">
+            <a href="/gbs_character_ring_final.png"><img src="/art/2021/thumbnail---gbs_character_ring_final.png"></a><br>
+            <p><b>gbs character ring</b><br>
+            <br>18 feb 2021</p>
+            <br>
+            <label class="wrap-collapsible">
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label class="lbl-toggle" type="checkbox" for="collapsible"></label>
+              <div class="collapsible-content">
+                <div class="content-inner">
+                  <p></p>
+                  <center><b>Description</b></center><br>
+                  <p>oop well brand new description for this
+                    <br>here's a character ring for gbs i think it's pretty cool
+                    <br>i started it in... 2019, i think. or not. (or 2018.) 
+                    <br>then i didn't touch it for at least a year and a half for sure and picked it up in february 2021 and just became Super dedicated to finishing it and well, here we are now!
+                    <br>enjoy it, on /gbs/gbs.html. and, well, on here too, of course!
+                  </p>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
     <!-- art endpoint -->
     <br><br><br><br><br><br>
     </center>
