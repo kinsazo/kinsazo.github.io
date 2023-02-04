@@ -16,109 +16,63 @@
     <meta name="theme-color" content="#ffffff">
     <!-- favicons -->
     <style>
-    a {
-      color: white;
-      text-decoration: none;
-      animation: dehover-anim 0.15s ease-out;
-      animation-iteration-count: 1;
-      animation-fill-mode:forwards;
-    }
-    @keyframes dehover-anim {
-        0%   { text-shadow: 0px 0.75px 5px rgba(255,255,255, 0.75); }
-        100%   { text-shadow: 0px -2px 5px rgba(255,255,255, 0); }
+      /* code on this page and some others is not good at all and very outdated will get to it soon */
+      body {
+        background-image: url("/site-bg/gbs_bg.png");
       }
-    a:visited {
-      color: white;
-      text-decoration: none;
-    }
-    a:hover, a:active, a:focus {
-      color: white;
-      text-decoration: none;
-      animation: hover-anim 0.04s ease-in;
-      animation-iteration-count: 1;
-      animation-fill-mode:forwards;
-    }
-    img {
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      width: 100%;
-      max-width: 450px;
-      max-height: 450px;
-      object-fit: cover;
-      height: cover;
-      object-position: 50% 15%;
-    }
-    .myDiv {
-      padding: 0;
-      max-width: 350px;
-      float: center;
-      text-align: left;
-      justify-content: center;
-      padding: 0;
-      width: 100%;
-      max-width: 450px;
-      height: auto;
-    }
-    img {
-      display: flex;
-      justify-content: center;
-      float:center;
-      padding: 0;
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-    }
-    art {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      flex: 300px;
-      justify-content: center;
-    }
-    arty {
-      padding: 10px 10px 64px;
-      margin: 10px;
-    }
-    body {
-      background-image: url("/site-bg/gbs_bg.png");
-    }
-    .gbs-backgrounds {
-      padding: 0;
-      max-width: 350px;
-      float: center;
-      text-align: left;
-      justify-content: center;
-      padding: 0;
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-    }
-    @font-face {
-        font-family: 'GauFontPopMagic';
-        src:url('GauFontPopMagic.ttf.woff') format('woff'),
-            url('GauFontPopMagic.ttf.svg#GauFontPopMagic') format('svg'),
-            url('GauFontPopMagic.ttf.eot'),
-            url('GauFontPopMagic.ttf.eot?#iefix') format('embedded-opentype'); 
-        font-weight: normal;
-        font-style: normal;
+      img {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        max-width: 450px;
+        max-height: 450px;
+        object-fit: cover;
+        height: cover;
+        object-position: 50% 15%;
       }
-      .adjust-line-height {
-        line-height: 4px;
+      .myDiv {
+        padding: 0;
+        max-width: 350px;
+        float: center;
+        text-align: left;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
       }
-      .adjust-line-height-big {
-        line-height: 16px;
+      img {
+        display: flex;
+        justify-content: center;
+        float:center;
+        padding: 0;
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
       }
-      .adjust-line-height-big p {
-        animation: marquee4 1s linear infinite;
-        animation-delay: 0s;
+      art {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex: 300px;
+        justify-content: center;
       }
-      @keyframes marquee4 {
-        0%   { transform:translateX(-3px); }
-        100%   { transform:translateX(-3px); }
+      arty {
+        padding: 10px 10px 64px;
+        margin: 10px;
       }
-          
-    }
+      .gbs-backgrounds {
+        padding: 0;
+        max-width: 350px;
+        float: center;
+        text-align: left;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+      }
     </style>
   </head>
   <body>
@@ -140,8 +94,8 @@
     <arty>
 <!-- art begins (two) -->
      <div class="myDiv">
-      <a href="/gbs-assets/backgrounds/godela_plains.png">
-        <img src="/gbs-assets/backgrounds/godela_plains.png">
+      <a href="/gbs/sfgb-assets/backgrounds/godela_plains.png">
+        <img src="/gbs/sfgb-assets/backgrounds/godela_plains.png">
       </a>
       <p>
         <b>Godela Plains</b>
@@ -151,8 +105,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/gbs-assets/backgrounds/seroni_city.png">
-        <img src="/gbs-assets/backgrounds/seroni_city.png">
+      <a href="/gbs/sfgb-assets/backgrounds/seroni_city.png">
+        <img src="/gbs/sfgb-assets/backgrounds/seroni_city.png">
       </a>
       <p>
         <b>Seroni City</b>
@@ -162,8 +116,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/gbs-assets/backgrounds/blackcubes_lair.png">
-        <img src="/gbs-assets/backgrounds/blackcubes_lair.png">
+      <a href="/gbs/sfgb-assets/backgrounds/blackcubes_lair.png">
+        <img src="/gbs/sfgb-assets/backgrounds/blackcubes_lair.png">
       </a>
       <p>
         <b>blackcube's Lair (Cave)</b>
@@ -173,8 +127,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/gbs-assets/backgrounds/bolasi_forest.png">
-        <img src="/gbs-assets/backgrounds/bolasi_forest.png">
+      <a href="/gbs/sfgb-assets/backgrounds/bolasi_forest.png">
+        <img src="/gbs/sfgb-assets/backgrounds/bolasi_forest.png">
       </a>
       <p>
         <b>Bolasi Forest</b>
@@ -184,8 +138,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/gbs-assets/backgrounds/prison_inside.png">
-        <img src="/gbs-assets/backgrounds/prison_inside.png">
+      <a href="/gbs/sfgb-assets/backgrounds/prison_inside.png">
+        <img src="/gbs/sfgb-assets/backgrounds/prison_inside.png">
       </a>
       <p>
         <b>Prison (Inside)</b>
@@ -195,8 +149,8 @@
 <!-- art -->
     <arty>
      <div class="myDiv">
-      <a href="/gbs-assets/backgrounds/prison_outside.png">
-        <img src="/gbs-assets/backgrounds/prison_outside.png">
+      <a href="/gbs/sfgb-assets/backgrounds/prison_outside.png">
+        <img src="/gbs/sfgb-assets/backgrounds/prison_outside.png">
       </a>
       <p>
         <b>Prison (Outside)</b>
@@ -218,77 +172,77 @@
     <p style="font-size:12px;transform: scaleY(1.82);font-family: 'GauFontPopMagic', 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
       bodies
     </p>
-        <a href="/gbs-assets/bodies/Backpack.png"><p>Backpack</p></a>
-        <a href="/gbs-assets/bodies/Backpack Front.png"><p>Backpack Front</p></a>
-        <a href="/gbs-assets/bodies/blackcube.png"><p>blackcube</p></a>
-        <a href="/gbs-assets/bodies/blackcube front.png"><p>blackcube Front</p></a>
-        <a href="/gbs-assets/bodies/bluecube.png"><p>bluecube</p></a>
-        <a href="/gbs-assets/bodies/bluecube front.png"><p>bluecube Front</p></a>
-        <a href="/gbs-assets/bodies/Copper.png"><p>Copper</p></a>
-        <a href="/gbs-assets/bodies/Copper Front.png"><p>Copper Front</p></a>
-        <a href="/gbs-assets/bodies/cyancube.png"><p>cyancube</p></a>
-        <a href="/gbs-assets/bodies/cyancube front.png"><p>cyancube Front</p></a>
-        <a href="/gbs-assets/bodies/Doritos.png"><p>Doritos</p></a>
-        <a href="/gbs-assets/bodies/Gold Bar.png"><p>Gold Bar</p></a>
-        <a href="/gbs-assets/bodies/Gold Bar Front.png"><p>Gold Bar Front</p></a>
-        <a href="/gbs-assets/bodies/greencube.png"><p>greencube</p></a>
-        <a href="/gbs-assets/bodies/greencube front.png"><p>greencube Front</p></a>
-        <a href="/gbs-assets/bodies/greycube.png"><p>greycube</p></a>
-        <a href="/gbs-assets/bodies/greycube front.png"><p>greycube Front</p></a>
-        <a href="/gbs-assets/bodies/Hill.png"><p>Hill</p></a>
-        <a href="/gbs-assets/bodies/labocube joycons.png"><p>labocube Joy-Cons</p></a>
-        <a href="/gbs-assets/bodies/labocube.png"><p>labocube No Joy-Cons</p></a>
-        <a href="/gbs-assets/bodies/labocube joycons front.png"><p>labocube Joy-Cons Front</p></a>
-        <a href="/gbs-assets/bodies/labocube front.png"><p>labocube No Joy-Cons Front</p></a>
-        <a href="/gbs-assets/bodies/limecube.png"><p>limecube</p></a>
-        <a href="/gbs-assets/bodies/limecube front.png"><p>limecube Front</p></a>
-        <a href="/gbs-assets/bodies/metalcube.png"><p>metalcube</p></a>
-        <a href="/gbs-assets/bodies/metalcube front.png"><p>metalcube Front</p></a>
-        <a href="/gbs-assets/bodies/monstercube.png"><p>monstercube</p></a>
-        <a href="/gbs-assets/bodies/monstercube front.png"><p>monstercube Front</p></a>
-        <a href="/gbs-assets/bodies/orangecube.png"><p>orangecube</p></a>
-        <a href="/gbs-assets/bodies/orangecube front.png"><p>orangecube Front</p></a>
-        <a href="/gbs-assets/bodies/Portal.png"><p>Portal</p></a>
-        <a href="/gbs-assets/bodies/redcube.png"><p>redcube</p></a>
-        <a href="/gbs-assets/bodies/redcube front.png"><p>redcube Front</p></a>
-        <a href="/gbs-assets/bodies/shadowcube.png"><p>shadowcube</p></a>
-        <a href="/gbs-assets/bodies/shadowcube front.png"><p>shadowcube front</p></a>
-        <a href="/gbs-assets/bodies/Sonic Ring.png"><p>Sonic Ring</p></a>
-        <a href="/gbs-assets/bodies/yellowcube.png"><p>yellowcube</p></a>
-        <a href="/gbs-assets/bodies/yellowcube front.png"><p>yellowcube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Backpack.png"><p>Backpack</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Backpack Front.png"><p>Backpack Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/blackcube.png"><p>blackcube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/blackcube front.png"><p>blackcube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/bluecube.png"><p>bluecube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/bluecube front.png"><p>bluecube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Copper.png"><p>Copper</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Copper Front.png"><p>Copper Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/cyancube.png"><p>cyancube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/cyancube front.png"><p>cyancube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Doritos.png"><p>Doritos</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Gold Bar.png"><p>Gold Bar</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Gold Bar Front.png"><p>Gold Bar Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/greencube.png"><p>greencube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/greencube front.png"><p>greencube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/greycube.png"><p>greycube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/greycube front.png"><p>greycube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Hill.png"><p>Hill</p></a>
+        <a href="/gbs/sfgb-assets/bodies/labocube joycons.png"><p>labocube Joy-Cons</p></a>
+        <a href="/gbs/sfgb-assets/bodies/labocube.png"><p>labocube No Joy-Cons</p></a>
+        <a href="/gbs/sfgb-assets/bodies/labocube joycons front.png"><p>labocube Joy-Cons Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/labocube front.png"><p>labocube No Joy-Cons Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/limecube.png"><p>limecube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/limecube front.png"><p>limecube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/metalcube.png"><p>metalcube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/metalcube front.png"><p>metalcube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/monstercube.png"><p>monstercube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/monstercube front.png"><p>monstercube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/orangecube.png"><p>orangecube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/orangecube front.png"><p>orangecube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Portal.png"><p>Portal</p></a>
+        <a href="/gbs/sfgb-assets/bodies/redcube.png"><p>redcube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/redcube front.png"><p>redcube Front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/shadowcube.png"><p>shadowcube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/shadowcube front.png"><p>shadowcube front</p></a>
+        <a href="/gbs/sfgb-assets/bodies/Sonic Ring.png"><p>Sonic Ring</p></a>
+        <a href="/gbs/sfgb-assets/bodies/yellowcube.png"><p>yellowcube</p></a>
+        <a href="/gbs/sfgb-assets/bodies/yellowcube front.png"><p>yellowcube Front</p></a>
       <br><br>
       
     <p style="font-size:12px;transform: scaleY(1.82);font-family: 'GauFontPopMagic', 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
       poses
     </p>
-        <a href="/gbs-assets/poses/Backpack.png"><p>Backpack</p></a>
-        <a href="/gbs-assets/poses/blackcube.png"><p>blackcube</p></a>
-        <a href="/gbs-assets/poses/Copper.png"><p>Copper</p></a>
-        <a href="/gbs-assets/poses/cyancube.png"><p>cyancube</p></a>
-        <a href="/gbs-assets/poses/Doritos.png"><p>Doritos</p></a>
-        <a href="/gbs-assets/poses/Gold Bar.png"><p>Gold Bar</p></a>
-        <a href="/gbs-assets/poses/greencube.png"><p>greencube</p></a>
-        <a href="/gbs-assets/poses/greycube.png"><p>greycube</p></a>
-        <a href="/gbs-assets/poses/labocube.png"><p>labocube</p></a>
-        <a href="/gbs-assets/poses/metalcube.png"><p>metalcube</p></a>
-        <a href="/gbs-assets/poses/monstercube.png"><p>monstercube</p></a>
-        <a href="/gbs-assets/poses/Portal.png"><p>Portal</p></a>
-        <a href="/gbs-assets/poses/redcube.png"><p>redcube</p></a>
-        <a href="/gbs-assets/poses/shadowcube.png"><p>shadowcube</p></a>
-        <a href="/gbs-assets/poses/Sonic Ring.png"><p>Sonic Ring</p></a>
+        <a href="/gbs/sfgb-assets/poses/Backpack.png"><p>Backpack</p></a>
+        <a href="/gbs/sfgb-assets/poses/blackcube.png"><p>blackcube</p></a>
+        <a href="/gbs/sfgb-assets/poses/Copper.png"><p>Copper</p></a>
+        <a href="/gbs/sfgb-assets/poses/cyancube.png"><p>cyancube</p></a>
+        <a href="/gbs/sfgb-assets/poses/Doritos.png"><p>Doritos</p></a>
+        <a href="/gbs/sfgb-assets/poses/Gold Bar.png"><p>Gold Bar</p></a>
+        <a href="/gbs/sfgb-assets/poses/greencube.png"><p>greencube</p></a>
+        <a href="/gbs/sfgb-assets/poses/greycube.png"><p>greycube</p></a>
+        <a href="/gbs/sfgb-assets/poses/labocube.png"><p>labocube</p></a>
+        <a href="/gbs/sfgb-assets/poses/metalcube.png"><p>metalcube</p></a>
+        <a href="/gbs/sfgb-assets/poses/monstercube.png"><p>monstercube</p></a>
+        <a href="/gbs/sfgb-assets/poses/Portal.png"><p>Portal</p></a>
+        <a href="/gbs/sfgb-assets/poses/redcube.png"><p>redcube</p></a>
+        <a href="/gbs/sfgb-assets/poses/shadowcube.png"><p>shadowcube</p></a>
+        <a href="/gbs/sfgb-assets/poses/Sonic Ring.png"><p>Sonic Ring</p></a>
       <br><br>
     
     <p style="font-size:12px;transform: scaleY(1.82);font-family: 'GauFontPopMagic', 'Neue Helvetica', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
       props
     </p>
-        <a href="/gbs-assets/props/markerclosed.svg"><p>Marker Closed (.svg)</p></a>
-        <a href="/gbs-assets/props/markeropen.svg"><p>Marker Open (.svg)</p></a>
-        <a href="/gbs-assets/props/monstercube hat.png"><p>Hypothetical monstercube Top Hat (.png)</p></a>
-        <a href="/gbs-assets/props/monstercube hat.svg"><p>Hypothetical monstercube Top Hat (.svg)</p></a>
-        <a href="/gbs-assets/props/monstercube wing.png"><p>monstercube wing (.png)</p></a>
-        <a href="/gbs-assets/props/Security Hat.PNG"><p>Security Hat (.png)</p></a>
-        <a href="/gbs-assets/props/Sign.png"><p>Sign (.png)</p></a>
-        <a href="/gbs-assets/props/Sign.svg"><p>Sign (.svg)</p></a>
+        <a href="/gbs/sfgb-assets/props/markerclosed.svg"><p>Marker Closed (.svg)</p></a>
+        <a href="/gbs/sfgb-assets/props/markeropen.svg"><p>Marker Open (.svg)</p></a>
+        <a href="/gbs/sfgb-assets/props/monstercube hat.png"><p>Hypothetical monstercube Top Hat (.png)</p></a>
+        <a href="/gbs/sfgb-assets/props/monstercube hat.svg"><p>Hypothetical monstercube Top Hat (.svg)</p></a>
+        <a href="/gbs/sfgb-assets/props/monstercube wing.png"><p>monstercube wing (.png)</p></a>
+        <a href="/gbs/sfgb-assets/props/Security Hat.PNG"><p>Security Hat (.png)</p></a>
+        <a href="/gbs/sfgb-assets/props/Sign.png"><p>Sign (.png)</p></a>
+        <a href="/gbs/sfgb-assets/props/Sign.svg"><p>Sign (.svg)</p></a>
     <br>
     <br>
     <br>
