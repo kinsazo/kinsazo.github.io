@@ -1,0 +1,349 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Home - kinsazo</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favicons -->
+    <style>
+      body {
+        background-image: url("background2a.png");
+      }
+      div {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;
+      }
+      /* --- SECTIONS --- */
+      .showcase img {
+        display: flex;
+        justify-content: center;
+        float: center;
+        padding: 0;
+        max-width: 225px;
+        height: auto;
+        transition: transform .2s;
+      }
+      .showcase img:hover, .showcase img:active, .showcase img:focus {
+        transform: scale(1.05); /* 105% zoom */
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+      }
+      .showcase-img {
+        display: flex;
+        justify-content: center;
+        float: center;
+      }
+      .projects {
+        left: 0;
+        background: repeating-linear-gradient(45deg, rgba(25,40,55,0.35) 15%, rgba(25,40,0,0.35) 15%, rgba(25,40,55,0.35) 10%, rgba(70,85,100,0.35) 45%, rgba(70,85,100,0.35) 55%, rgba(25,40,55,0.35) 70%);
+        background-attachment: fixed;
+        background-clip: padding-box;
+        border-radius: 6px;
+        box-shadow: inset 0 0 1.65px 1px rgba(246,246,247,0.14), inset 0 0 4px 2.25px rgba(0,0,0,0.02), 0 3px 9px rgba(0,0,0,0.26), inset 0 1.5px 6.35px rgba(246,246,247,0.16);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        -moz-backdrop-filter: blur(16px);
+        border: 1.5px solid rgba(2,3,4,0.26);
+        max-width: 478px;
+        height: 240px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 14px;
+        margin: 14px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        background-color: rgba(52,42,64,0.12);
+      }
+      .projects:target {
+        box-shadow: inset 0 1px 0.35px 2px rgba(255,255,255,0.22) inset 0 3px 0.35px 2px rgba(0,0,0,0.22) 0 6px 20px rgba(0,0,0,0.35);
+        z-index: 1;
+      }
+      .projects img {
+        transition: transform .2s;
+        margin-top: 8px;
+        max-width: 100%;
+        min-height: 80px;
+        object-fit: cover;
+        object-position: 0% 50%;
+      }
+      .projects img:hover, .projects img:active, .projects img:focus {
+        transform: scale(1.05); /* 105% zoom */
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+      }
+      .myDiv {
+        margin-top: 16px;
+        max-width: 225px;
+        float: center;
+        text-align: center;
+        border-radius: 6px;
+      }
+      .leftDiv {
+        padding: 2px 0px 28px 0px;
+        margin: 2 9 0 9;
+        float: left;
+        max-width: 225px;
+        text-align: center;
+      }
+      .latest {
+        max-width: 500px;
+        white-space: nowrap;
+        overflow: hidden;
+        animation-delay: 0s;
+      }
+      .latest p {
+        display: inline-block;
+        animation: marquee1 12s linear infinite;
+        animation-delay: 0s;
+        padding-left: 100%;
+      }
+      @keyframes marquee1 {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+      }
+      p:hover, p:active, p:focus {
+        animation-play-state: paused;
+      }
+      .allDiv {
+        max-width: 1600px;
+        display: flex;
+        flex-wrap: wrap;
+        float: center;
+        overflow: hidden;
+        justify-content: center;
+        margin-top: -4px;
+      }
+      @media screen and (max-width: 500px) {
+        .flex-direction {
+           flex-direction:column;
+        }
+      }
+      /* --- ACCOUNTS --- */
+      .socialsBox {
+        display: grid;
+        padding: 0px 0px 0px 24px;
+      }
+      .socialsBox span {
+        margin-right: 24px;
+        padding: 12px 0px 12px 0px;
+        display: inline-block;
+        line-height: 20px;
+      }
+      .socialsBox span img {
+        display: block;
+        float: left;
+        justify-content: center;
+        border-radius: 4px;
+      }
+      .socialsBox span p {
+        display: block;
+        float: left;
+        margin: 0px 0px 0px 12px;
+        text-align: left;
+      }
+      /* --- TITLES --- */
+      .header {
+        display: flex;
+        max-width: 650px;
+        width: 80%;
+        align-items: center;
+        padding: 0px 20px 20px 20px;
+        line-height: 22px;
+        animation: float 6s ease-in-out infinite;
+        animation-delay: 0s;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+      .hPage {
+        font-size: 30px;
+        font-family: 'GauFontPopMagic';
+        text-align: left;
+        letter-spacing: -3px;
+      }
+      .hComment {
+        font-size: 18px;
+        font-family: 'GauFontPopMagic';
+        text-align: right;
+        opacity: 0.85;
+        transform: scaleY(1.22);
+      }
+      .windowTitle {
+        font-size: 9px;
+        font-family: 'GauFontPopMagic';
+        transform: scaleY(1.72);
+        opacity: 0.95;
+        letter-spacing: -0.3px;
+        padding: 3px 12px;
+        text-align: left;
+      }
+      .linkTitle {
+        font-size: 14px;
+        font-family: 'GauFontPopMagic';
+        transform: scaleY(1.5) translateY(-1px);
+      }
+      .heading {
+        font-size: 10px;
+        font-family: 'GauFontPopMagic';
+        transform: scaleY(1.82);
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <br>
+        <div class="header">
+          <p class="hPage"><b>Home</b></p><p class="hComment">kinsazo</p>
+        </div>
+        <div class="pages">
+          <span style="opacity: 0.65;"><p>🏠 &nbsp;home</p></span>
+          <span><p><a href="/posts">📝 &nbsp;posts</a></p></span>
+          <span><p><a href="/tips">💡 &nbsp;tips</a></p></span>
+          <span><p><a href="/art/1">🖌️ &nbsp;art</a></p></span>
+          <!-- <span><p><a href="/wallpapers.html">🌉 &nbsp;wallpapers</a></p></span>  -->
+          <span><p><a href="/music.html">🎹 &nbsp;music</a></p></span>
+          <span><p><a href="/coolsites.html">🏆 &nbsp;cool sites</a></p></span>
+          <span><p><a href="/downloads.html">📂 &nbsp;downloads</a></p></span>
+          <span><p><a href="/general">🎉 &nbsp;general</a></p></span>
+          <span><p><a href="/extras.html">🚗 &nbsp;extras</a></p></span>
+        </div>
+        <br><br>
+        <div class="latest">
+          <a href="/posts/2022-02-13-one-year-anniversary.html">
+            <p>📝 LATEST POST: 13/2/22 - <u>"ONE YEAR ANNIVERSARY!!!"</u></p>
+          </a>
+        </div>
+        <br>
+        <div class="projects">
+          <p class="heading"><b>- &nbsp; projects &nbsp; -</b></p>
+          <a href="/gbs/gbs.html"><img src="/banners/goldbarsseries4x.png"></a>
+          <br><a href="/gbs/gbs.html"><img src="/banners/goldbarsseries4x.png"></a>
+          <br><a href="/gbs/gbs.html"><img src="/banners/goldbarsseries4x.png"></a>
+          <br><a href="/gbs/gbs.html"><img src="/banners/goldbarsseries4x.png"></a>
+          <br><a href="/gbs/gbs.html"><img src="/banners/goldbarsseries4x.png"></a>
+          <br><a href="/gbs/gbs.html"><img src="/banners/goldbarsseries4x.png"></a>
+          <br><a href="/gbs/gbs.html"><img src="/banners/goldbarsseries4x.png"></a>
+        </div>
+        <div class="allDiv">
+          <div class="leftDiv">
+            <div class="myDiv">
+              <div class="windowframe" style="max-width: 225px; height: 244px; background-color: rgba(142,128,205,0.34);">
+                <p class="windowTitle">welcome!</p>
+                <div class="textbox" style="background: rgba(251,250,252,0.78); font-size:15px; color: rgba(42,41,68,0.88); display: flex; display: -webkit-flex;">
+                  <p style="margin: auto; padding-left: 24px; padding-right: 24px;">
+                    hey thanks for visiting my website
+                    <br><br>lots of this is also on other sites but i made this as an attempt to put it all together
+                    <br><br>enjoy! (hopefully!)
+                  </p>
+                </div>
+              </div>
+              <br>
+              <!--  ABOUT ME -->
+              <div class="windowframe" style="max-width: 225px; height: 338px; background-color: rgba(83, 44, 55, 0.0)">
+                <p class="windowTitle">about me</p>
+                <div class="textbox" style="background: rgba(0,0,0,0.78); color: white; padding: 28px 24px; border: 2px dashed rgba(215,215,238,0.54); font-size:15px;">
+                  <center>
+                    <a href="/pfp/NAXICONNOV2022VERSION3.png"><img src="/pfp/NAXICONNOV2022VERSION3.png" width="48" height="48" style="border-radius: 2px;"></a>
+                    <p>
+                      workin on this
+                    </p>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br><br>
+          <!-- showcase -->
+          <div class="showcase">
+            <br>
+            <div class="windowframe" style="max-width: 225px; margin-left: 9px; margin-right: 9px; float: left; overflow-x: hidden; overflow-y: auto; height: 576px; padding: 8px 18px 20px 18px; -ms-overflow-style: none; scrollbar-width: none; background-color: rgba(22,21,62,0.82);">
+              <div class="textbox" style="background: rgba(0,1,2,0.24); top: 6px; color: white; padding: 8px 18px 11px 18px;">
+              <p style="font-size:10px;transform: scaleY(1.65);font-family: 'GauFontPopMagic'; margin-top:-6px;">
+                <b><br>-----------<br>showcase<br>
+              </p>
+              <p style="font-size:10px;transform: scaleY(1.65);font-family: 'GauFontPopMagic'; margin-bottom:-5px;">
+                <b>-----------</b></b>
+              </p>
+              <a href="/tips/googletranspng.html" style="text-decoration: underline;"><p>how to always get real transparent pngs on google</p></a>
+              <div class="showcase-img">
+                <a href="/art/2022/NAXBANNER3.png"><img src="/art/2022/THUMBNAIL---NAXBANNER3.png"></a>
+              </div>
+              <br>
+              <div class="showcase-img">
+                <a href="/art/2022/picosketch4picoday2022.png"><img src="/art/2022/THUMBNAIL---picosketch4picoday2022.png"></a>
+              </div>
+              <br>
+              <div class="showcase-img">
+                <a href="/art/2022/gexesis.png"><img src="/art/2022/thumbnail---gexesis.png"></a>
+              </div>
+              <br>
+              <div class="showcase-img">
+                <a href="/art/2021/tankman.png"><img src="/art/2021/tankman.png"></a>
+              </div> <!-- showcase-img -->
+            </div> <!-- windowframe -->
+          </div> <!-- showcase -->
+        </div> <!-- allDiv -->
+      </div> <!-- something -->
+      <br><br><br>
+      <p class="heading">
+        <b>accounts / contact</b>
+      </p>
+      <div class="socialsBox">
+        <a href="https://twitter.com/kinsazo">
+          <span>
+            <img src="/social-icons/tweetr.png" alt="🕊️" width="20" height="20">
+            <p class="linkTitle">Twitter</p><p>kinsazo</p>
+          </span>
+        </a>
+        <a href="https://cohost.org/kinsazo">
+          <span>
+            <img src="/social-icons/cohostthing200.png" alt="🥚" width="20" height="20">
+            <p class="linkTitle">cohost</p><p>kinsazo</p>
+          </span>
+        </a>
+        <a href="https://kinsazo.newgrounds.com">
+          <span>
+            <img src="/social-icons/newgrounded.png" alt="🌐" width="20" height="20">
+            <p class="linkTitle">Newgrounds</p><p>Kinsazo</p>
+          </span>
+        </a>
+        <a href="https://www.youtube.com/@Kinsazo">
+          <span>
+            <img src="/social-icons/yoghurt.png" alt="📺" width="20" height="20">
+            <p class="linkTitle">YouTube</p><p>Kinsazo</p>
+          </span>
+        </a>
+        <a href="https://open.spotify.com/user/3uznai7oorqhz1967o2r9vssa">
+          <span>
+            <img src="/social-icons/spottyfi.png" alt="🎧" width="20" height="20">
+            <p class="linkTitle">Spotify</p><p>Choceos</p>
+          </span>
+        </a>
+      </div>
+      <br><br><br>
+      <footer>
+        <p style="font-size:12px;">started 13 feb 2021</p>
+        <p style="font-size:12px;">last updated 21 april 2023</p>
+        <p style="font-size:12px;">version 4.0 beta (aurora)</p>
+      </footer>
+      </div>
+    </center>
+  </body>
+</html>
