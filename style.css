@@ -27,21 +27,57 @@ body {
     margin: 0px 24px 6px 24px;
     text-align: center;
 }
-/* --- floating title stuff --- */
+/* --- floating animation --- */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-3px); }
     100% { transform: translateY(0px); }
 }
-.pageTitle {
-    padding: 0px 20px 20px 20px;
+/* --- TITLES --- */
+.header {
+    display: flex;
     max-width: 650px;
-    float: center;
-    text-align: left;
+    width: 80%;
+    align-items: center;
+    padding: 0px 20px 20px 20px;
     line-height: 22px;
-    height: 80px;
     animation: float 6s ease-in-out infinite;
     animation-delay: 0s;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.hPage {
+    font-size: 30px;
+    font-family: 'GauFontPopMagic';
+    text-align: left;
+    letter-spacing: -3px;
+}
+.hComment {
+    font-size: 18px;
+    font-family: 'GauFontPopMagic';
+    text-align: right;
+    opacity: 0.85;
+    transform: scaleY(1.22);
+}
+.windowTitle {
+    font-size: 9px;
+    font-family: 'GauFontPopMagic';
+    transform: scaleY(1.72);
+    opacity: 0.95;
+    letter-spacing: -0.3px;
+    padding: 3px 12px;
+    text-align: left;
+}
+.linkTitle {
+    font-size: 14px;
+    font-family: 'GauFontPopMagic';
+    transform: scaleY(1.5) translateY(-1px);
+}
+.heading {
+    font-size: 10px;
+    font-family: 'GauFontPopMagic';
+    transform: scaleY(1.82);
 }
 
 /* --- POP MAGIC --- */
