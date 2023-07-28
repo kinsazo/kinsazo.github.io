@@ -74,7 +74,7 @@ body {
 .linkTitle {
     font-size: 14px;
     font-family: 'GauFontPopMagic';
-    transform: scaleY(1.5) translateY(0.5px);
+    transform: scaleY(1.5) translateY(0.75px);
 }
 .heading {
     font-size: 10px;
