@@ -12,7 +12,7 @@ body {
 
 .pages {
     display: inline-block;
-    max-width: 950px;
+    max-width: 850px;
 }
 .pages span {
     padding: 6px 0px 12px 0px;
@@ -38,7 +38,7 @@ body {
 /* --- TITLES --- */
 .header {
     display: flex;
-    max-width: 650px;
+    max-width: 850px;
     width: 80%;
     align-items: center;
     padding: 0px 20px 20px 20px;
@@ -51,17 +51,31 @@ body {
 }
 .hPage {
     font-size: 30px;
-    font-family: 'GauFontPopMagic';
+    font-family: 'GAU_root_N';
     text-align: left;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
+    transform: scaleY(1.2);
+    max-width: 480px;
+    line-height: 100%;
 }
 .hComment {
     font-size: 18px;
     font-family: 'GauFontPopMagic';
     text-align: right;
     opacity: 0.85;
-    transform: scaleY(1.22);
 }
+.hNav {
+    text-align: center;
+    opacity: 0.85;
+    text-decoration: none;
+    transition: opacity .24s ease-in-out;
+    font-family: 'Blinker', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
+}
+.hNav:hover, .hNav:active, .hNav:focus {
+    opacity: 1;
+    text-decoration: none;
+}
+
 .windowTitle {
     font-size: 9px;
     font-family: 'GauFontPopMagic';
@@ -90,11 +104,18 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GAU_root_N';
+    src:url('GAU_root_N.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* --- links stuff --- */
 a {
     color: white;
     text-decoration: none;
-    animation: dehover-anim 0.15s ease-out;
+    animation: dehover-anim 0.32s ease-out;
     animation-iteration-count: 1;
     animation-fill-mode:forwards;
 }
@@ -109,7 +130,7 @@ a:visited {
 a:hover, a:active, a:focus {
     color: white;
     text-decoration: none;
-    animation: hover-anim 0.04s ease-in;
+    animation: hover-anim 0.08s ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
