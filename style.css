@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;700&display=swap');
-
 body {
     background-image: url("/site-bg/updatepost_bg.png");
     background-repeat: repeat;
     background-attachment: fixed;
     background-color: black;
     color: white;
-    font-family: 'Blinker', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Aspekta', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
     padding: 8px 0px 32px 0px;
 }
 
@@ -34,7 +32,7 @@ body {
     50% { transform: translateY(-3px); }
     100% { transform: translateY(0px); }
 }
-/* --- TITLES --- */
+/* --- HEADERS --- */
 .header {
     display: flex;
     max-width: 720px;
@@ -95,7 +93,7 @@ body {
     transform: scaleY(1.82);
 }
 
-/* --- POP MAGIC --- */
+/* --- FONT FACES --- */
 @font-face {
     font-family: 'GauFontPopMagic';
     src:url('GauFontPopMagic.ttf.woff') format('woff'), url('GauFontPopMagic.ttf.svg#GauFontPopMagic') format('svg'), url('GauFontPopMagic.ttf.eot'), url('GauFontPopMagic.ttf.eot?#iefix') format('embedded-opentype');
@@ -110,7 +108,180 @@ body {
     font-style: normal;
 }
 
-/* --- links stuff --- */
+/**
+ * Aspekta
+ * @version 2.000
+ *
+ * @link https://github.com/ivodolenc/aspekta
+ *
+ * @author Ivo Dolenc (c) 2022
+ * @license Open Font License (OFL) v1.1
+ *
+ * Font Family: Aspekta
+ * Font Styles: 50-1000 Normal
+ */
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 50;
+  font-display: swap;
+  src: url('Aspekta-50.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('Aspekta-100.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 150;
+  font-display: swap;
+  src: url('Aspekta-150.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('Aspekta-200.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 250;
+  font-display: swap;
+  src: url('Aspekta-250.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('Aspekta-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 350;
+  font-display: swap;
+  src: url('Aspekta-350.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('Aspekta-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url('Aspekta-450.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Aspekta-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 550;
+  font-display: swap;
+  src: url('Aspekta-550.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('Aspekta-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 650;
+  font-display: swap;
+  src: url('Aspekta-650.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('Aspekta-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 750;
+  font-display: swap;
+  src: url('Aspekta-750.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('Aspekta-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 850;
+  font-display: swap;
+  src: url('Aspekta-850.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('Aspekta-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 950;
+  font-display: swap;
+  src: url('Aspekta-950.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 1000;
+  font-display: swap;
+  src: url('Aspekta-1000.woff2') format('woff2');
+}
+
+/* --- LINKS --- */
 a {
     color: white;
     text-decoration: none;
