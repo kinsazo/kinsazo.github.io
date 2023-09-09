@@ -4,8 +4,9 @@ body {
     background-attachment: fixed;
     background-color: black;
     color: white;
-    font-family: 'Noto Sans', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Work Sans', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
     padding: 8px 0px 32px 0px;
+    letter-spacing: -0.5px;
 }
 
 .pages {
@@ -96,111 +97,49 @@ body {
 /* --- FONT FACES --- */
 @font-face {
     font-family: 'GauFontPopMagic';
-    src:url('GauFontPopMagic.ttf.woff') format('woff'), url('GauFontPopMagic.ttf.svg#GauFontPopMagic') format('svg'), url('GauFontPopMagic.ttf.eot'), url('GauFontPopMagic.ttf.eot?#iefix') format('embedded-opentype');
+    src: url('GauFontPopMagic.ttf.woff') format('woff'), url('GauFontPopMagic.ttf.svg#GauFontPopMagic') format('svg'), url('GauFontPopMagic.ttf.eot'), url('GauFontPopMagic.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GAU_root_N';
-    src:url('GAU_root_N.ttf.woff') format('woff');
+    src: url('GAU_root_N.ttf.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-/**
- * Aspekta Variable
- * @version 2.000
- *
- * @link https://github.com/ivodolenc/aspekta
- *
- * @author Ivo Dolenc (c) 2022
- * @license Open Font License (OFL) v1.1
- *
- * Font Family: Aspekta Variable
- * Font Styles: 100-900 Normal
- */
-
-@font-face {
-  font-family: 'Aspekta Variable';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  src: url('/aspekta/variable/AspektaVF.woff2') format('woff2');
-}
-
-/**
- * Copyright (c) 2015, Sora Sagano (sagano@dotcolon.net)
- * This Font Software is licensed under the SIL Open Font License, Version 1.1.
-*/
-
-@font-face {
-  font-family: 'Route 159';
-  font-weight: normal;
-  font-display: swap;
-  font-style: normal;
-  src: url('/route159_110/Web Font/Route159-Regular.woff') format('woff'), url('/route159_110/Web Font/Route159-Regular.eot') format('embedded-opentype');
-}
-
-@font-face {
-  font-family: 'Route 159';
-  font-weight: bold;
-  font-display: swap;
-  font-style: normal;
-  src: url('/route159_110/Web Font/Route159-Bold.woff') format('woff'), url('/route159_110/Web Font/Route159-Bold.eot') format('embedded-opentype');
-}
-
-@font-face {
-  font-family: 'Route 159';
-  font-weight: normal;
-  font-display: swap;
-  font-style: italic;
-  src: url('/route159_110/Web Font/Route159-Italic.woff') format('woff'), url('/route159_110/Web Font/Route159-Italic.eot') format('embedded-opentype');
-}
-
-@font-face {
-  font-family: 'Route 159';
-  font-weight: bold;
-  font-display: swap;
-  font-style: italic;
-  src: url('/route159_110/Web Font/Route159-BoldItalic.woff') format('woff'), url('/route159_110/Web Font/Route159-BoldItalic.eot') format('embedded-opentype');
-}
-
 /*
- * Copyright 2015-2021 Google LLC. All Rights Reserved.
+ * Copyright 2019 The Work Sans Project Authors (https://github.com/weiweihuanghuang/Work-Sans)
  * This Font Software is licensed under the SIL Open Font License, Version 1.1.
 */
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url("/noto-sans/NotoSans-Regular.eot");
-  src: local("Noto Sans Regular"), local("NotoSans-Regular"), url("/noto-sans/NotoSans-Regular.eot?#iefix") format("embedded-opentype"), url("/noto-sans/NotoSans-Regular.woff2") format("woff2"), url("/noto-sans/NotoSans-Regular.woff") format("woff"), url("/noto-sans/NotoSans-Regular.ttf") format("truetype"), url("/noto-sans/NotoSans-Regular.svg#NotoSans-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Work Sans';
+    src: url('/work-sans/static/WOFF2/WorkSans-Regular.woff2') format('woff2'), url('/work-sans/static/WOFF/WorkSans-Regular.woff2') format('woff'), url('/work-sans/static/TTF/WorkSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url("/noto-sans/NotoSans-Italic.eot");
-  src: local("Noto Sans Italic"), local("NotoSans-Italic"), url("/noto-sans/NotoSans-Italic.eot?#iefix") format("embedded-opentype"), url("/noto-sans/NotoSans-Italic.woff2") format("woff2"), url("/noto-sans/NotoSans-Italic.woff") format("woff"), url("/noto-sans/NotoSans-Italic.ttf") format("truetype"), url("/noto-sans/NotoSans-Italic.svg#NotoSans-Italic") format("svg");
-  font-weight: 400;
-  font-style: italic;
+    font-family: 'Work Sans';
+    src: url('/work-sans/static/WOFF2/WorkSans-Italic.woff2') format('woff2'), url('/work-sans/static/WOFF/WorkSans-Italic.woff2') format('woff'), url('/work-sans/static/TTF/WorkSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url("/noto-sans/NotoSans-Bold.eot");
-  src: local("Noto Sans Bold"), local("NotoSans-Bold"), url("/noto-sans/NotoSans-Bold.eot?#iefix") format("embedded-opentype"), url("/noto-sans/NotoSans-Bold.woff2") format("woff2"), url("/noto-sans/NotoSans-Bold.woff") format("woff"), url("/noto-sans/NotoSans-Bold.ttf") format("truetype"), url("/noto-sans/NotoSans-Bold.svg#NotoSans-Bold") format("svg");
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Work Sans';
+    src: url('/work-sans/static/WOFF2/WorkSans-Bold.woff2') format('woff2'), url('/work-sans/static/WOFF/WorkSans-Bold.woff2') format('woff'), url('/work-sans/static/TTF/WorkSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url("/noto-sans/NotoSans-BoldItalic.eot");
-  src: local("Noto Sans BoldItalic"), local("NotoSans-BoldItalic"), url("/noto-sans/NotoSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/noto-sans/NotoSans-BoldItalic.woff2") format("woff2"), url("/noto-sans/NotoSans-BoldItalic.woff") format("woff"), url("/noto-sans/NotoSans-BoldItalic.ttf") format("truetype"), url("/noto-sans/NotoSans-BoldItalic.svg#NotoSans-BoldItalic") format("svg");
-  font-weight: 700;
-  font-style: italic;
+    font-family: 'Work Sans';
+    src: url('/work-sans/static/WOFF2/WorkSans-BoldItalic.woff2') format('woff2'), url('/work-sans/static/WOFF/WorkSans-BoldItalic.woff2') format('woff'), url('/work-sans/static/TTF/WorkSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
 /* --- LINKS --- */
