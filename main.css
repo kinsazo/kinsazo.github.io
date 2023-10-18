@@ -34,12 +34,35 @@ body {
 /* animations */
 
 .hover-zoom {
-    transition: transform .08s ease-in-out;
+    transition: transform .18s ease-in;
 }
 .hover-zoom:hover, .hover-zoom:active, .hover-zoom:focus {
     transform: scale(1.02);
     -ms-transform: scale(1.02);
     -webkit-transform: scale(1.02);
+    transition: transform 0.28s ease-out;
+}
+
+.hover-pickup {
+    transition: transform .18s ease-in;
+}
+
+.hover-pickup:hover, .hover-pickup:active, .hover-pickup:focus {
+    transform: translateY(-32px);
+    -ms-transform: translateY(-32px);
+    -webkit-transform: translateY(-32px);
+    transition: transform 0.28s ease-out;
+}
+
+.hover-zoom-pickup {
+    transition: transform .18s ease-in;
+}
+
+.hover-zoom-pickup:hover, .hover-zoom-pickup:active, .hover-zoom-pickup:focus {
+    transform: scale(1.02) translateY(-32px);
+    -ms-transform: scale(1.02) translateY(-32px);
+    -webkit-transform: scale(1.02) translateY(-32px);
+    transition: transform 0.28s ease-out;
 }
 
 @keyframes float {
@@ -128,6 +151,10 @@ h6 {
 
 /* elements */
 
+.scene {
+  perspective: 1920px;
+}
+
 .banner {
     max-width: 800px;
     min-height: 88px;
@@ -139,7 +166,7 @@ h6 {
     justify-content: flex-end;
     text-align: left;
     transform-style: preserve-3d;
-    transform: perspective(1920px) rotateX(-22deg);
+    transform: rotateX(-30deg);
 }
 
 .banner h3, .banner section {
