@@ -40,34 +40,32 @@ a {
 /* animations */
 
 .hover-zoom {
-    transition: transform .16s ease-in;
+    transition: all .16s ease-in;
+    opacity: 0.96;
 }
 .hover-zoom:hover, .hover-zoom:active, .hover-zoom:focus {
     transform: scale(1.02) translateY(2px);
-    -ms-transform: scale(1.02) translateY(2px);
     -webkit-transform: scale(1.02) translateY(2px);
-    transition: transform 0.26s ease-out;
+    transition: all 0.26s ease-out;
+    opacity: 1;
+}
+
+.perspective .banner {
+    transition: all .16s ease-in;
+}
+
+.perspective .banner:hover, .perspective .banner:active, .perspective .banner:focus {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.26s ease-out;
 }
 
 .hover-pickup {
-    transition: transform .16s ease-in;
+    transition: all .16s ease-in;
 }
 
 .hover-pickup:hover, .hover-pickup:active, .hover-pickup:focus {
     transform: translateY(-32px);
-    -ms-transform: translateY(-32px);
     -webkit-transform: translateY(-32px);
-    transition: transform 0.26s ease-out;
-}
-
-.hover-zoom-pickup {
-    transition: transform .16s ease-in;
-}
-
-.hover-zoom-pickup:hover, .hover-zoom-pickup:active, .hover-zoom-pickup:focus {
-    transform: scale(1.02) translateY(-32px);
-    -ms-transform: scale(1.02) translateY(-32px);
-    -webkit-transform: scale(1.02) translateY(-32px);
     transition: transform 0.26s ease-out;
 }
 
