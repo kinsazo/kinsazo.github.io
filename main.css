@@ -178,7 +178,7 @@ h6 {
     justify-content: flex-end;
     text-align: left;
     transform-style: preserve-3d;
-    transform: rotateX(-30deg) rotateY(-1deg);
+    transform: rotateX(-30deg);
     color: white;
 }
 
@@ -190,7 +190,7 @@ h6 {
     justify-content: center;
     margin: -24px 0 -42px 0;
     transform-style: preserve-3d;
-    transform: rotateX(-30deg) rotateY(1deg);
+    transform: rotateX(-30deg);
 }
 
 .scene-img img {
