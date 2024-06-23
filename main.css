@@ -24,7 +24,7 @@ a {
 
 .ps-front {
     transform-style: preserve-3d;
-    transform: rotateX(2deg);
+    transform: rotateX(6deg);
     transition: all 0.12s ease-out;
     opacity: 0.96;
 }
@@ -52,14 +52,14 @@ a {
 /* animations */
 
 .ps-front:hover {
-    transform: scale(1.0) rotateX(0deg) translateY(-4px);
-    -webkit-transform: scale(1.0) rotateX(0deg) translateY(-4px);
+    transform: scale(1.0) rotateX(0deg);
+    -webkit-transform: scale(1.0) rotateX(0deg);
     transition: all 0.16s ease-in-out;
     opacity: 1;
 }
 
 .ps-front:active {
-    transform: rotateX(2deg);
+    transform: rotateX(6deg);
     transition: all 0.12s ease-out;
     opacity: 0.96;
 }
@@ -68,6 +68,10 @@ a {
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     transition: all 0.26s ease-out;
     transform: scale(1.0);
+}
+
+.ps-front .banner:hover {
+    transform: translateY(3px);
 }
 
 .banner:active {
