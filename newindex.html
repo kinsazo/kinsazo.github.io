@@ -61,7 +61,7 @@
         }
         .topDiv {
             background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));
-            height: 96px;
+            height: 100px;
             margin: 4px 0px;
             text-align: left;
             display: flex;
@@ -69,10 +69,11 @@
             justify-content: space-between;
             padding: 0px 24px;
             border-radius: 32px 32px 8px 8px;
-            border: 2px solid rgba(255,255,255,0.2);
+            /* border: 2px solid rgba(255,255,255,0.2); */
             /* outline: 3px solid rgba(255,255,255,0);
             transition: outline 0.35s ease-in-out; * /
             /* backdrop-filter: blur(8px); */
+            box-shadow: 0.1px 2.1px 3.8px inset rgba(255,255,255,0.1), 0.1px -1.7px 1.9px inset rgba(255, 255, 255, 0.39);
         }
         /* .topDiv:hover {
             outline: 4px solid rgba(255,255,255,0.1);
@@ -100,10 +101,14 @@
                 <div class="topDiv">
                     <p style="font-size: 22px;">testing</p>
                 </div>
-                <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;">
-                    <div style="background-color: green; flex: 1; height: 100%; margin: 0px 16px 0px 0px;">
+                <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;/*! border-radius: 8px 8px 24px 24px; */">
+                    <div style="/*! background-color: green; */ flex: 1; height: 100%; margin: 0px 16px 0px 0px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div style="background-color: yellow; height: 50%; margin-bottom: 4px;border-radius: 8px 8px 0px 0px;">
+                        </div>
+                        <div style="background-color: purple; height: 50%;border-radius: 0px 0px 32px 32px;">
+                        </div>
                     </div>
-                    <div style="background-color: orange; flex: 1; height: 100%; margin: 0px 0px;">
+                    <div style="background-color: orange; flex: 1; height: 100%; margin: 0px 0px;border-radius: 8px 8px 32px 32px;">
                     </div>
                 </div>
             </div>
@@ -123,7 +128,7 @@
         </div>
         <footer class="h-spans">
             <span class="comment">started 2021-02-13</span>
-            <span class="comment">last updated 2024-06-26</span>
+            <span class="comment">last updated 2024-06-27</span>
             <span class="comment">version 4.1 beta (topaz)</span>
         </footer>
     </center>
