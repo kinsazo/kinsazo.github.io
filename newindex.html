@@ -21,13 +21,13 @@
             padding-left: 5px; padding-right: 5px; margin-bottom: 4px;
             transform: scale(1.0);
             opacity: 0.90;
-            transition: all 0.54s ease-in-out;
+            transition: all 0.44s ease-in-out;
         }
         .pageTitle h1:hover {
             opacity: 1;
             transform: scale(1.04) translateX(-18px) translateY(-10px) rotateZ(1deg);
             transition: all 0.21s ease-in;
-            text-shadow: 4px 6px 10px rgba(255,255,255,0.62);
+            text-shadow: 4px 6px 12px rgba(255,255,255,0.32);
         }
         .container {
             display: inline-flex;
@@ -51,10 +51,32 @@
         .sidebarItems a:hover {
             transform: scale(1.1);
             transition: all 0.22s ease-in;
-            background-color: rgba(255,255,255,0.52);
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.52), rgba(255,255,255,0.19));
         }
         /* .sidebarItems a:not(:hover) {
             transition: all 0.07s ease-in-out;
+        } */
+        .sidebarItems a {
+            border-radius: 12px;
+        }
+        .topDiv {
+            background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));
+            height: 96px;
+            margin: 4px 0px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 24px;
+            border-radius: 32px 32px 8px 8px;
+            border: 2px solid rgba(255,255,255,0.2);
+            /* outline: 3px solid rgba(255,255,255,0);
+            transition: outline 0.35s ease-in-out; * /
+            /* backdrop-filter: blur(8px); */
+        }
+        /* .topDiv:hover {
+            outline: 4px solid rgba(255,255,255,0.1);
+            transition: outline 0.17s ease-in;
         } */
     </style>
   </head>
@@ -74,7 +96,17 @@
                     </div>
                 </div>
             </div>
-            <div style="background-color: blue; min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin: 4px;"></div>
+            <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin: 4px; display: block;">
+                <div class="topDiv">
+                    <p style="font-size: 22px;">testing</p>
+                </div>
+                <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;">
+                    <div style="background-color: green; flex: 1; height: 100%; margin: 0px 16px 0px 0px;">
+                    </div>
+                    <div style="background-color: orange; flex: 1; height: 100%; margin: 0px 0px;">
+                    </div>
+                </div>
+            </div>
         </div>
         <br><br><br><br>
         <p>Thanks for stopping by! There isn't much here right now, but there will be soon.</p>
