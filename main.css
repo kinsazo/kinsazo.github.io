@@ -166,3 +166,18 @@ This Font Software is licensed under the SIL Open Font License, Version 1.1. */
     font-family: 'Necto Mono';
     src: url('/NectoMono-Regular.woff2') format('woff2'), url('/NectoMono-Regular.woff') format('woff');
 }
+
+/* Copyright (c) 2009, Matt McInerney <matt@pixelspread.com>, with Reserved Font Name: "Orbitron".
+This Font Software is licensed under the SIL Open Font License, Version 1.1. */
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('/orbitron-medium-webfont.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('/orbitron-bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
