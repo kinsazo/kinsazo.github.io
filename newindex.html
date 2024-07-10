@@ -123,6 +123,24 @@
             margin-bottom: 8px;
             align-items: center;
             display: flex;
+            animation: dehover-link 0.59s ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode:forwards;
+            border-radius: 2px;
+        }
+        .h-spans-right a:hover {
+            animation: hover-link 0.14s ease-in;
+            animation-iteration-count: 1;
+            animation-fill-mode:forwards;
+            background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.03));
+        }
+        @keyframes dehover-link {
+            0%    { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 2px solid rgba(255,255,255,0.03); }
+            100%  { text-shadow: 0px -2px 6px rgba(250,250,250,0); background-color: rgba(255,255,255,0); outline: 0px solid rgba(255,255,255,0); }
+        }
+        @keyframes hover-link {
+            0%    { text-shadow: 0px -2px 6px rgba(250,250,250,0); background-color: rgba(255,255,255,0); outline: 0px solid rgba(255,255,255,0); }
+            100%  { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 2px solid rgba(255,255,255,0.03); }
         }
     </style>
   </head>
@@ -197,7 +215,7 @@
         </div>
         <footer class="h-spans">
             <span class="comment">started 2021-02-13</span>
-            <span class="comment">last updated 2024-07-02</span>
+            <span class="comment">last updated 2024-07-09</span>
             <span class="comment">version 4.2 beta (opal)</span>
         </footer>
     </center>
