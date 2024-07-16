@@ -120,13 +120,14 @@
             margin-right: 12px;
         }
         .h-spans-right a {
-            margin-bottom: 8px;
+            margin: 4px 8px 4px 8px;
             align-items: center;
             display: flex;
             animation: dehover-link 0.15s ease-out;
             animation-iteration-count: 1;
             animation-fill-mode:forwards;
             border-radius: 2px;
+            padding: 0px 8px;
         }
         .h-spans-right a:hover {
             animation: hover-link 0.12s ease-in;
@@ -135,12 +136,12 @@
             background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.03));
         }
         @keyframes dehover-link {
-            0%    { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.04); }
-            100%  { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 0px solid rgba(255,255,255,0); }
+            0%    { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.14); }
+            100%  { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 1px solid rgba(255,255,255,0); }
         }
         @keyframes hover-link {
-            0%    { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 0px solid rgba(255,255,255,0); }
-            100%  { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.04); }
+            0%    { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 1px solid rgba(255,255,255,0); }
+            100%  { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.14); }
         }
     </style>
   </head>
@@ -162,7 +163,7 @@
             </div>
             <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin: 4px; display: block;">
                 <div class="topDiv">
-                    <p style="font-size: 22px;">The quick brown fox jumps over the lazy dog.</p>
+                    <p style="font-size: 20px;">Thank you for visiting!</p>
                 </div>
                 <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;/*! border-radius: 8px 8px 24px 24px; */">
                     <div style="/*! background-color: green; */ flex: 1; height: 100%; margin: 0px 16px 0px 0px; display: flex; flex-direction: column; justify-content: space-between;">
@@ -181,8 +182,8 @@
                             <div class="headline">
                                 <p>accounts / contact</p>
                             </div>
-                            <div style="text-align: left; padding: 12px 16px 0px 16px;">
-                                <div class="h-spans-right" style="height: 8em; overflow: scroll; border-radius: 0px 0px 16px 16px;/*! background-color: grey; */ /*! font-family: 'GAU_root_N'; */letter-spacing: -0.02em;">
+                            <div style="text-align: left; padding: 4px;">
+                                <div class="h-spans-right" style="height: 8.5em; overflow: scroll; /*! background-color: grey; */ letter-spacing: -0.02em;">
                                     <a href="https://kioteiga.bsky.social"><img src="/platform-bluesky.svg" style="margin-right: 12px;" width="16px" height="16px"><span>Bluesky</span><span style="opacity:0.8;">kioteiga.bsky.social</span></a>
                                     <a href="https://twitter.com/kinsazo"><img src="/platform-twitter.svg" style="margin-right: 12px;" width="16px" height="16px"><span>Twitter</span><span style="opacity:0.8;">kinsazo</span></a>
                                     <a href="https://kinsazo.newgrounds.com"><img src="/platform-newgrounds.svg" style="margin-right: 12px;" width="16px" height="16px"><span>Newgrounds</span><span style="opacity:0.8;">Kinsazo</span></a>
@@ -195,7 +196,7 @@
                     </div>
                     <div style="/*! background-color: orange; */ flex: 1; height: 100%; margin: 0px 0px;border-radius: 8px 8px 32px 32px;background-image: linear-gradient(to bottom, rgba(169, 165, 189, 0.3), rgba(159, 154, 189, 0.48), rgba(169, 164, 196, 0.66), rgba(175, 171, 198, 0.8), rgba(181, 178, 189, 0.94));box-shadow: 0.1px 2.15px 3.5px inset rgba(255, 255, 255, 0.11), 0.1px -1.56px 1.9px inset rgba(255, 255, 255, 0.28);">
                         <div class="headline" style="margin-top: 8px;">
-                            <p>showcase</p>
+                            <p>featured</p>
                         </div>
                     </div>
                 </div>
@@ -218,7 +219,7 @@
         </div>
         <footer class="h-spans">
             <span class="comment">started 2021-02-13</span>
-            <span class="comment">last updated 2024-07-12</span>
+            <span class="comment">last updated 2024-07-16</span>
             <span class="comment">version 4.2 beta (opal)</span>
         </footer>
     </center>
