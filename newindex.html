@@ -39,26 +39,29 @@
         }
         .sidebarItems {
             transform-style: preserve-3d;
-            transform: translateX(40px) translateY(50%) rotateZ(-1deg) rotateX(5deg) rotateY(45deg);
+            transform: translateX(48px) translateY(50%) rotateZ(-1deg) rotateX(5deg) rotateY(45deg);
             text-align: left;
-            /* -webkit-text-stroke: 1px black; */
+            /*! -webkit-text-stroke: 1px black; */
             text-shadow:
                 -1px -1px 0 #000,
                 1px -1px 0 #000,
                 -1px  1px 0 #000,
                 1px  1px 0 #000;
             font-family: 'GAU_root_N';
+            font-size: 32px;
         }
         .sidebarItems a:hover {
-            transform: scale(1.1);
-            transition: all 0.2s ease-in;
+            transform: scale(1.08);
+            transition: all 0.19s ease-in;
             background-image: linear-gradient(to bottom, rgba(255,255,255,0.52), rgba(255,255,255,0.19));
-            outline: 2px solid rgba(255,255,255,0.47);
+            outline: 2px solid rgba(255,255,255,0.56);
         }
         .sidebarItems a {
-            border-radius: 12px;
-            outline: 1px solid rgba(255,255,255,0);
-            transition: outline 0.05s ease-in-out;
+            border-radius: 14px;
+            outline: 2px solid rgba(255,255,255,0);
+            transition: outline 0.04s ease-out;
+            height: 30px;
+            padding: 1px;
         }
         .topDiv {
             background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));
@@ -171,12 +174,12 @@
             <div style="width: 300px; height: 800px; margin: 4px;">
                 <div style="perspective: 300px;">
                     <div class="sidebarItems">
-                        <a href="newindex.html" style="font-size: 32px;">home</a>
-                        <a href="about.html" style="font-size: 32px; opacity:0.75;">about</a>
-                        <a href="art.html" style="font-size: 32px; opacity:0.75;">art</a>
-                        <a href="blog.html" style="font-size: 32px; opacity:0.75;">blog</a>
-                        <a href="links.html" style="font-size: 32px; opacity:0.75;">links</a>
-                        <a href="extras.html" style="font-size: 32px; opacity:0.75;">extras</a>
+                        <a href="newindex.html">home</a>
+                        <a href="about.html" style="opacity:0.75;">about</a>
+                        <a href="art.html" style="opacity:0.75;">art</a>
+                        <a href="blog.html" style="opacity:0.75;">blog</a>
+                        <a href="links.html" style="opacity:0.75;">links</a>
+                        <a href="extras.html" style="opacity:0.75;">extras</a>
                     </div>
                 </div>
             </div>
