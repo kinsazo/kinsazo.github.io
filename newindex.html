@@ -65,12 +65,12 @@
         }
         .topDiv {
             background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));
-            height: 100px;
+            height: 72px;
             margin: 4px 4px 0px 4px;
-            text-align: left;
+            text-align: center;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding: 0px 24px;
             border-radius: 32px 32px 8px 8px;
             /* border: 2px solid rgba(255,255,255,0.2); */
@@ -90,7 +90,7 @@
             background-color: rgba(255,255,255,0);
             /*! border-radius: 2px; */
             padding: 0px 16px;
-            height: 24px;
+            height: 22px;
             align-items: center;
             display: flex;
             transition: all 0.2s ease-in-out;
@@ -120,7 +120,12 @@
         }
         .h-spans-right span {
             display: inline-block;
-            margin-right: 12px;
+            margin-right: 16px;
+        }
+        .h-spans-right img {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
         }
         .h-spans-right a {
             margin: 4px 8px 4px 8px;
@@ -146,7 +151,7 @@
             0%    { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 1px solid rgba(255,255,255,0); }
             100%  { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.14); }
         }
-        .readupdatebutton {
+        .special-button {
             background-color: rgba(255,255,255,0.1);
             width: 96px;
             text-align: center;
@@ -159,11 +164,35 @@
             border-radius: 4px;
             background-image: linear-gradient(to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.08));
         }
-        .readupdatebutton:hover {
+        .special-button:hover {
             background-color: rgba(255,255,255,0.22);
             background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0.13), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.13));
             outline: 1px solid rgba(255,255,255,0.34);
             text-shadow: 0px 1.5px 0.5px rgba(0,0,0,0.4);
+        }
+        .imagegrid {
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* padding-inline: 24px; */
+            justify-content: center;
+            padding: 24px 0px;
+        }
+        .imagegrid img {
+            max-height: 128px;
+            padding: 8px 24px;
+        }
+        .imagegrid a {
+            width: 160px;
+            justify-content: center;
+            display: flex;
+        }
+        .imagegrid img:hover {
+            scale: 1.2;
+            outline: 2px solid rgba(255,255,255,0.52);
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px)
         }
     </style>
   </head>
@@ -183,9 +212,9 @@
                     </div>
                 </div>
             </div>
-            <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin: 4px; display: block;">
+            <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin-top: 4px; display: block;">
                 <div class="topDiv">
-                    <p style="font-size: 20px;">Thank you for visiting!</p>
+                    <p style="font-size: 20px;letter-spacing: -0.04em;">Thank you for visiting!</p>
                 </div>
                 <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;/*! border-radius: 8px 8px 24px 24px; */">
                     <div style="/*! background-color: green; */ flex: 1; height: 100%; margin: 4px; display: flex; flex-direction: column; justify-content: space-between;">
@@ -197,12 +226,39 @@
                                 <span style="font-size: 20px;">sample text</span>
                                 <br><span style="opacity:0.75;font-size: 14px;">2024-06-26</span>
                                 <div style="justify-content: space-between;display: flex;height: 6.8em;flex-direction: column;"><div style="outline: 1px dashed rgba(255,255,255,0.25); height: 3.2em; margin-top: 8px; color: rgba(255,255,255,0.5); padding: 4px;">Writing text in here</div>
-                                <div style="justify-content: right; display: flex; margin-top: 8px;"><div class="readupdatebutton"><a href="/blog.html">&gt; READ</a></div></div></div>
+                                <div style="justify-content: right; display: flex; margin-top: 8px;"><div class="special-button"><a href="/blog.html">&gt; READ</a></div></div></div>
                             </div>
                         </div>
                         <div style="/*! background-color: purple; */ height: 50%;border-radius: 0px 0px 32px 32px;background-image: linear-gradient(to bottom, rgba(66, 62, 62, 0.81), rgba(11, 8, 19, 0.87), rgba(14, 11, 26, 0.68), rgba(64, 51, 68, 0.75));box-shadow: 0.1px 2.15px 3.5px inset rgba(255, 255, 255, 0.11), 0.1px -1.56px 1.9px inset rgba(255, 255, 255, 0.28);padding: 8px 0px;">
                             <div class="headline">
                                 <p>accounts / contact</p>
+                            </div>
+                            <div style="text-align: left; padding: 4px;">
+                                <div class="h-spans-right" style="height: 8.5em; overflow: scroll; /*! background-color: grey; */ /*! letter-spacing: -0.04em; *//*! display: none; */">
+                                    <a href="https://kioteiga.bsky.social"><img src="/platform-bluesky.svg"><span style="color: rgb(158, 192, 244);">Bluesky</span><span style="opacity:0.8;">kioteiga.bsky.social</span></a>
+                                    <a href="https://kinsazo.newgrounds.com"><img src="/platform-newgrounds.svg"><span style="color: rgb(244, 198, 157);">Newgrounds</span><span style="opacity:0.8;">Kinsazo</span></a>
+                                    <a href="https://wetdry.world/@kinsazo"><img src="/platform-mtdon.svg"><span style="color: rgb(191, 187, 244);">Mastodon</span><span style="opacity:0.8;">kinsazo@wetdry.world</span></a>
+                                    <a href="https://twitter.com/kinsazo"><img src="/platform-twitter.svg"><span style="color: rgb(170, 213, 238);">Twitter</span><span style="opacity:0.8;">kinsazo</span></a>
+                                    <a href="https://youtube.com/@Kinsazo"><img src="/platform-yt.svg"><span style="color: rgb(223, 157, 161);">YouTube</span><span style="opacity:0.8;">Kinsazo</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="/*! background-color: orange; */ flex: 1; height: 100%; margin: 4px; border-radius: 8px 8px 32px 32px;background-image: linear-gradient(to bottom, rgba(169, 165, 189, 0.3), rgba(159, 154, 189, 0.48), rgba(169, 164, 196, 0.66), rgba(175, 171, 198, 0.8), rgba(181, 178, 189, 0.94));box-shadow: 0.1px 2.15px 3.5px inset rgba(255, 255, 255, 0.11), 0.1px -1.56px 1.9px inset rgba(255, 255, 255, 0.28);">
+                        <div class="headline" style="margin-top: 8px;">
+                            <p>featured</p>
+                        </div>
+                        <div style="overflow: scroll;height: 88%;width: 94%; display: none;">
+                            <div class="imagegrid">
+                                <a><img src="/art/2022/gexesis.png"></a>
+                                <a><img src="/art/2022/gexesis.png"></a>
+                                <a><img src="/art/2022/picosketch4picoday2022.png"></a>
+                                <a><img src="/art/2022/gexesis.png"></a>
+                                <a><img src="/art/2021/thumb__hifi.png"></a>
+                                <a><img src="/art/2022/gexesis.png"></a>
+                                <a><img src="/art/2022/gexesis.png"></a>
+                                <a><img src="/art/2022/gexesis.png"></a>
+                                <a><img src="/art/2022/gexesis.png"></a>
                             </div>
                             <div style="text-align: left; padding: 4px;">
                                 <div class="h-spans-right" style="height: 8.5em; overflow: scroll; /*! background-color: grey; */ letter-spacing: -0.02em;">
@@ -216,18 +272,13 @@
                             </div>
                         </div>
                     </div>
-                    <div style="/*! background-color: orange; */ flex: 1; height: 100%; margin: 4px; border-radius: 8px 8px 32px 32px;background-image: linear-gradient(to bottom, rgba(169, 165, 189, 0.3), rgba(159, 154, 189, 0.48), rgba(169, 164, 196, 0.66), rgba(175, 171, 198, 0.8), rgba(181, 178, 189, 0.94));box-shadow: 0.1px 2.15px 3.5px inset rgba(255, 255, 255, 0.11), 0.1px -1.56px 1.9px inset rgba(255, 255, 255, 0.28);">
-                        <div class="headline" style="margin-top: 8px;">
-                            <p>featured</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
         <div style="height: 180px;"></div>
         <footer class="h-spans">
             <span class="comment">started 2021-02-13</span>
-            <span class="comment">last updated 2024-07-18</span>
+            <span class="comment">last updated 2024-07-22</span>
             <span class="comment">version 4.2 beta (opal)</span>
         </footer>
     </center>
