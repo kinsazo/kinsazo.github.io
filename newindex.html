@@ -77,11 +77,11 @@
             /* border: 2px solid rgba(255,255,255,0.2); */
             /* outline: 3px solid rgba(255,255,255,0);
             transition: outline 0.35s ease-in-out; * /
-            /* backdrop-filter: blur(8px); */
             /*! box-shadow: 0.1px 2.1px 3.8px inset rgba(255,255,255,0.1), 0.1px -1.7px 1.9px inset rgba(255, 255, 255, 0.39); */
             width: 480px;
             background-color: rgba(255,255,255,0.1);
             backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
             /*! outline: 2px solid rgba(255,255,255,0.2); */
         }
         /* .topDiv:hover {
@@ -198,7 +198,8 @@
             scale: 1.2;
             outline: 2px solid rgba(255,255,255,0.52);
             background: rgba(0,0,0,0.2);
-            backdrop-filter: blur(8px)
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
     </style>
     </head>
@@ -292,7 +293,7 @@
         <div style="height: 180px;"></div>
         <footer class="h-spans">
             <span class="comment">started 2021-02-13</span>
-            <span class="comment">last updated 2024-07-27</span>
+            <span class="comment">last updated 2024-07-28</span>
             <span class="comment">version 4.2 beta (opal)</span>
         </footer>
     </center>
