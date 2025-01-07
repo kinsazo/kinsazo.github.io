@@ -3,15 +3,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Home - kosatigo</title>
+    <title>Art - kosatigo</title>
     <link href="/main.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <style>
         body {
-            /* background-image: url("/site-bg/music_bg.png"); */
-            background-image: url("background3.png");
+            background-image: url("/site-bg/art_bg.png");
+            /* background-image: url("background3.png"); */
             scrollbar-color: rgba(255,255,255,0.75) rgba(255,255,255,0);
             padding: 8px 16px;
         }
@@ -112,16 +112,16 @@
         }
         .topDiv {
             /*! background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18)); */
-            height: 48px;
+            height: 64px;
             margin-top: 8px;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0px 24px;
-            border-radius: 6px;
+            border-radius: 8px;
             /* border: 2px solid rgba(255,255,255,0.2); */
-            /*! outline: 1.5px solid rgba(255,255,255,0.3); */ /*
+            /* outline: 3px solid rgba(255,255,255,0);
             transition: outline 0.35s ease-in-out; * /
             /*! box-shadow: 0.1px 2.1px 3.8px inset rgba(255,255,255,0.1), 0.1px -1.7px 1.9px inset rgba(255, 255, 255, 0.39); */
             width: 480px;
@@ -137,7 +137,7 @@
         .headline {
             font-family: 'Orbitron';
             text-shadow: 1.2px 1.5px 0.5px rgba(0,0,0,0.4);
-            background-image: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0));
+            background-image: linear-gradient(to right, rgba(255,255,255,0.27), rgba(255,255,255,0));
             background-color: rgba(255,255,255,0);
             /*! border-radius: 2px; */
             padding: 0px 8px;
@@ -147,7 +147,8 @@
             transition: all 0.2s ease-in-out;
             /* border: 1px solid rgba(255,255,255,0); */
             box-shadow: 0px 1px 0.2px inset rgba(255,255,255,0), 0px -1px 0.2px inset rgba(255,255,255,0);
-            margin: 0px;
+
+            margin-left: 8px;
         }
         .headline:hover {
             /* background-image: linear-gradient(to right, rgba(255,255,255,0.37), rgba(255,255,255,0.06)); */
@@ -221,7 +222,7 @@
             outline: 1px solid rgba(255,255,255,0.34);
             text-shadow: 0px 1.5px 0.5px rgba(0,0,0,0.4);
         }
-        .imagegrid {
+        .img-grid-mini {
             /*! background: rgba(255,255,255,0.1); */
             display: flex;
             flex-wrap: wrap;
@@ -230,17 +231,19 @@
             justify-content: center;
             padding: 24px 0px;
         }
-        .imagegrid img {
-            max-height: 128px;
+        .img-grid-mini img {
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
             padding: 8px 8px;
             transition: 0.09s all ease-out;
         }
-        .imagegrid a {
-            width: 160px;
+        .img-grid-mini a {
+            width: 128px;
             justify-content: center;
             display: flex;
         }
-        .imagegrid img:hover {
+        .img-grid-mini img:hover {
             scale: 1.2;
             outline: 2px solid rgba(255,255,255,0.52);
             background: rgba(0,0,0,0.2);
@@ -248,113 +251,165 @@
             -webkit-backdrop-filter: blur(8px);
             transition: 0.044s all ease-in-out;
         }
-        .flags-thing {
-            display: inline-block;
-            /*! outline: 1px solid rgba(255,255,255,0.1); */
-            padding: 2px;
-            /*! border-radius: 4px; */
-            /*! background-color: rgba(255,255,255,0.04); */
-            transform: translateX(-4px);
+
+        .imagegrid2 {
+            /*! background: rgba(255,255,255,0.1); */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* padding-inline: 24px; */
+            justify-content: center;
+            padding: 24px 0px;
+            /*! max-width: 800px; */
         }
-        .flags-thing img {
-            width: auto;
+        .imagegrid2 section {
+            padding: 32px 0px;
+            transition: 0.24s background ease-in-out;
+            width: 288px;
+        }
+        .imagegrid2 img {
+            max-height: 256px;
+            max-width: 256px;
+            padding: 8px 24px;
+            transition: 0.09s all ease-out;
+        }
+        .imagegrid2 a {
+            width: 288px;
+            justify-content: center;
+            display: flex;
+        }
+        .imagegrid2 p a {
+            display: inline;
+        }
+        .imagegrid2 section:hover {
+            outline: 2px solid rgba(255,255,255,0.52);
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: 0.044s all ease-in-out;
+        }
+        .imagegrid2 section:hover img {
+            scale: 1.1;
+        }
+        h6 {
+            font-family: 'Necto Mono';
+            transform: scaleY(1);
+        }
+        .imagegrid2 h5 {
+            text-align: left;
+            transform: translateY(8px);
+            padding: 0px 16px;
+            /*opacity: 0.75;*/
+            /* font-size: 14px; */
+        }
+        .imagegrid2 details {
+            text-align: left;
+            padding: 0px 16px;
+        }
+        .imagegrid2 summary {
+            font-size: 18px;
+        }
+        .imagegrid2 p {
+            background-color: rgba(255,255,255,0.1);
+            padding: 8px;
+        }
+        .pages {
+            display: inline-flex;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 8px;
+            outline: 2px solid rgba(255,255,255,0.05);
+            padding: 2px 4px;
+            border-radius: 9px;
+        }
+        .page-item {
+            width: 32px;
+            opacity: 0.75;
+            padding: 5px 0px;
+            /*height: 32px;*/
+            border-radius: 4px;
+            margin: 4px;
+            /*align-items: center;*/
+            /*transition: 0.064s all ease-in-out;*/
+            transition: 0.092s all ease-out;
+            outline: 1px solid rgba(255,255,255,0);
+        }
+        #selected {
+            background-color: rgba(255,255,255,0.1);
+            opacity: 1;
+            outline: 2px solid rgba(255,255,255,0.2);
+            cursor: default;
+        }
+        #selected:hover {
+            background-color: rgba(255,255,255,0.2);
+            /*background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0.08), rgba(255,255,255,0)), linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0.08), rgba(255,255,255,0));*/
+            background-image: radial-gradient(rgba(255,255,255,0.06), rgba(255,255,255,0));
+        }
+        .page-item:hover {
+            background-color: rgba(255,255,255,0.1);
+            transition: 0.051s all ease-in;
+            outline: 1px solid rgba(255,255,255,0.15);
+        }
+        .pages .special-button {
+            width: 36px;
+            height: 32px;
+            margin: 0px 2px;
+            /*border-radius: 100%;*/
+            font-size: 20px;
+            font-weight: bold;
+            /*! transform: scaleX(0.8); */
+            font-size: 18px;
+        }
+        #button-unavailable {
+            cursor: not-allowed;
+            color: rgba(255,255,255,0.5);
+            opacity: 0.75;
+            /*transition: none;*/
+        }
+        #button-unavailable:hover {
+            color: rgba(255,255,255,0.4);
+            background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0));
+            text-shadow: 0px 0px 0px rgba(0,0,0,0);
         }
     </style>
     </head>
     <body>
-    <div class="pageTitle"><h1>home</h1></div>
+    <div class="pageTitle"><h1>art</h1></div>
     <center>
         <div class="container">
             <div style="width: 320px; height: 800px; margin-left: -46px;margin-right: -32px;">
                 <div style="perspective: 320px;">
                     <div class="sidebarItems">
-                        <a href="newindex.html" id="selected-page" style="color: rgb(242, 227, 179);">home</a>
+                        <a href="newindex.html">home</a>
                         <a href="about.html">about</a>
-                        <a href="art.html">art</a>
+                        <a href="art.html" id="selected-page" style="color: rgb(242, 165, 165);">art</a>
                         <a href="blog.html">blog</a>
                         <a href="links.html">links</a>
                         <a href="extras.html">extras</a>
                     </div>
                 </div>
             </div>
-            <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin-top: 4px; display: block;">
-                <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;/*! border-radius: 8px 8px 24px 24px; */">
-                    <div style="/*! background-color: green; */ flex: 1; height: 100%; margin: 4px; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div style="/*! background-color: rgb(49, 8, 8); */ height: 100%; margin-bottom: 4px;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(138, 73, 73, 0.57), rgba(62, 20, 45, 0.53), rgba(60, 20, 54, 0.61), rgba(138, 88, 172, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! outline: 1px solid rgba(255,255,255,0.3); *//*! border: 1px solid rgba(255,255,255,0.2); */">
-                            <div class="headline">
-                                <p>latest update</p>
-                            </div>
-                            <div style="text-align: left; padding: 4px 16px;/*! justify-content: stretch; *//*! display: grid; *//*! flex-direction: row; */">
-                                <span style="font-size: 20px;">sample text</span>
-                                <br><span style="opacity:0.75;font-size: 14px;">2024-06-26 (Wed)</span>
-                                <div style="justify-content: space-between;display: flex;height: 6.8em;flex-direction: column;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 3.2em; margin-top: 8px; color: rgba(255,255,255,0.5); padding: 4px;">Writing text in here</div>
-                                <div style="justify-content: right; display: flex; margin-top: 8px;"><div class="special-button"><a href="/blog.html">&gt; READ</a></div></div></div>
-                            </div>
-                        </div>
-                        <div style="/*! background-color: purple; */ height: 100%;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! display: none; */margin-top: 4px;">
-                            <div class="headline">
-                                <p>intro</p>
-                            </div>
-                            <div style="text-align: left; /*! padding: 4px; */height: 100px;">
-                                <p style="height: 148px;overflow: scroll;padding-left: 16px;padding-right: 16px;transform: translateY(-8px);">Hi, I'm Kos, welcome to my website. This page is for keeping up with updates and also acts as a base to go to other pages.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="/*! background-color: orange; */ flex: 1; height: 100%; margin: 4px; /*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(169, 165, 189, 0.3), rgba(159, 154, 189, 0.48), rgba(169, 164, 196, 0.66), rgba(175, 171, 198, 0.8), rgba(181, 178, 189, 0.94));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);">
-                        <div class="headline" style="/*! margin-top: 8px; */">
-                            <p>?</p>
-                        </div>
-                        <div style="overflow: scroll;height: 92%;width: 100%; /*! display: none; */">
-                            <div class="imagegrid">
-                                <a><img src="/art/2022/gexesis.png"></a>
-                                <a><img src="/art/2022/gexesis.png"></a>
-                                <a><img src="/art/2022/picosketch4picoday2022.png"></a>
-                                <a><img src="/art/2022/gexesis.png"></a>
-                                <a><img src="/art/2021/thumb__hifi.png"></a>
-                                <a><img src="/art/2022/gexesis.png"></a>
-                                <a><img src="/art/2022/gexesis.png"></a>
-                                <a><img src="/art/2022/gexesis.png"></a>
-                                <a><img src="/art/2022/gexesis.png"></a>
-                            </div>
-                            <div style="text-align: left; padding: 4px; display: none;">
-                                <div class="h-spans-right" style="height: 8.5em; overflow: scroll; /*! background-color: grey; */ letter-spacing: -0.02em;">
-                                    <a href="https://kioteiga.bsky.social"><img src="/platform-bluesky.svg" style="margin-right: 12px;" width="16px" height="16px"><span>Bluesky</span><span style="opacity:0.8;">kioteiga.bsky.social</span></a>
-                                    <a href="https://twitter.com/kinsazo"><img src="/platform-twitter.svg" style="margin-right: 12px;" width="16px" height="16px"><span>Twitter</span><span style="opacity:0.8;">kinsazo</span></a>
-                                    <a href="https://kinsazo.newgrounds.com"><img src="/platform-newgrounds.svg" style="margin-right: 12px;" width="16px" height="16px"><span>Newgrounds</span><span style="opacity:0.8;">Kinsazo</span></a>
-                                    <a href="https://wetdry.world/@kinsazo"><img src="/platform-mtdon.svg" style="margin-right: 12px;" width="16px" height="16px"><span>Mastodon</span><span style="opacity:0.8;">kinsazo@wetdry.world</span></a>
-                                    <a href="https://youtube.com/@Kinsazo"><img src="/platform-yt.svg" style="margin-right: 12px;" width="16px" height="16px"><span>YouTube</span><span style="opacity:0.8;">Kinsazo</span></a>
-                                </div>
-                                <div style="outline: 1px solid rgba(255,255,255,0.25); height: 3em; margin-top: 12px; color: rgba(255,255,255,0.45); padding: 4px; display: none;">Writing text in here</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="topDiv">
-                    <p style="font-size: 18px;/*! letter-spacing: -0.04em; */">Thank you for visiting!</p>
-                </div>
-                <div style="/*! background-color: purple; */ height: 172px;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(66, 62, 62, 0.81), rgba(11, 8, 19, 0.87), rgba(14, 11, 26, 0.68), rgba(64, 51, 68, 0.75));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; */width: 400px;margin-top: 8px;">
-                    <div class="headline">
-                        <p>accounts / contact</p>
-                    </div>
-                    <div style="text-align: left; padding: 4px;">
-                        <div class="h-spans-right" style="height: 140px; overflow: scroll; /*! background-color: grey; */ /*! letter-spacing: -0.04em; *//*! display: none; */">
-                            <a href="https://bsky.app/profile/kosatigo.bsky.social"><img src="/platform-bluesky.svg"><span style="color: rgb(158, 192, 244);">Bluesky</span><span style="opacity:0.8;">kosatigo.bsky.social</span></a>
-                            <a href="https://kinsazo.newgrounds.com"><img src="/platform-newgrounds.svg"><span style="color: rgb(244, 198, 157);">Newgrounds</span><span style="opacity:0.8;">Kinsazo</span></a>
-                            <a href="https://wetdry.world/@kinsazo"><img src="/platform-mtdon.svg"><span style="color: rgb(191, 187, 244);">Mastodon</span><span style="opacity:0.8;">kinsazo@wetdry.world</span></a>
-                            
-                            <a href="https://youtube.com/@Kinsazo"><img src="/platform-yt.svg"><span style="color: rgb(223, 157, 161);">YouTube</span><span style="opacity:0.8;">Kinsazo</span></a>
-                        <a href="https://twitter.com/kinsazo"><img src="/platform-twitter.svg"><span style="color: rgb(148, 189, 213);">Twitter (inactive)</span><span style="opacity:0.8;">kinsazo</span></a></div>
-                    </div>
-                </div>
+            <div style="background-color: rgba(0,0,0,0.2); min-width: 500px; flex: 1; max-width: 1200px; /*! height: 800px; */ margin-top: 4px; display: block;box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! height: 100px; */overflow: scroll;">
+                <div class="img-grid-mini">
+                                
+
+
+
+
+
+
+
+
+                            <a href="/art/2022/picosketch4picoday2022.png"><img src="/art/2022/picosketch4picoday2022.png"></a><a href="/art/2022/NAXBANNER3.png"><img src="/art/2022/NAXBANNER3.png"></a><a href="/art/2022/NAX.png"><img src="/art/2022/NAX.png"></a><a href="/art/2022/spotbot.png"><img src="/art/2022/spotbot.png"></a><a href="/art/2022/gexesis.png"><img src="/art/2022/gexesis.png"></a><a href="/art/2021/crex_sketch.png"><img src="/art/2021/crex_sketch.png"></a><a href="/art/2021/hifi.png"><img src="/art/2021/hifi.png"></a><a href="/art/2021/funker.png"><img src="/art/2021/funker.png"></a><a href="/art/2021/wackydynamicpose.png"><img src="/art/2021/wackydynamicpose.png"></a><a href="/art/2021/pizzacube_new-banner.png"><img src="/art/2021/pizzacube_new-banner.png"></a><a href="/art/2021/bowser_redraw_2021.png"><img src="/art/2021/bowser_redraw_2021.png"></a><a href="/art/2021/picoday2021.png"><img src="/art/2021/picoday2021.png"></a><a href="/art/2021/croix compilation.png"><img src="/art/2021/croix compilation.png"></a><a href="/art/2021/tankman.png"><img src="/art/2021/tankman.png"></a><a href="/art/2021/funny-yoshi.jpg"><img src="/art/2021/funny-yoshi.jpg" style="object-position: 50% 15%;"></a><a href="/art/2021/kindlefirey.jpg"><img src="/art/2021/kindlefirey.jpg"></a><a href="/gbs/gbs_character_ring_final.png"><img src="/gbs/gbs_character_ring_final.png"></a></div>
+
+
             </div>
         </div>
-        <div style="height: 180px;"></div>
-        <footer class="h-spans">
-            <span class="comment">started 2021-02-13</span>
-            <span class="comment">last updated 2025-01-06</span>
-            <span class="comment">version 4.2 beta (opal)</span>
-        </footer>
+
+
     </center>
-  
+
+
 
 </body></html>
