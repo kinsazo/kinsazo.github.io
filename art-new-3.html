@@ -1,0 +1,425 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Art - kosatigo</title>
+    <link href="/main.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <style>
+        body {
+            background-image: url("/site-bg/art_bg.png");
+            /* background-image: url("background3.png"); */
+            scrollbar-color: rgba(255,255,255,0.75) rgba(255,255,255,0);
+            font-family: 'Verdana', 'Necto Mono', 'Work Sans', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
+            padding: 8px 16px;
+        }
+        /* Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is a trademark of Bitstream, Inc. */
+        @font-face {
+            font-family: 'Bitstream Vera Sans Mono';
+            src: url('/VeraMono-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* Fonts by Fenotype */
+        @font-face {
+            font-family: '080203';
+            src: url('/080203.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: '11dot20';
+            src: url('/11.20___.TTF');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .pageTitle {
+            width: auto;
+        }
+        .pageTitle h1 {
+            text-align: right;
+            padding-left: 8px; padding-right: 12px; padding-top: 8px; margin-bottom: 4px;
+            font-size: 36px;
+            opacity: 1;
+            transition: all 0.54s ease-in-out;
+            transform: translateX(0%);
+            letter-spacing: 0px;
+            text-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+            border-radius: 60px;
+            font-family: '080203';
+        }
+        .pageTitle h1:hover {
+            letter-spacing: 2px;
+            transform: translateX(-1%);
+            transition: all 0.36s ease-in-out;
+            text-shadow: -1px -1px 0 rgba(0,0,0,1),
+                1px -1px 0px rgba(0,0,0,1),
+                1px  1px 0 rgba(0,0,0,1),
+                -1px  1px 0 rgba(0,0,0,1),
+                1px  2.5px 3px rgba(0,0,0,0.72),
+                2.5px  3.5px 3px rgba(0,0,0,0.3);
+            /* background-color: rgba(255,255,255,0.2); */
+            background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.35));
+            padding-right: 36px;
+        }
+        .container {
+            display: inline-flex;
+            min-width: fit-content;
+            height: fit-content;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        .sidebarItems {
+            transform-style: preserve-3d;
+            transform: translateX(32px) translateY(25%) rotateX(0deg) rotateY(50deg);
+            text-align: left;
+            /*! -webkit-text-stroke: 1px black; */
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px  1px 0 #000,
+                1px  1px 0 #000,
+                -1px 0px 0 #000,
+                1px 0px 0 #000;
+            font-family: 'Orbitron';
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            padding: 4px;
+            outline: 2px solid rgba(20,20,20,0.1);
+        }
+        .sidebarItems a {
+            border-radius: 8px;
+            outline: 2px solid rgba(255,255,255,0);
+            transition: all 0.08s ease-out;
+            height: 24px;
+            padding: 4px 2px 1px 4px;
+            opacity: 0.75;
+            margin: 0px 0px;
+            line-height: 28px;
+            width: 86%;
+        }
+        .sidebarItems a:hover {
+            transform: scaleX(1.1) scaleY(0.98) translateX(16px);
+            transition: all 0.15s ease-in;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.28), rgba(255,255,255,0.06));
+            outline: 2px solid rgba(255,255,255,0.4);
+            opacity: 0.92;
+        }
+        #selected-page {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.08), rgba(255,255,255,0));
+            opacity: 1;
+            outline: 1px solid rgba(255,255,255,0.06);
+        }
+        #selected-page:hover {
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.62), rgba(255,255,255,0.36)), linear-gradient(to right, rgba(255,255,255,0.18), rgba(255,255,255,0));
+            outline: 2px solid rgba(255,255,255,0.8);
+        }
+        .topDiv {
+            /*! background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18)); */
+            height: 64px;
+            margin-top: 8px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 24px;
+            border-radius: 8px;
+            /* border: 2px solid rgba(255,255,255,0.2); */
+            /* outline: 3px solid rgba(255,255,255,0);
+            transition: outline 0.35s ease-in-out; * /
+            /*! box-shadow: 0.1px 2.1px 3.8px inset rgba(255,255,255,0.1), 0.1px -1.7px 1.9px inset rgba(255, 255, 255, 0.39); */
+            width: 480px;
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            /*! outline: 2px solid rgba(255,255,255,0.2); */
+        }
+        /* .topDiv:hover {
+            outline: 4px solid rgba(255,255,255,0.1);
+            transition: outline 0.17s ease-in;
+        } */
+        .headline {
+            font-family: 'Orbitron';
+            text-shadow: 1.2px 1.5px 0.5px rgba(0,0,0,0.4);
+            background-image: linear-gradient(to right, rgba(255,255,255,0.27), rgba(255,255,255,0));
+            background-color: rgba(255,255,255,0);
+            /*! border-radius: 2px; */
+            padding: 0px 8px;
+            height: 22px;
+            align-items: center;
+            display: flex;
+            transition: all 0.2s ease-in-out;
+            /* border: 1px solid rgba(255,255,255,0); */
+            box-shadow: 0px 1px 0.2px inset rgba(255,255,255,0), 0px -1px 0.2px inset rgba(255,255,255,0);
+
+            margin-left: 8px;
+        }
+        .headline:hover {
+            /* background-image: linear-gradient(to right, rgba(255,255,255,0.37), rgba(255,255,255,0.06)); */
+            background-color: rgba(255,255,255,0.1);
+            /* padding: 0px 20px; */
+            /* text-shadow: 0px 1.5px 0.5px rgba(0,0,0,0.4); */
+            transition: all 0.2s ease-in-out;
+            /* border: 1px solid rgba(255,255,255,0.1); */
+            /* box-shadow: 0px 1px 0.2px inset rgba(255,255,255,0.1), 0px -1px 0.2px inset rgba(255,255,255,0.1); */
+        }
+        .headline p {
+            transition: all 0.2s ease-in-out;
+            font-size: 18px;
+            letter-spacing: .1em;
+            font-weight: bold;
+            transform: translateY(2px);
+        }
+        /* .headline:hover p {
+            transform: translateY(2px) translateX(8px);
+            transition: all 0.2s ease-in-out;
+        } */
+        .h-spans-right span {
+            display: inline-block;
+            margin-right: 16px;
+        }
+        .h-spans-right img {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+        }
+        .h-spans-right a {
+            margin: 4px 8px 4px 8px;
+            align-items: center;
+            display: flex;
+            animation: dehover-link 0.15s ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode:forwards;
+            border-radius: 2px;
+            padding: 0px 8px;
+        }
+        .h-spans-right a:hover {
+            animation: hover-link 0.12s ease-in;
+            animation-iteration-count: 1;
+            animation-fill-mode:forwards;
+            background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.03));
+        }
+        @keyframes dehover-link {
+            0%    { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.14); }
+            100%  { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 1px solid rgba(255,255,255,0); }
+        }
+        @keyframes hover-link {
+            0%    { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 1px solid rgba(255,255,255,0); }
+            100%  { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.14); }
+        }
+        .special-button {
+            background-color: rgba(255,255,255,0.1);
+            width: 96px;
+            text-align: center;
+            height: 1.6em;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            transition: all 0.16s ease-in-out;
+            outline: 1px solid rgba(255,255,255,0);
+            border-radius: 4px;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.08));
+        }
+        .special-button:hover {
+            background-color: rgba(255,255,255,0.22);
+            background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0.13), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.13));
+            outline: 1px solid rgba(255,255,255,0.34);
+            text-shadow: 0px 1.5px 0.5px rgba(0,0,0,0.4);
+        }
+        .img-grid-mini {
+            /*! background: rgba(255,255,255,0.1); */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* padding-inline: 24px; */
+            justify-content: center;
+            padding: 24px 8px;
+        }
+        .img-grid-mini img {
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
+            padding: 4px 4px;
+            transition: 0.09s all ease-out;
+        }
+        .img-grid-mini a {
+            justify-content: center;
+            display: flex;
+        }
+        .img-grid-mini img:hover {
+            scale: 1.2;
+            outline: 2px solid rgba(255,255,255,0.52);
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: 0.044s all ease-in-out;
+        }
+
+        .imagegrid2 {
+            /*! background: rgba(255,255,255,0.1); */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* padding-inline: 24px; */
+            justify-content: center;
+            padding: 24px 0px;
+            /*! max-width: 800px; */
+        }
+        .imagegrid2 section {
+            padding: 32px 0px;
+            transition: 0.24s background ease-in-out;
+            width: 288px;
+        }
+        .imagegrid2 img {
+            max-height: 256px;
+            max-width: 256px;
+            padding: 8px 24px;
+            transition: 0.09s all ease-out;
+        }
+        .imagegrid2 a {
+            width: 288px;
+            justify-content: center;
+            display: flex;
+        }
+        .imagegrid2 p a {
+            display: inline;
+        }
+        .imagegrid2 section:hover {
+            outline: 2px solid rgba(255,255,255,0.52);
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: 0.044s all ease-in-out;
+        }
+        .imagegrid2 section:hover img {
+            scale: 1.1;
+        }
+        h6 {
+            font-family: 'Necto Mono';
+            transform: scaleY(1);
+        }
+        .imagegrid2 h5 {
+            text-align: left;
+            transform: translateY(8px);
+            padding: 0px 16px;
+            /*opacity: 0.75;*/
+            /* font-size: 14px; */
+        }
+        .imagegrid2 details {
+            text-align: left;
+            padding: 0px 16px;
+        }
+        .imagegrid2 summary {
+            font-size: 18px;
+        }
+        .imagegrid2 p {
+            background-color: rgba(255,255,255,0.1);
+            padding: 8px;
+        }
+        .pages {
+            display: inline-flex;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 8px;
+            outline: 2px solid rgba(255,255,255,0.05);
+            padding: 2px 4px;
+            border-radius: 9px;
+        }
+        .page-item {
+            width: 32px;
+            opacity: 0.75;
+            padding: 5px 0px;
+            /*height: 32px;*/
+            border-radius: 4px;
+            margin: 4px;
+            /*align-items: center;*/
+            /*transition: 0.064s all ease-in-out;*/
+            transition: 0.092s all ease-out;
+            outline: 1px solid rgba(255,255,255,0);
+        }
+        #selected {
+            background-color: rgba(255,255,255,0.1);
+            opacity: 1;
+            outline: 2px solid rgba(255,255,255,0.2);
+            cursor: default;
+        }
+        #selected:hover {
+            background-color: rgba(255,255,255,0.2);
+            /*background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0.08), rgba(255,255,255,0)), linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0.08), rgba(255,255,255,0));*/
+            background-image: radial-gradient(rgba(255,255,255,0.06), rgba(255,255,255,0));
+        }
+        .page-item:hover {
+            background-color: rgba(255,255,255,0.1);
+            transition: 0.051s all ease-in;
+            outline: 1px solid rgba(255,255,255,0.15);
+        }
+        .pages .special-button {
+            width: 36px;
+            height: 32px;
+            margin: 0px 2px;
+            /*border-radius: 100%;*/
+            font-size: 20px;
+            font-weight: bold;
+            /*! transform: scaleX(0.8); */
+            font-size: 18px;
+        }
+        #button-unavailable {
+            cursor: not-allowed;
+            color: rgba(255,255,255,0.5);
+            opacity: 0.75;
+            /*transition: none;*/
+        }
+        #button-unavailable:hover {
+            color: rgba(255,255,255,0.4);
+            background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0));
+            text-shadow: 0px 0px 0px rgba(0,0,0,0);
+        }
+    </style>
+    </head>
+    <body>
+    <div class="pageTitle"><h1>art</h1></div>
+    <center>
+        <div class="container">
+            <div style="width: 300px; height: 800px; margin-left: -46px;margin-right: -32px;">
+                <div style="perspective: 300px;">
+                    <div class="sidebarItems">
+                        <a href="newindex.html">home</a>
+                        <a href="about.html">about</a>
+                        <a href="art.html" id="selected-page" style="color: rgb(242, 165, 165);">art</a>
+                        <a href="blog.html">blog</a>
+                        <a href="links.html">links</a>
+                        <a href="extras.html">extras</a>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: rgba(0,0,0,0.2); min-width: 500px; flex: 1; max-width: 1200px; /*! height: 800px; */ margin-top: 4px; display: block;box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! height: 100px; */overflow: scroll;">
+                <div class="img-grid-mini">
+                                
+
+
+
+
+
+
+
+
+                            <a href="/art/2022/picosketch4picoday2022.png"><img src="/art/2022/picosketch4picoday2022.png"></a><a href="/art/2022/NAXBANNER3.png"><img src="/art/2022/NAXBANNER3.png"></a><a href="/art/2022/NAX.png"><img src="/art/2022/NAX.png"></a><a href="/art/2022/spotbot.png"><img src="/art/2022/spotbot.png"></a><a href="/art/2022/gexesis.png"><img src="/art/2022/gexesis.png"></a><a href="/art/2021/crex_sketch.png"><img src="/art/2021/crex_sketch.png"></a><a href="/art/2021/hifi.png"><img src="/art/2021/hifi.png"></a><a href="/art/2021/funker.png"><img src="/art/2021/funker.png"></a><a href="/art/2021/wackydynamicpose.png"><img src="/art/2021/wackydynamicpose.png"></a><a href="/art/2021/pizzacube_new-banner.png"><img src="/art/2021/pizzacube_new-banner.png"></a><a href="/art/2021/bowser_redraw_2021.png"><img src="/art/2021/bowser_redraw_2021.png"></a><a href="/art/2021/picoday2021.png"><img src="/art/2021/picoday2021.png"></a><a href="/art/2021/croix compilation.png"><img src="/art/2021/croix compilation.png"></a><a href="/art/2021/tankman.png"><img src="/art/2021/tankman.png"></a><a href="/art/2021/funny-yoshi.jpg"><img src="/art/2021/funny-yoshi.jpg" style="object-position: 50% 15%;"></a><a href="/art/2021/kindlefirey.jpg"><img src="/art/2021/kindlefirey.jpg"></a><a href="/gbs/gbs_character_ring_final.png"><img src="/gbs/gbs_character_ring_final.png"></a></div>
+
+
+            </div>
+        </div>
+
+
+    </center>
+
+
+
+</body></html>
