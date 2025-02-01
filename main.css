@@ -1,103 +1,15 @@
 body {
     color: white;
-    font-family: 'Necto Mono', 'Work Sans', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
-    padding: 16px 32px;
+    font-family: 'Verdana', 'Work Sans', 'Neue Helvetica', 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
+    padding: 8px 16px;
     background-repeat: repeat;
+    scrollbar-color: rgba(255,255,255,0.75) rgba(255,255,255,0);
 }
 
 a {
     text-decoration: none;
     color: #fafafa;
     display: block;
-}
-
-/* custom elements */
-
-.pixel-img {
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-}
-
-.ps-front {
-    transform-style: preserve-3d;
-    transform: rotateX(6deg);
-    transition: all 0.12s ease-out;
-    opacity: 0.96;
-}
-
-.banner {
-    max-width: 600px;
-    min-height: 88px;
-    display: flex;
-    align-items: flex-start;
-    padding: 18px;
-    margin: 0 0 8px 0;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: left;
-    color: white;
-    border-radius: 2px;
-    transition: all .16s ease-in;
-    transform: scale(0.98);
-}
-
-.banner h3, .banner section {
-    margin: 0;
-}
-
-/* animations */
-
-.ps-front:hover {
-    transform: scale(1.0) rotateX(0deg);
-    -webkit-transform: scale(1.0) rotateX(0deg);
-    transition: all 0.16s ease-in-out;
-    opacity: 1;
-}
-
-.ps-front:active {
-    transform: rotateX(6deg);
-    transition: all 0.12s ease-out;
-    opacity: 0.96;
-}
-
-.banner:hover {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    transition: all 0.26s ease-out;
-    transform: scale(1.0);
-}
-
-.ps-front .banner:hover {
-    transform: translateY(3px);
-}
-
-.banner:active {
-    transition: all .16s ease-in;
-    transform: scale(0.98);
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(2px); }
-    100% { transform: translateY(0px); }
-}
-
-/* headings */
-
-h1 {
-    font-family: 'GAU_root_N';
-    /* animation: float 6s ease-in-out infinite; */
-}
-
-h6 {
-    font-family: 'GauFontPopMagic';
-    transform: scaleY(1.82);
-}
-
-/* special text */
-
-.special-text {
-    font-family: 'GauFontPopMagic';
-    transform: scaleY(1.5) translateY(0.75px);
 }
 
 .comment {
@@ -108,6 +20,238 @@ h6 {
 .h-spans span {
     display: inline-block;
     margin: 0px 8px;
+}
+
+#link-box {
+    animation: dehover-link 0.15s ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-radius: 2px;
+}
+
+#link-box:hover {
+    animation: hover-link 0.12s ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.03));
+}
+@keyframes dehover-link {
+    0%    { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.14); }
+    100%  { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 1px solid rgba(255,255,255,0); }
+}
+@keyframes hover-link {
+    0%    { text-shadow: 0px -2px 6px rgba(255,255,255,0); background-color: rgba(255,255,255,0); outline: 1px solid rgba(255,255,255,0); }
+    100%  { text-shadow: 0px 1.47px 3.9px rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.03); outline: 1px solid rgba(255,255,255,0.14); }
+}
+
+/* headings */
+
+h1 {
+    font-family: 'GAU_root_N';
+}
+
+h6 {
+    font-family: 'Orbitron';
+    letter-spacing: .1em;
+    font-weight: bold;
+}
+
+.pageTitle {
+    width: auto;
+}
+.pageTitle h1 {
+    text-align: right;
+    padding-left: 8px; padding-right: 12px; padding-top: 8px; margin-bottom: 4px;
+    font-size: 36px;
+    opacity: 1;
+    transition: all 0.54s ease-in-out;
+    transform: translateX(0%);
+    letter-spacing: 0px;
+    text-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+    border-radius: 60px;
+    font-family: '080203';
+}
+.pageTitle h1:hover {
+    letter-spacing: 2px;
+    transform: translateX(-1%);
+    transition: all 0.36s ease-in-out;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000,
+        -1px 0px 0 #000,
+        1px 0px 0 #000,
+        1px  2.5px 3px rgba(0,0,0,0.72),
+        2.5px  3.5px 3px rgba(0,0,0,0.3);
+    /* background-color: rgba(255,255,255,0.2); */
+    background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.35));
+    padding-right: 36px;
+}
+        
+/* navigation */
+
+.container {
+    display: inline-flex;
+    min-width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.sidebarItems {
+    transform-style: preserve-3d;
+    transform: translateX(32px) translateY(25%) rotateX(0deg) rotateY(50deg);
+    text-align: left;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000,
+        -1px 0px 0 #000,
+        1px 0px 0 #000;
+    font-family: 'Orbitron';
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 4px;
+    outline: 2px solid rgba(20,20,20,0.1);
+}
+.sidebarItems a {
+    border-radius: 8px;
+    outline: 2px solid rgba(255,255,255,0);
+    transition: all 0.08s ease-out;
+    height: 24px;
+    padding: 4px 2px 1px 4px;
+    opacity: 0.75;
+    margin: 0px 0px;
+    line-height: 28px;
+    width: 86%;
+}
+.sidebarItems a:hover {
+    transform: scaleX(1.1) scaleY(0.98) translateX(16px);
+    transition: all 0.15s ease-in;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.28), rgba(255,255,255,0.06));
+    outline: 2px solid rgba(255,255,255,0.4);
+    opacity: 0.92;
+}
+#selected-page {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.08), rgba(255,255,255,0));
+    opacity: 1;
+    outline: 1px solid rgba(255,255,255,0.06);
+}
+#selected-page:hover {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.62), rgba(255,255,255,0.36)), linear-gradient(to right, rgba(255,255,255,0.18), rgba(255,255,255,0));
+    outline: 2px solid rgba(255,255,255,0.8);
+}
+.topDiv {
+    /*! background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18)); */
+    height: 48px;
+    margin-top: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 24px;
+    border-radius: 6px;
+    /* border: 2px solid rgba(255,255,255,0.2); */
+    /*! outline: 1.5px solid rgba(255,255,255,0.3); */ /*
+    transition: outline 0.35s ease-in-out; * /
+    /*! box-shadow: 0.1px 2.1px 3.8px inset rgba(255,255,255,0.1), 0.1px -1.7px 1.9px inset rgba(255, 255, 255, 0.39); */
+    width: 480px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /*! outline: 2px solid rgba(255,255,255,0.2); */
+}
+/* .topDiv:hover {
+    outline: 4px solid rgba(255,255,255,0.1);
+    transition: outline 0.17s ease-in;
+} */
+        
+/* more elements */
+
+.special-button {
+    background-color: rgba(20,20,20,0.3);
+    min-width: 96px;
+    text-align: center;
+    height: 26px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 0.16s ease-in-out;
+    outline: 1px solid rgba(255,255,255,0.02);
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.12), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.06));
+    font-size: 15px;
+    padding: 0px 24px;
+}
+.special-button:hover {
+    transition: all 0.18s ease-in-out;
+    background-color: rgba(20,20,20,0.29);
+    background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0.05), rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0.18), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.13));
+    outline: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    color: rgba(255,255,255,0.92);
+    font-size: 16px;
+}
+.imagegrid {
+    /*! background: rgba(255,255,255,0.1); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* padding-inline: 24px; */
+    justify-content: center;
+    padding: 24px 0px;
+}
+.imagegrid img {
+    max-height: 128px;
+    padding: 8px 8px;
+    transition: 0.09s all ease-out;
+}
+.img-grid a {
+    width: 160px;
+    justify-content: center;
+    display: flex;
+}
+.img-grid img:hover {
+    scale: 1.2;
+    outline: 2px solid rgba(255,255,255,0.52);
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: 0.044s all ease-in-out;
+}
+.img-grid-mini {
+    /*! background: rgba(255,255,255,0.1); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* padding-inline: 24px; */
+    justify-content: center;
+    padding: 24px 8px;
+}
+.img-grid-mini img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    padding: 4px 4px;
+    transition: 0.09s all ease-out;
+}
+.img-grid-mini a {
+    justify-content: center;
+    display: flex;
+}
+.img-grid-mini img:hover {
+    scale: 1.2;
+    outline: 2px solid rgba(255,255,255,0.52);
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: 0.044s all ease-in-out;
 }
 
 /* fonts */
@@ -159,14 +303,6 @@ h6 {
     font-style: italic;
 }
 
-/* Copyright © 2023, Collletttivo (https://www.collletttivo.it/) and original designer (as listed on collletttivo.it)
-This Font Software is licensed under the SIL Open Font License, Version 1.1. */
-
-@font-face {
-    font-family: 'Necto Mono';
-    src: url('/NectoMono-Regular.woff2') format('woff2'), url('/NectoMono-Regular.woff') format('woff');
-}
-
 /* Copyright (c) 2009, Matt McInerney <matt@pixelspread.com>, with Reserved Font Name: "Orbitron".
 This Font Software is licensed under the SIL Open Font License, Version 1.1. */
 
@@ -180,4 +316,41 @@ This Font Software is licensed under the SIL Open Font License, Version 1.1. */
     font-family: 'Orbitron';
     src: url('/orbitron-bold-webfont.woff') format('woff');
     font-weight: bold;
+}
+
+/* Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is a trademark of Bitstream, Inc. */
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('/VeraMono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#monospace-font {
+    font-family: 'Bitstream Vera Sans Mono', "Courier", "Courier New", monospace;
+}
+
+/* Fonts by Fenotype */
+
+@font-face {
+    font-family: '080203';
+    src: url('/080203.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '11dot20';
+    src: url('/11.20___.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Copyright (c) 2012, Brian J. Bonislawsky DBA Astigmatic (AOETI)
+This Font Software is licensed under the SIL Open Font License, Version 1.1. */
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/Audiowide-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
