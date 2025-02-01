@@ -1,0 +1,208 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Home - kosatigo</title>
+    <link href="/main1.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <style>
+        body {
+            background-image: url("background3.png");
+        }
+        .status-text {
+            outline: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4px;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: rgba(0,0,0,0.5);
+            box-shadow: 2px 3px 8px rgba(0,0,0,0.2);
+            margin-right: 32px;
+        }
+        .status-date {
+            font-size: 14px;
+            opacity: 0.75;
+            border-radius: 2px;
+            padding: 0px 4px;
+        }
+        .status-icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 8px;
+            image-rendering: pixelated;
+        }
+        .a-status {
+            display:inline-flex;
+            flex-direction:row;
+            /*! align-items: center; */
+            padding-bottom: 12px;
+        }
+        .topDiv {
+            /*! background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18)); */
+            width: 480px;
+            height: 48px;
+            margin-top: 8px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 24px;
+            border-radius: 6px;
+            /* border: 2px solid rgba(255,255,255,0.2); */
+            /*! outline: 1.5px solid rgba(255,255,255,0.3); */ /*
+            transition: outline 0.35s ease-in-out; * /
+            /*! box-shadow: 0.1px 2.1px 3.8px inset rgba(255,255,255,0.1), 0.1px -1.7px 1.9px inset rgba(255, 255, 255, 0.39); */
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            /*! outline: 2px solid rgba(255,255,255,0.2); */
+        }
+        /* .topDiv:hover {
+            outline: 4px solid rgba(255,255,255,0.1);
+            transition: outline 0.17s ease-in;
+        } */
+        .headline {
+            font-family: 'Orbitron';
+            text-shadow: 1.2px 1.5px 0.5px rgba(0,0,0,0.4);
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0));
+            background-color: rgba(255,255,255,0);
+            /*! border-radius: 2px; */
+            padding: 0px 8px;
+            height: 22px;
+            align-items: center;
+            display: flex;
+            transition: all 0.2s ease-in-out;
+            /* border: 1px solid rgba(255,255,255,0); */
+            box-shadow: 0px 1px 0.2px inset rgba(255,255,255,0), 0px -1px 0.2px inset rgba(255,255,255,0);
+            margin: 0px;
+        }
+        .headline:hover {
+            /* background-image: linear-gradient(to right, rgba(255,255,255,0.37), rgba(255,255,255,0.06)); */
+            background-color: rgba(255,255,255,0.1);
+            /* padding: 0px 20px; */
+            /* text-shadow: 0px 1.5px 0.5px rgba(0,0,0,0.4); */
+            transition: all 0.2s ease-in-out;
+            /* border: 1px solid rgba(255,255,255,0.1); */
+            /* box-shadow: 0px 1px 0.2px inset rgba(255,255,255,0.1), 0px -1px 0.2px inset rgba(255,255,255,0.1); */
+        }
+        .headline p {
+            transition: all 0.2s ease-in-out;
+            font-size: 18px;
+            letter-spacing: .1em;
+            font-weight: bold;
+            transform: translateY(2px);
+        }
+        /* .headline:hover p {
+            transform: translateY(2px) translateX(8px);
+            transition: all 0.2s ease-in-out;
+        } */
+        .h-spans-right span {
+            display: inline-block;
+            margin-right: 16px;
+        }
+        .h-spans-right img {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+        }
+        .h-spans-right a {
+            margin: 0px 8px;
+            align-items: center;
+            display: flex;
+            padding: 2px 8px;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="pageTitle"><h1>home</h1></div>
+    <center>
+        <div class="container">
+            <div style="width: 300px; height: 800px; margin-left: -46px;margin-right: -32px;">
+                <div style="perspective: 300px;">
+                    <div class="sidebarItems">
+                        <a href="newindex.html" id="selected-page" style="color: rgb(242, 227, 179);">home</a>
+                        <a href="about.html">about</a>
+                        <a href="art.html">art</a>
+                        <a href="blog.html">blog</a>
+                        <a href="links.html">links</a>
+                        <a href="extras.html">extras</a>
+                    </div>
+                </div>
+            </div>
+            <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin-top: 4px; display: block;">
+                <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;/*! border-radius: 8px 8px 24px 24px; */">
+                    <div style="/*! background-color: green; */ flex: 1; height: 100%; margin: 4px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div style="/*! background-color: rgb(49, 8, 8); */ height: 100%; margin-bottom: 4px;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(138, 73, 73, 0.57), rgba(62, 20, 45, 0.53), rgba(60, 20, 54, 0.61), rgba(138, 88, 172, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! outline: 1px solid rgba(255,255,255,0.3); *//*! border: 1px solid rgba(255,255,255,0.2); */">
+                            <div class="headline">
+                                <p>latest post</p>
+                            </div>
+                            <div style="text-align: left; padding: 4px 8px;/*! justify-content: stretch; *//*! display: grid; *//*! flex-direction: row; */">
+                                <a href="blog/test-post.html" id="link-box" style="padding: 0px 4px;margin: 0px -1px;"><span style="font-size: 20px;">Test Post</span>
+                                <br><span style="opacity:0.75;font-size: 14px;">2025-01-23</span></a>
+                                <div style="justify-content: space-between;display: flex;height: 7.45em;flex-direction: column;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgba(255,255,255,0.5); padding: 4px;">Yeah</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="/*! background-color: purple; */ height: 100%;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! display: none; */margin-top: 4px;">
+                            <div class="headline">
+                                <p>changelog</p>
+                            </div><div style="justify-content: space-between;display: flex;height: 10.38em;flex-direction: column;text-align: left;padding: 0px 8px;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgb(255, 255, 255); padding: 8px; font-family:'Bitstream Vera Sans Mono'; overflow: scroll;background: rgba(0,0,0,0.2);"><p style="transform:translateY(-16px);">2025-01-31<br>- add about page<br><br>2025-01-23<br>- added changelog<br>- added status</p></div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div style="/*! background-color: orange; */ flex: 1; height: 100%; margin: 4px; /*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(169, 165, 189, 0.3), rgba(159, 154, 189, 0.48), rgba(169, 164, 196, 0.66), rgba(175, 171, 198, 0.69), rgba(181, 178, 189, 0.7));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);">
+                        <div class="headline" style="/*! margin-top: 8px; */">
+                            <p>status</p>
+                        </div>
+                        <div style="text-align: left; padding: 4px 16px;/*! justify-content: stretch; *//*! display: grid; *//*! flex-direction: row; *//*! overflow: scroll; */">
+                            <div style="height: 20em; overflow: scroll;padding: 4px 8px;">
+	                            <div class="a-status">
+		                            <img src="talk3.png" class="status-icon">
+		                            <div>
+			                            <span id="monospace-font" class="status-date">2025-01-24</span>
+			                            <div class="status-text">made some icons for this</div>
+			  						</div>
+			  					</div>
+			  					<div class="a-status">
+			  						<img src="talk1.png" class="status-icon">
+			  						<div>
+			  							<span id="monospace-font" class="status-date">2025-01-23</span>
+			  							<div class="status-text">first status woohoo</div>
+			  						</div>
+			  					</div>
+			  				</div>
+			  				<div style="justify-content: right; display: flex; margin-top: 8px;"><a href="/status.html" class="special-button" style="/*! padding: 0px 20px; */ /*! font-size: 15px; *//*! background-color: rgba(20,20,20,0.3); */">&gt; VIEW ALL</a></div>
+		               	</div>
+                    </div>
+                </div>
+                <div class="topDiv" style="/*! height: 300px; */">
+                    <p style="font-size: 18px;/*! letter-spacing: -0.04em; */">Thank you for visiting!</p>
+                </div>
+                <div style="/*! background-color: purple; */ height: 172px;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(66, 62, 62, 0.81), rgba(11, 8, 19, 0.87), rgba(14, 11, 26, 0.68), rgba(64, 51, 68, 0.75));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; */width: 400px;margin-top: 8px;">
+                    <div class="headline">
+                        <p>accounts / contact</p>
+                    </div>
+                    <div style="text-align: left; padding: 6px 4px;">
+                        <div class="h-spans-right" style="height: 140px; overflow: scroll; /*! background-color: grey; */ /*! letter-spacing: -0.04em; *//*! display: none; */">
+                            <a href="https://bsky.app/profile/kosatigo.bsky.social" id="link-box"><img src="/platform-bluesky.svg"><span style="color: rgb(158, 192, 244);">Bluesky</span><span style="opacity:0.8;">kosatigo.bsky.social</span></a>
+                            <a href="https://kinsazo.newgrounds.com" id="link-box"><img src="/platform-newgrounds.svg"><span style="color: rgb(244, 198, 157);">Newgrounds</span><span style="opacity:0.8;">Kinsazo</span></a>
+                            <a href="https://wetdry.world/@kinsazo" id="link-box"><img src="/platform-mtdon.svg"><span style="color: rgb(191, 187, 244);">Mastodon</span><span style="opacity:0.8;">kinsazo@wetdry.world</span></a>
+                            <a href="https://youtube.com/@Kinsazo" id="link-box"><img src="/platform-yt.svg"><span style="color: rgb(223, 157, 161);">YouTube</span><span style="opacity:0.8;">Kinsazo</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 180px;"></div>
+        <footer class="h-spans">
+            <span class="comment">started 2021-02-13</span>
+            <span class="comment" style="display: none;">last updated 2025-01-23</span>
+            <span class="comment">version 4.2 beta (opal)</span>
+        </footer>
+    </center>
+  
+
+</body></html>

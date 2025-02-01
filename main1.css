@@ -75,10 +75,13 @@ h6 {
     letter-spacing: 2px;
     transform: translateX(-1%);
     transition: all 0.36s ease-in-out;
-    text-shadow: -1px -1px 0 rgba(0,0,0,1),
-        1px -1px 0px rgba(0,0,0,1),
-        1px  1px 0 rgba(0,0,0,1),
-        -1px  1px 0 rgba(0,0,0,1),
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000,
+        -1px 0px 0 #000,
+        1px 0px 0 #000,
         1px  2.5px 3px rgba(0,0,0,0.72),
         2.5px  3.5px 3px rgba(0,0,0,0.3);
     /* background-color: rgba(255,255,255,0.2); */
@@ -339,6 +342,15 @@ This Font Software is licensed under the SIL Open Font License, Version 1.1. */
 @font-face {
     font-family: '11dot20';
     src: url('/11.20___.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Copyright (c) 2012, Brian J. Bonislawsky DBA Astigmatic (AOETI)
+This Font Software is licensed under the SIL Open Font License, Version 1.1. */
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/Audiowide.ttf');
     font-weight: normal;
     font-style: normal;
 }
