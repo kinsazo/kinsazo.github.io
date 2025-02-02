@@ -1,0 +1,91 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Art - kosatigo</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/main.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <style>
+        
+        body {
+            background-image: url("/site-bg/art_bg.png");
+        }
+        .tooltip {
+            position:relative; /* making the .tooltip span a container for the tooltip text */
+            border-bottom:1px dashed #000; /* little indicater to indicate it's hoverable */
+        }
+        .tooltip:before {
+          content: attr(data-text); /* here's the magic */
+          position:absolute;
+
+          transform:translateY(120px);
+
+          /* basic styles */
+          width:200px;
+          padding:10px;
+          border-radius:10px;
+          background:#000;
+          color: #fff;
+          text-align:center;
+
+          display:none; /* hide by default */
+        }
+        .tooltip:hover:before {
+          display:block;
+        }
+
+        .img-box {
+          width: 800px;
+          height: 800px;
+          display: block;
+          background: rgba(0,0,0,0.5);
+          padding: 32px;
+        }
+
+        .clickable-img {
+          padding: 0px;
+        }
+
+    </style>
+    </head>
+    <body>
+    
+	<div class="pageTitle"><h1>art</h1></div>
+    <center>
+        <div class="container" style="/*! display:flex; */ /*! flex-direction: row; */">
+            <div style="width: 300px; height: 800px; margin-left: -46px;margin-right: -32px;">
+                <div style="perspective: 300px;">
+                    <div class="sidebarItems">
+                        <a href="newindex.html">home</a>
+                        <a href="about.html">about</a>
+                        <a href="art.html" id="selected-page" style="color: rgb(242, 165, 165);">art</a>
+                        <a href="blog.html">blog</a>
+                        <a href="links.html">links</a>
+                        <a href="extras.html">extras</a>
+                    </div>
+                </div>
+            </div>
+            <div style="max-width: 1200px;"><div style="background-color: rgba(121, 121, 121, 0.2); min-width: 500px; flex: 1; max-width: 1200px; /*! height: 800px; */ margin-top: 4px; display: block;box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);height: 300px;/*! overflow: scroll; */clip-path: polygon(0px 2%, 5% 0px, 95% 0px, 100% 2%, 100.00% 98%, 95% 100%, 5% 100%, 0% 98%);/*! outline: 8px solid rgba(255,255,255,0.1); *//*! border-radius: 20px; */">
+                <br>
+<div class="img-grid-mini">
+                        <img src="/art/2022/NAXBANNER3.png" id="btnDemo"><a href="/art/2022/NAXBANNER3.png"><img src="/art/2022/NAXBANNER3.png"></a><a href="/art/2022/NAX.png"><img src="/art/2022/NAX.png"></a><a href="/art/2022/spotbot.png"><img src="/art/2022/spotbot.png"></a><a href="/art/2022/gexesis.png"><img src="/art/2022/gexesis.png"></a><a href="/art/2021/crex_sketch.png"><img src="/art/2021/crex_sketch.png"></a><a href="/art/2021/hifi.png"><img src="/art/2021/hifi.png"></a><a href="/art/2021/funker.png"><img src="/art/2021/funker.png"></a><a href="/art/2021/wackydynamicpose.png"><img src="/art/2021/wackydynamicpose.png"></a><a href="/art/2021/pizzacube_new-banner.png"><img src="/art/2021/pizzacube_new-banner.png"></a><a href="/art/2021/bowser_redraw_2021.png"><img src="/art/2021/bowser_redraw_2021.png"></a><a href="/art/2021/picoday2021.png"><img src="/art/2021/picoday2021.png"></a><a href="/art/2021/croix compilation.png"><img src="/art/2021/croix compilation.png"></a><a href="/art/2021/tankman.png"><img src="/art/2021/tankman.png"></a><a href="/art/2021/funny-yoshi.jpg"><img src="/art/2021/funny-yoshi.jpg" style="object-position: 50% 15%;"></a><a href="/art/2021/kindlefirey.jpg"><img src="/art/2021/kindlefirey.jpg"></a><a href="/gbs/gbs_character_ring_final.png"><img src="/gbs/gbs_character_ring_final.png"></a></div>
+            
+  </div><br><div class="img-box">
+  <a><img style="width:100%;height: 600px;" id="fullimg"></a>
+  <p id="imgtext">text</p>
+</div>
+</div>
+        </div>
+    </center>
+<script>
+var btn = document.getElementById('btnDemo');
+btn.onClick = function(){alert('button is clicked..');
+		var full_img = document.getElementById("fullimg");
+		var img_text = document.getElementById("imgtext");
+		full_img.src = `/art/2022/NAXBANNER3.png`;
+		img_text.innerHTML = `please work`;
+	}
+</script><style type="text/css"></style></body></html>
