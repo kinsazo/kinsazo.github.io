@@ -12,12 +12,38 @@
         body {
             background-image: url("/site-bg/art_bg.png");
         }
+        .img-box {
+            max-width: 800px;
+            min-width: 200px;
+            height: 700px;
+            display: block;
+            background: rgba(0,0,0,0.5);
+            padding: 32px;
+            padding-right: 15px;
+            overflow: scroll;
+            outline: 2px solid rgba(255,255,255,0.32);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        #artdate {
+            margin-top: 16px;
+            margin-bottom: 0px;
+            opacity: 0.8;
+        }
+        .year-heading {
+            text-align:left;
+            padding-left:32px;
+            margin-bottom:-10px;
+            font-family: 'Audiowide';
+            margin-top: -6px;
+        }
     </style>
     </head>
     <body>
-    <div class="pageTitle"><h1>art</h1></div>
+
+	<div class="pageTitle"><h1>art</h1></div>
     <center>
-        <div class="container">
+        <div class="container" style="/*! display:flex; */ /*! flex-direction: row; */">
             <div style="width: 300px; height: 800px; margin-left: -46px;margin-right: -32px;">
                 <div style="perspective: 300px;">
                     <div class="sidebarItems">
@@ -30,10 +56,42 @@
                     </div>
                 </div>
             </div>
-            <div style="background-color: rgba(0,0,0,0.2); min-width: 500px; flex: 1; max-width: 1200px; /*! height: 800px; */ margin-top: 4px; display: block;box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! height: 100px; */overflow: scroll;">
-                <div class="img-grid-mini">
-                        <a href="/art/2022/picosketch4picoday2022.png"><img src="/art/2022/picosketch4picoday2022.png"></a><a href="/art/2022/NAXBANNER3.png"><img src="/art/2022/NAXBANNER3.png"></a><a href="/art/2022/NAX.png"><img src="/art/2022/NAX.png"></a><a href="/art/2022/spotbot.png"><img src="/art/2022/spotbot.png"></a><a href="/art/2022/gexesis.png"><img src="/art/2022/gexesis.png"></a><a href="/art/2021/crex_sketch.png"><img src="/art/2021/crex_sketch.png"></a><a href="/art/2021/hifi.png"><img src="/art/2021/hifi.png"></a><a href="/art/2021/funker.png"><img src="/art/2021/funker.png"></a><a href="/art/2021/wackydynamicpose.png"><img src="/art/2021/wackydynamicpose.png"></a><a href="/art/2021/pizzacube_new-banner.png"><img src="/art/2021/pizzacube_new-banner.png"></a><a href="/art/2021/bowser_redraw_2021.png"><img src="/art/2021/bowser_redraw_2021.png"></a><a href="/art/2021/picoday2021.png"><img src="/art/2021/picoday2021.png"></a><a href="/art/2021/croix compilation.png"><img src="/art/2021/croix compilation.png"></a><a href="/art/2021/tankman.png"><img src="/art/2021/tankman.png"></a><a href="/art/2021/funny-yoshi.jpg"><img src="/art/2021/funny-yoshi.jpg" style="object-position: 50% 15%;"></a><a href="/art/2021/kindlefirey.jpg"><img src="/art/2021/kindlefirey.jpg"></a><a href="/gbs/gbs_character_ring_final.png"><img src="/gbs/gbs_character_ring_final.png"></a></div>
+            <div>
+                <div style="background-color: rgba(121, 121, 121, 0.2); min-width: 500px; max-width: 1200px; /*! height: 800px; */ margin-top: 4px; display: block;box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);height: 300px;/*! overflow: scroll; */clip-path: polygon(0px 2%, 5% 0px, 95% 0px, 100% 2%, 100.00% 98%, 95% 100%, 5% 100%, 0% 98%);/*! outline: 8px solid rgba(255,255,255,0.1); *//*! border-radius: 20px; */">
+	                <br>
+					<div style="height: 260px; overflow: scroll; padding-top:8px;">
+                        <h4 class="year-heading">2022</h4>
+                        <div class="img-grid-mini" style="justify-content: left; padding: 24px 26px;">
+                            <img src="/art/2022/picosketch4picoday2022.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2022/picosketch4picoday2022.png`; img_link.href=`/art/2022/picosketch4picoday2022.png`; art_date.innerHTML=`2022-07-30`; art_title.innerHTML=`Pico sketch`; art_text.innerHTML=`originally made for pico day 2022 but i kept putting it off, was meant to be more than just pico<br>might still finish it some day!`;">
+                            <img src="/art/2022/NAXBANNER3.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2022/NAXBANNER3.png`; img_link.href=`/art/2022/NAXBANNER3.png`; art_date.innerHTML=`2022-04-14 / 2022-07-24`; art_title.innerHTML=`New banner`; art_text.innerHTML=`new banner i made, just playing around a lot but i really liked the result<br><br>definitely overused motion blur and color dodge<br><br>this is the updated version from 24th july! <b><u><a href='/art/2022/naxbanner2.png'>here</a></u></b> is the original!`;">
+                            <img src="/art/2022/NAX.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2022/NAX.png`; img_link.href=`/art/2022/NAX.png`; art_date.innerHTML=`2022-04-07`; art_title.innerHTML=`NAX (new sona)`; art_text.innerHTML=`NEW SONA this is nax uhh<br><br>was going to include concept art but it's kinda bad<br><br>enjoy (??)<br><br>no more croix era, 2021-2022`;">
+                            <img src="/art/2022/spotbot.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2022/spotbot.png`; img_link.href=`/art/2022/spotbot.png`; art_date.innerHTML=`2022-03-01`; art_title.innerHTML=`Spot-Bot`; art_text.innerHTML=`new oc?? robot design based off of the spotify logo and off a dumb rhyme i thought of did not mean to spend this much time on it or post it or anything but here it is lol`;">
+                            <img src="/art/2022/gexesis.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2022/gexesis.png`; img_link.href=`/art/2022/gexesis.png`; art_date.innerHTML=`2022-01-22`; art_title.innerHTML=`gex`; art_text.innerHTML=`This is like a luau at mel blanc's house`;">
+                        </div><h4 class="year-heading">2021</h4>
+                        <div class="img-grid-mini" style="justify-content: left; padding: 24px 26px;">
+                            <img src="/art/2021/crex_sketch.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/crex_sketch.png`; img_link.href=`/art/2021/crex_sketch.png`; art_date.innerHTML=`2021-10-30`; art_title.innerHTML=`crex sketch`; art_text.innerHTML=`sorry for not posting any art for 3 months lol here is some`;">
+                            <img src="/art/2021/hifi.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/hifi.png`; img_link.href=`/art/2021/hifi.png`; art_date.innerHTML=`2021-07-26`; art_title.innerHTML=`hi-fi`; art_text.innerHTML=``;">
+                            <img src="/art/2021/funker.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/funker.png`; img_link.href=`/art/2021/funker.png`; art_date.innerHTML=`2021-07-06`; art_title.innerHTML=`funker`; art_text.innerHTML=``;">
+                            <img src="/art/2021/wackydynamicpose.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/wackydynamicpose.png`; img_link.href=`/art/2021/wackydynamicpose.png`; art_date.innerHTML=`2021-06-04`; art_title.innerHTML=`wacky dynamic pose`; art_text.innerHTML=`i didn't know what else to name this<br>here's a slightly new design pretty neat`;">
+                            <img src="/art/2021/pizzacube_new-banner.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/pizzacube_new-banner.png`; img_link.href=`/art/2021/pizzacube_new-banner.png`; art_date.innerHTML=`2021-05-17`; art_title.innerHTML=`new (newgrounds) banner`; art_text.innerHTML=`actually i spent too long on this to not post it<br>should've taken half an hour but it took about 4 hahaha anyway`;">
+                            <img src="/art/2021/bowser_redraw_2021.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/bowser_redraw_2021.png`; img_link.href=`/art/2021/bowser_redraw_2021.png`; art_date.innerHTML=`2021-05-09`; art_title.innerHTML=`bowser redraw`; art_text.innerHTML=`redrew this bowser from 2018 <a href='/art/other/bowz2018forcomparison.png'><b><u>(linked)</u></b></a> it was meant as a sketch and then i spent way long on doing shading for it<br>looks a bit off to me still but i like how i did the shading at least<br>bowser is hard to draw 👍`;">
+                            <img src="/art/2021/picoday2021.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/picoday2021.png`; img_link.href=`/art/2021/picoday2021.png`; art_date.innerHTML=`2021-05-01`; art_title.innerHTML=`happy pico day!`; art_text.innerHTML=`a little thing that i did before i go to sleep today, couldn't comfortably just make nothing<br>merry pico day 2021 :)`;">
+                            <img src="/art/2021/croix compilation.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/croix compilation.png`; img_link.href=`/art/2021/croix compilation.png`; art_date.innerHTML=`2021-05-01`; art_title.innerHTML=`croix compilation`; art_text.innerHTML=`i figured i should do this lol, here an oc sona whatever you would call it since i haven't had one i'd actually use in a really long time<br>this is croix<br>okay so the name i wanted it to be like, crex but not crex and the only thing i could think of is croix, named after la croix but you pronounce the x.<br>if you have any other name ideas please let me know haha`;">
+                            <img src="/art/2021/tankman.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/tankman.png`; img_link.href=`/art/2021/tankman.png`; art_date.innerHTML=`2021-04-03`; art_title.innerHTML=`tankman`; art_text.innerHTML=`logged back into newgrounds for the first time in a really long time a few weeks back thought i should draw something to celebrate<br><br><b><a href='https://www.newgrounds.com/art/view/pizzacube/tankman' style='color: white; text-decoration: underline;'>obligatory newgrounds mirror</a></b>`;">
+                            <img src="/art/2021/funny-yoshi.jpg" style="object-position: 50% 15%;" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/funny-yoshi.jpg`; img_link.href=`/art/2021/funny-yoshi.jpg`; art_date.innerHTML=`2021-03-01`; art_title.innerHTML=`funny yoshi`; art_text.innerHTML=`funny yoshi<br>it's a jpg and i'm sorry for that<br>maybe i'll fix it one day. ...probably not, no. but who knows. everything is full of opportunity`;">
+                            <img src="/art/2021/kindlefirey.jpg" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/art/2021/kindlefirey.jpg`; img_link.href=`/art/2021/kindlefirey.jpg`; art_date.innerHTML=`2021-02-24`; art_title.innerHTML=`kindle firey`; art_text.innerHTML=``;">
+                            <img src="/gbs/gbs_character_ring_final.png" onclick="var full_img=document.getElementById('fullimg'); var img_link=document.getElementById('imglink'); var art_date=document.getElementById('artdate'); var art_title=document.getElementById('arttitle'); var art_text=document.getElementById('arttext'); full_img.src=`/gbs/gbs_character_ring_final.png`; img_link.href=`/gbs/gbs_character_ring_final.png`; art_date.innerHTML=`2021-02-18`; art_title.innerHTML=`gbs character ring`; art_text.innerHTML=`here's a character ring for gbs i think it's pretty cool<br>i started it in... 2019, i think. or not. (or 2018.) <br>then i didn't touch it for at least a year and a half for sure and picked it up in february 2021 and just became Super dedicated to finishing it and well, here we are now!`;">
+                        </div>
+                    </div>
+                </div><br><div class="img-box">
+                    <a id="imglink"><img id="fullimg" style="max-width:100%; max-height: 600px;" src="transparent128.png"></a>
+                    <h4 id="artdate"></h4>
+                    <h3 id="arttitle"></h3>
+                    <p id="arttext">No item selected.</p>
+                </div>
+                <a class="special-button" href="sketches.html" style="display:flex;margin:32px;width:128px;">&gt; SKETCHES</a>
             </div>
         </div>
     </center>
+
 </body></html>
