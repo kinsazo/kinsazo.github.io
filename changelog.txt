@@ -1,0 +1,29 @@
+2025-04-08
+- updated look of statuses more (moved date into status bubble, moved date below status text)
+- made website titles bold
+- moved thank you for visiting message down + reduced background opacity + increased border radius
+- set 15px font size for changelog
+- removed text preview for latest blog post on home page
+- increased height of changelog box on home page
+- made entire latest post box link to latest post, not only the post title and date
+- added button to view txt version of changelog
+- changed latest post box to have a horizontal gradient instead of vertical
+- added some vertical padding in accounts/contact box
+- increased default opacity of special button outline from 0.02 to 0.12
+- added hover outline for home boxes
+- increase opacity of box title backgrounds when the box is hovered, not when the title is hovered
+
+2025-03-31
+- made button a capsule instead of a rounded rectangle
+- changed look of statuses a bit
+
+2025-02-02
+- add preview box to art page
+- sort art by year
+
+2025-01-31
+- add about page
+
+2025-01-23
+- added changelog
+- added status

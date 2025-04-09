@@ -12,20 +12,32 @@
         body {
             background-image: url("background3.png");
         }
+        .home-box {
+            outline: 1.28px solid rgba(255,255,255,0) !important;
+            transition: all 120ms ease-out;
+        }
+        .home-box:hover {
+            outline: 1.28px solid rgba(255,255,255,0.45) !important;
+            transition: all 75ms ease-in;
+        }
         .status-text {
-            outline: 1px solid rgba(255,255,255,0.1);
+            outline: 2px solid rgba(255,255,255,0.3);
             margin-top: 4px;
             padding: 8px;
-            border-radius: 8px;
-            background-color: rgba(0,0,0,0.5);
+            border-radius: 12px;
+            background-color: rgba(0,0,0,0.65);
             box-shadow: 2px 3px 8px rgba(0,0,0,0.2);
             margin-right: 32px;
         }
         .status-date {
-            font-size: 14px;
-            opacity: 0.75;
-            border-radius: 2px;
-            padding: 0px 4px;
+            font-size: 13px;
+            opacity: 0.72;
+            /*! border-radius: 4px; */
+            padding-top: 2px;
+            /*! background-color: rgba(0,0,0,0.2); */
+            /*! margin-top: 8px; */
+            /*! height: 20px; */
+            display: block;
         }
         .status-icon {
             width: 48px;
@@ -49,12 +61,12 @@
             align-items: center;
             justify-content: center;
             padding: 0px 24px;
-            border-radius: 6px;
+            border-radius: 100px;
             /* border: 2px solid rgba(255,255,255,0.2); */
             /*! outline: 1.5px solid rgba(255,255,255,0.3); */ /*
             transition: outline 0.35s ease-in-out; * /
             /*! box-shadow: 0.1px 2.1px 3.8px inset rgba(255,255,255,0.1), 0.1px -1.7px 1.9px inset rgba(255, 255, 255, 0.39); */
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255,255,255,0.072);
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
             /*! outline: 2px solid rgba(255,255,255,0.2); */
@@ -78,7 +90,7 @@
             box-shadow: 0px 1px 0.2px inset rgba(255,255,255,0), 0px -1px 0.2px inset rgba(255,255,255,0);
             margin: 0px;
         }
-        .headline:hover {
+        .home-box:hover .headline {
             /* background-image: linear-gradient(to right, rgba(255,255,255,0.37), rgba(255,255,255,0.06)); */
             background-color: rgba(255,255,255,0.1);
             /* padding: 0px 20px; */
@@ -113,6 +125,9 @@
             display: flex;
             padding: 2px 8px;
         }
+        .special-button {
+            outline: 1px solid rgba(255,255,255,0.12);
+        }
     </style>
     </head>
     <body>
@@ -134,73 +149,75 @@
             <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin-top: 4px; display: block;">
                 <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;/*! border-radius: 8px 8px 24px 24px; */">
                     <div style="/*! background-color: green; */ flex: 1; height: 100%; margin: 4px; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div style="/*! background-color: rgb(49, 8, 8); */ height: 100%; margin-bottom: 4px;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(138, 73, 73, 0.57), rgba(62, 20, 45, 0.53), rgba(60, 20, 54, 0.61), rgba(138, 88, 172, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! outline: 1px solid rgba(255,255,255,0.3); *//*! border: 1px solid rgba(255,255,255,0.2); */">
-                            <div class="headline">
-                                <p>latest post</p>
-                            </div>
-                            <div style="text-align: left; padding: 4px 8px;/*! justify-content: stretch; *//*! display: grid; *//*! flex-direction: row; */">
-                                <a href="blog/test-post.html" id="link-box" style="padding: 0px 4px; margin: 0px -1px; display: block;"><span style="font-size: 20px;">Test Post</span>
-                                <br><span style="opacity:0.75;font-size: 14px;">2025-01-23</span></a>
-                                <div style="justify-content: space-between;display: flex;height: 7.45em;flex-direction: column;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgba(255,255,255,0.5); padding: 4px;">Yeah</div>
+                        <a style="/*! background-color: rgb(49, 8, 8); */ height: 24%; margin-bottom: 4px;border-radius: 0px;background-image: linear-gradient(to right, rgba(138, 73, 73, 0.57), rgba(62, 20, 45, 0.53), rgba(60, 20, 54, 0.61), rgba(138, 88, 172, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! outline: 1px solid rgba(255,255,255,0.3); *//*! border: 1px solid rgba(255,255,255,0.2); */" href="blog/test-post.html" id="link-box" class="home-box">
+                            <div class="headline"><p>latest post</p></div><div style="text-align: left; padding: 4px 8px;/*! justify-content: stretch; *//*! display: grid; *//*! flex-direction: row; */"><div style="padding: 0px 4px; margin: 0px -1px; display: block;"><span style="font-size: 20px;">Test Post</span>
+                                <br><span style="opacity:0.75;font-size: 14px;">2025-01-23</span></div>
+                                <div style="justify-content: space-between;display: none;height: 7.45em;flex-direction: column;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgba(255,255,255,0.5); padding: 4px;">Yeah</div>
                                 </div>
                             </div>
-                        </div>
-                        <div style="/*! background-color: purple; */ height: 100%;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! display: none; */margin-top: 4px;">
+                        </a>
+                        <div style="/*! background-color: purple; */ height: 100%;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! display: none; */margin-top: 4px;" class="home-box">
                             <div class="headline">
                                 <p>changelog</p>
-                            </div><div style="justify-content: space-between;display: flex;height: 10.38em;flex-direction: column;text-align: left;padding: 0px 8px;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgb(255, 255, 255); padding: 8px; font-family:'Bitstream Vera Sans Mono'; overflow: scroll;background: rgba(0,0,0,0.2);"><p style="transform:translateY(-16px);">2025-02-02<br>- add preview box to art page<br>- sort art by year<br><br>2025-01-31<br>- add about page<br><br>2025-01-23<br>- added changelog<br>- added status</p></div>
-                                </div>
+                            </div><div style="justify-content: space-between;display: flex;height: 17.75em;flex-direction: column;text-align: left;padding: 0px 8px;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgb(255, 255, 255); padding: 8px; font-family:'Bitstream Vera Sans Mono'; overflow: scroll;background: rgba(0,0,0,0.2);font-size:15px;"><p style="transform:translateY(-16px);">2025-04-08<br>- updated look of statuses more (moved date into status bubble, moved date below status text)<br>- made website titles bold<br>- moved thank you for visiting message down + reduced background opacity + increased border radius<br>- set 15px font size for changelog<br>- removed text preview for latest blog post on home page<br>- increased height of changelog box on home page<br>- made entire latest post box link to latest post, not only the post title and date<br>- added button to view txt version of changelog<br>- changed latest post box to have a horizontal gradient instead of vertical<br>- added some vertical padding in accounts/contact box<br>- increased default opacity of special button outline from 0.02 to 0.12<br>- added hover outline for home boxes<br>- increase opacity of box title backgrounds when the box is hovered, not when the title is hovered<br><br>2025-03-31<br>- made button a capsule instead of a rounded rectangle<br>- changed look of statuses a bit<br><br>2025-02-02<br>- add preview box to art page<br>- sort art by year<br><br>2025-01-31<br>- add about page<br><br>2025-01-23<br>- added changelog<br>- added status</p></div>
+                                <div style="justify-content: right; display: flex; margin-top: 8px;"><a class="special-button" style="/*! padding: 0px 20px; */ /*! font-size: 15px; *//*! background-color: rgba(20,20,20,0.3); */ border-radius: 100px;" href="/changelog.txt">.txt version</a></div></div>
                             
                         </div>
                     </div>
-                    <div style="/*! background-color: orange; */ flex: 1; height: 100%; margin: 4px; /*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(169, 165, 189, 0.3), rgba(159, 154, 189, 0.48), rgba(169, 164, 196, 0.66), rgba(175, 171, 198, 0.69), rgba(181, 178, 189, 0.7));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);">
+                    <div style="/*! background-color: orange; */ flex: 1; height: 100%; margin: 4px; /*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(169, 165, 189, 0.3), rgba(159, 154, 189, 0.48), rgba(169, 164, 196, 0.66), rgba(175, 171, 198, 0.69), rgba(181, 178, 189, 0.7));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);" class="home-box">
                         <div class="headline" style="/*! margin-top: 8px; */">
                             <p>status</p>
                         </div>
                         <div style="text-align: left; padding: 4px 16px;/*! justify-content: stretch; *//*! display: grid; *//*! flex-direction: row; *//*! overflow: scroll; */">
                             <div style="height: 20em; overflow: scroll;padding: 4px 8px;">
 	                            <div class="a-status">
+		                            <img class="status-icon" src="talk2.png">
+		                            <div class="status-text">
+			                            
+			                            <div>i don't really know what to say here</div>
+			  						<span id="monospace-font" class="status-date">2025-03-31</span></div>
+			  					</div><div class="a-status">
 		                            <img src="talk3.png" class="status-icon">
-		                            <div>
-			                            <span id="monospace-font" class="status-date">2025-01-24</span>
-			                            <div class="status-text">made some icons for this</div>
-			  						</div>
+		                            <div class="status-text">
+			                            
+			                            <div>made some icons for this</div>
+			  						<span id="monospace-font" class="status-date">2025-01-24</span></div>
 			  					</div>
 			  					<div class="a-status">
 			  						<img src="talk1.png" class="status-icon">
-			  						<div>
-			  							<span id="monospace-font" class="status-date">2025-01-23</span>
-			  							<div class="status-text">first status woohoo</div>
-			  						</div>
+			  						<div class="status-text">
+			  							
+			  							<div>first status woohoo</div>
+			  						<span id="monospace-font" class="status-date">2025-01-23</span></div>
 			  					</div>
 			  				</div>
-			  				<div style="justify-content: right; display: flex; margin-top: 8px;"><a href="/status.html" class="special-button" style="/*! padding: 0px 20px; */ /*! font-size: 15px; *//*! background-color: rgba(20,20,20,0.3); */">&gt; VIEW ALL</a></div>
+			  				<div style="justify-content: right; display: flex; margin-top: 8px;"><a href="/status.html" class="special-button" style="/*! padding: 0px 20px; */ /*! font-size: 15px; *//*! background-color: rgba(20,20,20,0.3); */ border-radius: 100px;">&gt; VIEW ALL</a></div>
 		               	</div>
                     </div>
                 </div>
-                <div class="topDiv" style="/*! height: 300px; */">
-                    <p style="font-size: 18px;/*! letter-spacing: -0.04em; */">Thank you for visiting!</p>
-                </div>
-                <div style="/*! background-color: purple; */ height: 172px;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(66, 62, 62, 0.81), rgba(11, 8, 19, 0.87), rgba(14, 11, 26, 0.68), rgba(64, 51, 68, 0.75));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; */width: 400px;margin-top: 8px;">
+                
+                <div style="/*! background-color: purple; */ height: 172px;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(66, 62, 62, 0.81), rgba(11, 8, 19, 0.87), rgba(14, 11, 26, 0.68), rgba(64, 51, 68, 0.75));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; */width: 400px;margin-top: 8px;" class="home-box">
                     <div class="headline">
                         <p>accounts / contact</p>
                     </div>
-                    <div style="text-align: left; padding: 6px 4px;">
-                        <div class="h-spans-right" style="height: 140px; overflow: scroll; /*! background-color: grey; */ /*! letter-spacing: -0.04em; *//*! display: none; */">
-                            <a href="https://bsky.app/profile/kosatigo.bsky.social" id="link-box"><img src="/platform-bluesky.svg"><span style="color: rgb(158, 192, 244);">Bluesky</span><span style="opacity:0.8;">kosatigo.bsky.social</span></a>
-                            <a href="https://kinsazo.newgrounds.com" id="link-box"><img src="/platform-newgrounds.svg"><span style="color: rgb(244, 198, 157);">Newgrounds</span><span style="opacity:0.8;">Kinsazo</span></a>
-                            <a href="https://wetdry.world/@kinsazo" id="link-box"><img src="/platform-mtdon.svg"><span style="color: rgb(191, 187, 244);">Mastodon</span><span style="opacity:0.8;">kinsazo@wetdry.world</span></a>
-                            <a href="https://youtube.com/@Kinsazo" id="link-box"><img src="/platform-yt.svg"><span style="color: rgb(223, 157, 161);">YouTube</span><span style="opacity:0.8;">Kinsazo</span></a>
+                    <div style="text-align: left; padding: px 4px;">
+                        <div class="h-spans-right" style="height: 140px; overflow: scroll; /*! background-color: grey; */ /*! letter-spacing: -0.04em; *//*! display: none; */padding: 4px 0px;">
+                            <a href="https://bsky.app/profile/kosatigo.bsky.social" id="link-box"><img src="/platform-bluesky.svg"><span style="color: rgb(158, 192, 244);"><b>Bluesky</b></span><span style="opacity:0.8;">kosatigo.bsky.social</span></a>
+                            <a href="https://kinsazo.newgrounds.com" id="link-box"><img src="/platform-newgrounds.svg"><span style="color: rgb(244, 198, 157);"><b>Newgrounds</b></span><span style="opacity:0.8;">Kinsazo</span></a>
+                            <a href="https://wetdry.world/@kinsazo" id="link-box"><img src="/platform-mtdon.svg"><span style="color: rgb(191, 187, 244);"><b>Mastodon</b></span><span style="opacity:0.8;">kinsazo@wetdry.world</span></a>
+                            <a href="https://youtube.com/@Kinsazo" id="link-box"><img src="/platform-yt.svg"><span style="color: rgb(223, 157, 161);"><b>YouTube</b></span><span style="opacity:0.8;">Kinsazo</span></a>
                         </div>
                     </div>
                 </div>
-            </div>
+            <br><br><div class="topDiv" style="/*! height: 300px; */">
+                    <p style="font-size: 18px;/*! letter-spacing: -0.04em; */">Thank you for visiting!</p>
+                </div></div>
         </div>
         <div style="height: 180px;"></div>
         <footer class="h-spans">
             <span class="comment">started 2021-02-13</span>
             <span class="comment" style="display: none;">last updated 2025-01-23</span>
-            <span class="comment">version 4.2 beta (opal)</span>
+            <span class="comment">version 4.2.0 (opal)</span>
         </footer>
     </center>
 </body></html>
