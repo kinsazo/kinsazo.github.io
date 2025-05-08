@@ -1,6 +1,16 @@
+2025-05-08
+- changed look of side navigation (smaller font size, no text outline, colour selected page's background instead of its title) and reduced width too
+- fixed layout scaling issues on art page
+
+2025-05-02
+- updated about page again (style and content)
+
+2025-04-09
+- style update for about page
+
 2025-04-08
 - updated look of statuses more (moved date into status bubble, moved date below status text)
-- made website titles bold
+- made website titles bold in accounts / contact box
 - moved thank you for visiting message down + reduced background opacity + increased border radius
 - set 15px font size for changelog
 - removed text preview for latest blog post on home page

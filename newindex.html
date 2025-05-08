@@ -134,10 +134,10 @@
     <div class="pageTitle"><h1>home</h1></div>
     <center>
         <div class="container">
-            <div style="width: 300px; height: 800px; margin-left: -46px;margin-right: -32px;">
+            <div class="navigation">
                 <div style="perspective: 300px;">
                     <div class="sidebarItems">
-                        <a href="newindex.html" id="selected-page" style="color: rgb(242, 227, 179);">home</a>
+                        <a href="newindex.html" id="selected-page" style="background-image: linear-gradient(to right, rgba(242, 227, 179, 1), rgba(242, 227, 179, 0.8));">home</a>
                         <a href="about.html">about</a>
                         <a href="art.html">art</a>
                         <a href="blog.html">blog</a>
@@ -146,7 +146,7 @@
                     </div>
                 </div>
             </div>
-            <div style="/* background-color: blue; */ min-width: 500px; flex: 1; max-width: 1200px; height: 800px; margin-top: 4px; display: block;">
+            <div class="container2">
                 <div style="/* background-color: grey; */ height: 400px; margin: 4px 0px; width: 100%; display:inline-flex; flex-wrap: wrap;/*! border-radius: 8px 8px 24px 24px; */">
                     <div style="/*! background-color: green; */ flex: 1; height: 100%; margin: 4px; display: flex; flex-direction: column; justify-content: space-between;">
                         <a style="/*! background-color: rgb(49, 8, 8); */ height: 24%; margin-bottom: 4px;border-radius: 0px;background-image: linear-gradient(to right, rgba(138, 73, 73, 0.57), rgba(62, 20, 45, 0.53), rgba(60, 20, 54, 0.61), rgba(138, 88, 172, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! outline: 1px solid rgba(255,255,255,0.3); *//*! border: 1px solid rgba(255,255,255,0.2); */" href="blog/test-post.html" id="link-box" class="home-box">
@@ -159,8 +159,8 @@
                         <div style="/*! background-color: purple; */ height: 100%;/*! border-radius: 8px; */background-image: linear-gradient(to bottom, rgba(96, 128, 168, 0.71), rgba(20, 22, 60, 0.6), rgba(156, 242, 185, 0.18));box-shadow: 0px 2.2px 3px inset rgba(255, 255, 255, 0.18), 0px -1.2px 1.5px inset rgba(255, 255, 255, 0.29);/*! padding: 8px 0px; *//*! display: none; */margin-top: 4px;" class="home-box">
                             <div class="headline">
                                 <p>changelog</p>
-                            </div><div style="justify-content: space-between;display: flex;height: 17.75em;flex-direction: column;text-align: left;padding: 0px 8px;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgb(255, 255, 255); padding: 8px; font-family:'Bitstream Vera Sans Mono'; overflow: scroll;background: rgba(0,0,0,0.2);font-size:15px;"><p style="transform:translateY(-16px);">2025-04-08<br>- updated look of statuses more (moved date into status bubble, moved date below status text)<br>- made website titles bold<br>- moved thank you for visiting message down + reduced background opacity + increased border radius<br>- set 15px font size for changelog<br>- removed text preview for latest blog post on home page<br>- increased height of changelog box on home page<br>- made entire latest post box link to latest post, not only the post title and date<br>- added button to view txt version of changelog<br>- changed latest post box to have a horizontal gradient instead of vertical<br>- added some vertical padding in accounts/contact box<br>- increased default opacity of special button outline from 0.02 to 0.12<br>- added hover outline for home boxes<br>- increase opacity of box title backgrounds when the box is hovered, not when the title is hovered<br><br>2025-03-31<br>- made button a capsule instead of a rounded rectangle<br>- changed look of statuses a bit<br><br>2025-02-02<br>- add preview box to art page<br>- sort art by year<br><br>2025-01-31<br>- add about page<br><br>2025-01-23<br>- added changelog<br>- added status</p></div>
-                                <div style="justify-content: right; display: flex; margin-top: 8px;"><a class="special-button" style="/*! padding: 0px 20px; */ /*! font-size: 15px; *//*! background-color: rgba(20,20,20,0.3); */ border-radius: 100px;" href="/changelog.txt">.txt version</a></div></div>
+                            </div><div style="justify-content: space-between;display: flex;height: 17.75em;flex-direction: column;text-align: left;padding: 0px 8px;"><div style="outline: 1px solid rgba(255,255,255,0.25); height: 100%; margin-top: 8px; color: rgb(255, 255, 255); padding: 8px; font-family:'Bitstream Vera Sans Mono'; overflow: scroll;background: rgba(0,0,0,0.2);font-size:15px;"><p style="transform:translateY(-16px);">2025-05-08<br>- changed look of side navigation (smaller font size, no text outline, colour selected page's background instead of its title) and reduced width too<br>- fixed layout scaling issues on art page<br><br>2025-05-02<br>- updated about page again (style and content)<br><br>2025-04-09<br>- style update for about page<br><br>2025-04-08<br>- updated look of statuses more (moved date into status bubble, moved date below status text)<br>- made website titles bold in accounts / contact box<br>- moved thank you for visiting message down + reduced background opacity + increased border radius<br>- set 15px font size for changelog<br>- removed text preview for latest blog post on home page<br>- increased height of changelog box on home page<br>- made entire latest post box link to latest post, not only the post title and date<br>- added button to view txt version of changelog<br>- changed latest post box to have a horizontal gradient instead of vertical<br>- added some vertical padding in accounts/contact box<br>- increased default opacity of special button outline from 0.02 to 0.12<br>- added hover outline for home boxes<br>- increase opacity of box title backgrounds when the box is hovered, not when the title is hovered<br><br>2025-03-31<br>- made button a capsule instead of a rounded rectangle<br>- changed look of statuses a bit<br><br>2025-02-02<br>- add preview box to art page<br>- sort art by year<br><br>2025-01-31<br>- add about page<br><br>2025-01-23<br>- added changelog<br>- added status</p></div>
+                                <div style="justify-content: right; display: flex; margin-top: 8px;"><a class="special-button" href="/changelog.txt">.txt version</a></div></div>
                             
                         </div>
                     </div>
@@ -191,7 +191,7 @@
 			  						<span id="monospace-font" class="status-date">2025-01-23</span></div>
 			  					</div>
 			  				</div>
-			  				<div style="justify-content: right; display: flex; margin-top: 8px;"><a href="/status.html" class="special-button" style="/*! padding: 0px 20px; */ /*! font-size: 15px; *//*! background-color: rgba(20,20,20,0.3); */ border-radius: 100px;">&gt; VIEW ALL</a></div>
+			  				<div style="justify-content: right; display: flex; margin-top: 8px;"><a href="/status.html" class="special-button">&gt; VIEW ALL</a></div>
 		               	</div>
                     </div>
                 </div>
